@@ -1,0 +1,1847 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10283e">
+<meta name="description" content="مختبر تفاعلي لتعلّم التكهرب والأفعال الكهربائية المتبادلة للسنة الرابعة من التعليم المتوسط.">
+<meta property="og:title" content="مختبر التكهرب | الرابعة متوسط">
+<meta property="og:description" content="توقّع، جرّب، ثم فسّر انتقال الإلكترونات والتجاذب والتنافر.">
+<title>مختبر التكهرب — تجارب تفاعلية وتمارين الشهادة | متوسطة الإخوة ختال</title>
+<style>
+:root{color-scheme:light;--ink:#152746;--muted:#4b5c76;--teal:#0e6965;--line:#dce5ec;--paper:#fff;--blue:#176a8f;--amber:#975118;--surface:#f5f8fb;--night:#112641;--focus:#984f00}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#edf3f8;background-image:radial-gradient(ellipse at 88% 0,#deeeef 0,transparent 55%);color:var(--ink);font-family:Tahoma,"Noto Sans Arabic",Arial,sans-serif;line-height:1.65}
+button,select,input{font:inherit}button,select{min-height:44px}button{cursor:pointer;touch-action:manipulation}button:disabled{cursor:default;opacity:.55}a{color:var(--teal)}:focus-visible{outline:3px solid var(--focus);outline-offset:3px}h1,h2,h3,p{margin:0}bdi[dir=ltr]{display:inline-block;white-space:nowrap;font-family:Arial,sans-serif}
+.wrap{max-width:1280px;margin:auto;padding:22px clamp(12px,3vw,36px) 32px}.skip{position:absolute;top:4px;inset-inline-start:10px;z-index:9;background:#fff;padding:8px 14px;transform:translateY(-150%)}.skip:focus{transform:none}
+.hero{isolation:isolate;position:relative;overflow:hidden;padding:clamp(23px,4vw,48px);padding-bottom:18px;border-radius:25px;color:white;background:radial-gradient(ellipse at 12% 25%,#194b5a,transparent 65%),linear-gradient(110deg,#12223f,#152d4e 67%,#1a3c55);box-shadow:0 12px 32px #132f5030}
+.hero::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(#b0e8ec22 1px,transparent 1px);background-size:20px 20px;mask-image:linear-gradient(90deg,#000,transparent 85%)}
+.hero-copy{position:relative;max-width:73%;z-index:1}.eyebrow{display:flex;align-items:center;gap:8px;color:#b8e2e6;font-size:clamp(11px,1.2vw,14px);font-weight:700}.status-dot{width:8px;height:8px;flex:none;border-radius:50%;background:#7ce7ce;box-shadow:0 0 13px #80ead6}.eyeline{display:inline-block;width:12px;height:1px;background:#a6d6db}
+.hero h1{font-size:clamp(32px,6.1vw,70px);line-height:1.17;margin:13px 0 11px;letter-spacing:-.025em}.hero h1 em{color:#9aeadd;font-style:normal}.hero p{font-size:clamp(14px,2vw,21px);color:#e0edf8}.credit{color:#c0d7e6;font-size:clamp(11px,1.3vw,14px);font-weight:700;margin-top:12px}.credit span{padding:0 4px;color:#9aeadd}
+.hero-art{position:absolute;top:4%;left:2%;width:min(38%,430px);height:auto;z-index:0}.hero nav{margin-top:24px;border-top:1px solid #aad0dd35;padding-top:13px;position:relative;display:flex;flex-wrap:wrap;gap:8px}.hero nav a{color:#f2fbff;border:1px solid #8fb2ca68;border-radius:9px;padding:4px 10px;text-decoration:none;font-size:13px;min-height:37px;display:inline-flex;align-items:center}.hero nav a:hover{background:#226070}.hero :focus-visible{outline-color:#fff0b1}
+#lab,#recap,#challenge{scroll-margin-top:12px}.indexline{margin:20px 2px 9px;display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:700;color:#22516b}.indexline span:last-child{color:var(--teal)}
+.tabs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin-bottom:12px}.tabs button{display:flex;gap:8px;align-items:center;text-align:start;background:#f8fbfd;color:var(--ink);border:1px solid #cbdbe6;border-radius:11px;padding:8px;font-weight:700;line-height:1.3;font-size:clamp(12px,1.25vw,15px)}.tabs button span{display:grid;place-items:center;flex:none;width:26px;height:26px;background:#e6edf3;border-radius:7px;color:#34546f;font-size:12px}.tabs button[aria-pressed=true]{background:#14384e;color:#fff;border-color:#14384e}.tabs button[aria-pressed=true] span{background:#2e566e;color:#c6fff0}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,330px);gap:0;border:1px solid #ccdae5;border-radius:18px;background:var(--paper);box-shadow:0 8px 26px #263f6110}
+.observation,.controls{min-width:0;padding:clamp(12px,2vw,22px)}.controls{border-inline-start:1px solid #dce7ee;background:linear-gradient(180deg,#f1f8fa,#fcfdfe);border-radius:18px 0 0 18px}.title-row{display:flex;gap:8px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:10px}.kicker{font-size:12px;font-weight:800;color:var(--teal);line-height:1.4;margin-bottom:4px}.title-row h2,.bottom h2{font-size:clamp(20px,2.5vw,29px);line-height:1.4}.controls h3{font-size:clamp(16px,1.7vw,20px);line-height:1.55;margin:5px 0 14px}
+.view-switch{display:flex;gap:3px;padding:3px;border-radius:11px;background:#edf3f6;border:1px solid #e2ebf0}.view-switch button{min-height:36px;border:none;border-radius:8px;padding:4px 9px;background:none;color:#354a69;font-size:12px;font-weight:700}.view-switch button[aria-pressed=true]{background:#fff;color:#165f64;box-shadow:0 2px 5px #243f5925}
+.stage{overflow:hidden;border:1px solid #d7e5eb;border-radius:13px;background:#f2f8fa;direction:ltr}.stage svg{display:block;width:100%;height:auto;overflow:hidden}.stage svg text{font-family:Tahoma,"Noto Sans Arabic",Arial,sans-serif}.stage svg .latin{font-family:Arial,sans-serif}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0}.chip{font-size:11px;padding:4px 8px;font-weight:700;border:1px solid;border-radius:999px;display:inline-flex;align-items:center;gap:5px}.chip.minus{color:#145f80;background:#eaf7ff;border-color:#b9deef}.chip.plus{color:#824211;background:#fff4e8;border-color:#edd2b3}.chip.neutral{color:#405875;background:#f1f4fa;border-color:#dae3ee}
+.readout{padding:12px;border-radius:12px;background:#eef8f6;border-inline-start:4px solid #298378;min-height:88px}.readout strong{display:block;color:#115952;font-size:15px}.readout p{font-size:13px;color:#345768;margin-top:3px}.readout .metrics{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}.readout .metrics span{padding:3px 7px;border:1px solid #cbe2e1;border-radius:8px;background:#fff;font-size:12px}
+.field{margin-bottom:9px}.field label,.predict label{display:block;font-size:13px;font-weight:700;margin-bottom:4px}.field small{display:block;font-size:11px;color:var(--muted)}select{width:100%;border:1px solid #bdcfdb;border-radius:9px;color:var(--ink);background:#fff;padding:5px 8px;font-size:13px}input[type=range]{width:100%;margin:2px 0;accent-color:#086e68;min-height:27px}.split{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.predict{margin-top:11px;padding-top:10px;border-top:1px solid #dbe6ed}.predict small{font-weight:400;color:var(--muted);margin-inline-start:4px}
+.actions,.quiz-actions{display:flex;gap:6px;margin-top:10px}.actions button,.quiz-actions button{border:1px solid #b8cdd7;border-radius:9px;padding:7px 10px;color:#173d53;background:#fff;font-weight:700;font-size:13px}.actions button:first-child,.quiz-actions button:first-child{background:#0b6b64;color:white;border-color:#0b6b64}.actions button:first-child{flex:1}
+.timeline{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}.timeline button{flex:1;min-width:34px;min-height:42px;border:1px solid #c8d8e2;background:#fff;border-radius:8px;color:#2b506b;font-size:13px;font-weight:700}.timeline button[aria-current=step]{background:#dcefeb;border-color:#84bcb6;color:#094c49}
+.feedback{min-height:27px;font-size:12px;color:#435771;margin-top:8px}.feedback.good{color:#0b6652;font-weight:700}.feedback.bad{color:#94451d;font-weight:700}
+details{border-top:1px solid var(--line);padding-top:8px;color:#36536b}summary{cursor:pointer;font-weight:700;font-size:13px;color:#174e65}details p{font-size:13px;margin-top:7px}
+.bottom{margin-top:19px;background:white;border:1px solid #cedee8;border-radius:17px;padding:clamp(13px,2.2vw,24px);box-shadow:0 6px 24px #203e5d0c}.concepts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:11px 0}.concepts article,.question{padding:12px;border:1px solid #d9e6ed;border-radius:10px;background:#f6fafc}.concepts b{float:inline-start;margin-inline-end:7px;color:#fff;background:#186864;border-radius:8px;display:grid;place-items:center;width:25px;height:25px}.concepts h3{font-size:16px}.concepts p{font-size:13px;color:#37536d;margin-top:7px}.resource li{font-size:13px}.resource ul{padding-inline-start:20px}.quiz-head{display:flex;justify-content:space-between;align-items:center;gap:6px}.score{font-size:12px;padding:5px 10px;background:#e9f7f4;border:1px solid #c3e3de;border-radius:999px;color:#105954;white-space:nowrap}
+#questions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:11px}.question label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}.question p{font-size:12px;margin-top:5px}.question.good{border-color:#8ac7af}.question.bad{border-color:#d49e86}footer{text-align:center;color:#38526d;padding:5px 12px 25px;font-size:12px}.notice{padding:12px}
+@media(max-width:870px){.bench{grid-template-columns:minmax(0,1fr) minmax(230px,275px)}.tabs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:655px){.wrap{padding:9px 8px 19px}.hero{padding:17px 13px 12px;border-radius:16px}.hero-copy{max-width:100%}.hero-art{width:38%;left:0;top:1%;opacity:.32}.hero p{max-width:95%}.hero nav{margin-top:14px;padding-top:7px}.eyebrow{flex-wrap:wrap;gap:4px}.hero h1{margin-top:10px}.bench{display:flex;flex-direction:column}.controls{order:0;border-inline-start:0;border-bottom:1px solid #d9e6ed;border-radius:17px 17px 0 0}.observation{order:1}.controls h3{margin-bottom:8px}.tabs{gap:4px}.tabs button{min-height:49px;gap:4px;padding:4px}.tabs button span{width:20px;height:22px}.concepts,#questions{grid-template-columns:1fr}.indexline{margin-top:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+.flow{stroke-dasharray:7 7;animation:flow .65s linear 3}.flash{animation:flash .5s ease-out 1}@keyframes flow{to{stroke-dashoffset:-28}}@keyframes flash{0%{opacity:.3}100%{opacity:1}}
+@media print{body{background:white}.wrap{max-width:none;padding:0}.hero{color:#172f46;background:white;box-shadow:none;padding:0 0 12px;border-bottom:1px solid #999}.hero h1 em,.hero .eyebrow,.hero p,.hero .credit{color:#172f46}.hero-art,.hero nav,.tabs,.controls,.view-switch,.quiz-actions{display:none}.bench{display:block}.bottom,.bench{box-shadow:none;break-inside:avoid}footer{margin-top:12px}}
+
+.phase{font-size:12px;color:#28536a;margin-top:10px;font-weight:700}.phase+.timeline{margin-top:4px}.observation{scroll-margin-top:8px}
+@media(min-width:656px) and (max-height:950px){.hero{padding-top:26px}.hero h1{font-size:clamp(31px,5vw,57px)}.hero nav{margin-top:17px}.hero-art{width:min(35%,370px)}}
+
+.paper-lift{animation:lift .6s cubic-bezier(.2,.75,.3,1) both;transform-box:fill-box;transform-origin:center}@keyframes lift{from{translate:12px 15px;opacity:.6}to{translate:0 0;opacity:1}}
+.scene-key{font-size:13px;color:#31536d;background:#f1f6fa;border-radius:9px;padding:7px 10px;margin-bottom:8px}.stepper{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:6px;margin:8px 0 3px;padding:5px;background:#edf5f7;border-radius:10px}.stepper .phase{margin:0;text-align:center;line-height:1.4}.stepper button,.comparison button{border:1px solid #c4d9e2;color:#194e62;background:#fff;border-radius:8px;min-height:40px;padding:4px 9px;font-size:12px;font-weight:700}.stepper #nextStep:not(:disabled){background:#116b63;border-color:#116b63;color:#fff}.action-tip{font-size:11px;color:#365770;margin-top:7px}.reading-tip{border-top:1px solid #cce4df;margin-top:8px;padding-top:6px;color:#244f54;font-size:12px}.reading-tip b{display:block;color:#124d49}.comparison{border:1px solid #c6dbe3;border-radius:10px;padding:7px 10px;margin-top:10px;background:#f7fbfd}.comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:6px}.comparison-grid>div,.charge-primer p{background:#fff;border:1px solid #d3e2e9;border-radius:8px;padding:8px;font-size:13px}.comparison p{margin:2px 0 6px}.comparison button{font-size:11px;line-height:1.4;width:100%}.charge-primer{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:6px;margin-top:9px}.charge-primer p{background:#eff7fa;color:#28516a}.inside-arrow{stroke-dasharray:5 5}
+@media(max-width:655px){.bench{display:flex;flex-direction:column}.controls{order:1;border-top:1px solid #d9e6ed;border-bottom:0;border-radius:0 0 17px 17px}.observation{order:0}.scene-key{font-size:12px}.charge-primer{grid-template-columns:1fr 1fr}.charge-primer p:first-child{grid-column:1/-1}}
+.stage:has(.studio-svg){border-color:#9cb6b5;background:#cfdfde;box-shadow:inset 0 0 12px #21474d30}.legend[hidden]{display:none}.stage:has(.studio-svg)+.stepper{margin-top:10px}.view-switch button{font-size:clamp(11px,1.5vw,13px);min-height:39px}.stage .apparatus-move,.stage .pendulum,.stage .foil-leaf{transform-origin:0 0}
+.play-scene .apparatus-move{animation:apparatus-in 620ms cubic-bezier(.22,.68,.26,1) both}.play-scene .rubbing{animation:rub-back 390ms ease-in-out 2}.play-scene .pendulum{animation:swing-in 860ms cubic-bezier(.23,.72,.42,1) both}.play-scene .foil-leaf{animation:leaf-open 710ms cubic-bezier(.18,.7,.36,1) both}
+@keyframes apparatus-in{from{transform:translate(var(--from-x),var(--from-y))}to{transform:translate(0,0)}}@keyframes rub-back{0%,100%{transform:translateX(0)}50%{transform:translateX(12px)}}@keyframes swing-in{from{transform:rotate(0deg)}70%{transform:rotate(calc(var(--angle) * 1.11))}to{transform:rotate(var(--angle))}}@keyframes leaf-open{from{transform:rotate(var(--leaf-start))}to{transform:rotate(var(--leaf))}}
+@media(prefers-reduced-motion:reduce){.play-scene :is(.apparatus-move,.rubbing,.pendulum,.foil-leaf){animation:none!important}}
+
+
+[hidden]{display:none!important}
+.hero nav .featured{background:#c8f4e9;border-color:#c8f4e9;color:#133e48;font-weight:800}
+.hero nav .featured:hover{background:#e4fff8;color:#143e47}
+.title-row .stage-tools{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.stage-tools #fullView{min-height:41px;padding:4px 9px;border:1px solid #c7dce4;border-radius:9px;background:#fff;color:#164e64;font-weight:700;font-size:12px}
+.pend-tools{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:9px}
+.pend-tools button{font-size:12px;font-weight:700;min-height:42px;border:1px solid #bad2dd;border-radius:8px;background:white;color:#14526a;padding:5px 9px}
+.pend-tools button[aria-pressed=true]{border-color:#347d90;background:#e5f7fb;color:#154e62}
+.pend-tools span{font-size:12px;color:#365570}
+.pend-stage .el circle{fill:#1477a9;stroke:#e6faff;stroke-width:1}
+.pend-stage .el path{fill:none;stroke:white;stroke-width:1.7;stroke-linecap:round}
+.pend-stage .plusmark circle{fill:#fff3df;stroke:#a76a32;stroke-width:1}
+.pend-stage .plusmark path{fill:none;stroke:#9a511e;stroke-width:1.4;stroke-linecap:round}
+.pend-stage .travel circle{fill:#0877b2;stroke:#e2faff;stroke-width:1.7}
+.bench:fullscreen,.bench.lab-focus{background:#f4f8fa;overflow:auto;align-content:start;border-radius:0}
+.bench.lab-focus{position:fixed;inset:0;z-index:100}
+body.lab-fallback{overflow:hidden}
+.bench:is(:fullscreen,.lab-focus) .controls{display:none}
+.bench:is(:fullscreen,.lab-focus) .observation{width:min(1200px,100%);margin-inline:auto;padding:clamp(10px,1.7vw,23px)}
+.bench:is(:fullscreen,.lab-focus) .stage svg{max-height:62dvh}
+.bench:is(:fullscreen,.lab-focus) .readout strong{font-size:clamp(16px,2.2vw,24px)}
+.bench:is(:fullscreen,.lab-focus) .readout p{font-size:clamp(14px,1.7vw,19px)}
+.bench:is(:fullscreen,.lab-focus){display:block}
+@media(max-width:410px){.title-row .stage-tools{width:100%;justify-content:space-between}.pend-tools span{flex-basis:100%}}
+@media print{.stage-tools,.pend-tools{display:none!important}}
+
+.playbar{margin:10px 0 6px;padding:9px 12px;background:#f1f7fa;border:1px solid #d3e4eb;border-radius:12px}
+.playbar-line{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:12px;color:#304e63}
+.playbar-line output{font-weight:700;color:#154f59}
+.playbar input{display:block;margin:2px 0 0;cursor:ew-resize}
+.stage:has(.pend-svg){background:#e9f1f2}
+.pend-stage .model-halo{paint-order:stroke;stroke:#f3fbfb;stroke-width:4px;stroke-linejoin:round}
+.pend-tools #nearOnly[aria-pressed=true]{background:#133c51;color:#fff;border-color:#133c51}
+.pend-tools #nearOnly{margin-inline-start:auto}
+.phase-notes{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.phase-notes>div{padding:6px 9px;border:1px solid #cee1df;background:#fff;border-radius:8px;min-width:0}
+.phase-notes>div:nth-child(2){border-color:#cee0ec;background:#f6fbff}
+.view-switch button{white-space:nowrap}
+.mini-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:8px}
+.mini-results button{display:block;width:100%;margin-top:6px}
+.mini-results>div{padding:8px;border:1px solid #d5e3eb;border-radius:9px;background:#fff;font-size:13px}
+.mini-results .retain{border-color:#88bdad;background:#edf9f4}
+@media(max-width:480px){.mini-results{grid-template-columns:1fr}.phase-notes{grid-template-columns:1fr}.title-row .stage-tools{gap:3px}.view-switch button{padding-inline:6px}}
+@media print{.playbar{display:none!important}}
+
+.video-stage svg,.pend-stage svg{aspect-ratio:640/338;width:100%;max-width:100%;height:auto;background:#edf4f4}
+.pend-tools #sceneRun{background:#0b6b64;color:#fff;border-color:#0b6b64;min-width:108px}
+#framePhase{unicode-bidi:plaintext;text-align:start}
+@media(max-width:510px){.title-row .stage-tools{width:100%;align-items:center;justify-content:flex-start}.stage-tools .view-switch{flex-wrap:wrap}.view-switch button{font-size:11px}.pend-tools #nearOnly{margin-inline-start:0}}
+:root{--focus:#b45a0a}
+body{background:#eaf0f4;background-image:radial-gradient(ellipse at 92% 0,#d7efea 0,transparent 49%),radial-gradient(ellipse at 0 42%,#e6eafa,transparent 50%)}
+.hero{background:radial-gradient(ellipse at 10% 20%,#1d5860,transparent 63%),linear-gradient(111deg,#102642,#172d4e 66%,#1b4055)}
+.hero nav .exam-jump{background:#ffdfa5;color:#35271a;border-color:#ffdfa5;font-weight:800}
+.hero nav .exam-jump:hover{background:#fff0cb}
+.bench{border-color:#b8d0d9;box-shadow:0 15px 34px #183a4917}
+.stage:has(svg){border-color:#a9c5c8;box-shadow:0 5px 13px #24434d18}
+.title-row h2,.bottom h2{letter-spacing:-.02em}
+.stage-status{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#193c4e;color:#eff9fc;border-radius:10px 10px 4px 4px;padding:6px 10px;font-size:11px;font-weight:700;margin-top:9px}
+.stage-status .status-dot{display:inline-block;width:6px;height:6px;margin-inline-end:6px;box-shadow:none}
+#sceneKey{background:none;border-radius:0;color:#345b6c;padding:4px 1px}
+.phase-notes>div{border-inline-start-width:3px}
+.bem{padding:0;overflow:hidden;scroll-margin-top:12px}
+.bem-intro{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:clamp(16px,3vw,31px);color:#fff;background:radial-gradient(ellipse at 8% 15%,#27665e,transparent 63%),#15394d}
+.bem-intro p:not(.bem-kicker){max-width:62ch;color:#d9eef1;margin-top:5px;font-size:clamp(12px,1.5vw,15px)}
+.bem-kicker{font-weight:800;color:#b6eee0;font-size:12px;margin-bottom:4px}
+.bem-stamp{display:grid;place-items:center;flex:none;min-width:90px;border:1px solid #87b2ba70;border-radius:13px;background:#ffffff15;color:#f8e5b7;font-size:12px;padding:8px 12px}
+.bem-stamp b{font-size:26px;line-height:1.1}
+.bem-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:14px clamp(10px,2.3vw,23px) 8px}
+.bem-tabs button,.bem-variants button,.bem-transport button{border:1px solid #bed4de;background:#f4fafb;color:#184653;border-radius:10px;font-size:13px;font-weight:750;padding:6px 9px;line-height:1.5}
+.bem-tabs button{display:flex;align-items:center;gap:7px;justify-content:center}
+.bem-tabs button b{font-family:Arial,sans-serif;background:#e1edf0;border-radius:7px;padding:2px 6px}
+.bem-tabs button[aria-pressed=true],.bem-variants button[aria-pressed=true]{background:#164f57;border-color:#164f57;color:#fff}
+.bem-tabs button[aria-pressed=true] b{background:#ffffff30;color:#fff}
+.bem-content{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(265px,1fr);gap:16px;padding:10px clamp(10px,2.3vw,23px) 21px}
+.bem-watch,.bem-work{min-width:0}
+.bem-watch h3,.bem-work h3{font-size:clamp(17px,2vw,22px);line-height:1.45}
+#bemContext{font-size:13px;color:#3a566d;margin:5px 0 8px;min-height:42px}
+.bem-variants,.bem-transport{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.bem-variants button{min-height:38px}
+.bem-stage{background:#d5e4e5}
+.bem-stage svg{aspect-ratio:640/338}
+.bem-transport{margin-top:8px}
+.bem-transport #bemPlay{background:#0b6b64;border-color:#0b6b64;color:#fff}
+.bem-transport #bemLabels[aria-pressed=true]{background:#d8f3eb;border-color:#7ab6ac}
+.bem-phase{padding:5px 9px;border:1px solid #cde0e6;border-radius:8px;background:#f2f8fa;font-size:12px;color:#224d61}
+.bem-phase output{font-weight:800;unicode-bidi:plaintext}
+.bem-phase input{display:block}
+.bem-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px;font-size:12px}
+.bem-work{background:#f3f8fa;border:1px solid #d7e5eb;border-radius:14px;padding:12px}
+#bemQuestions .question{margin-top:6px;background:#fff;padding:8px 10px}
+#bemQuestions .field{margin-bottom:0}
+#bemQuestions .question.good{background:#effaf3}
+#bemQuestions .question.bad{background:#fff3e8}
+#bemQuestions .question p:empty,#bemResult:empty{display:none}
+#bemResult{color:#136555;font-weight:800;margin-top:8px;font-size:13px}
+#bemModel{margin-top:9px}
+#bemModel p{font-size:13px;line-height:1.75}
+@media(max-width:750px){.bem-content{grid-template-columns:1fr}}
+@media(max-width:490px){.bem-tabs{gap:4px}.bem-tabs button{flex-direction:column;gap:2px;font-size:10px;padding:4px}.bem-intro{align-items:flex-start}.bem-stamp{min-width:57px;padding:5px;font-size:10px}.bem-stamp b{font-size:21px}.bem-transport button{font-size:11px}}
+@media print{.bem-tabs,.bem-transport,.bem-phase,.bem-links{display:none}}
+
+.bem-writing{display:block;margin-top:9px;color:#244b5a;font-size:13px;font-weight:750}
+.bem-writing small{display:block;color:#546779;font-weight:400}
+#bemWritten{display:block;width:100%;resize:vertical;font:inherit;font-size:13px;border:1px solid #c3d5de;border-radius:8px;margin-top:4px;padding:6px 8px;color:var(--ink);background:#fff}
+.bench:is(:fullscreen,.lab-focus) .stage-status{margin-top:6px}
+
+.motion-key{display:flex;gap:8px;align-items:baseline;padding:7px 10px;border:1px solid #c0dae6;border-inline-start:4px solid #16749f;border-radius:9px;background:#eaf6fc;color:#183e54;font-size:13px;margin:4px 0 8px;line-height:1.55}
+.motion-key b{white-space:nowrap}
+.motion-key[data-kind=force]{background:#edf8f4;border-color:#a8d3c5;border-inline-start-color:#18766a;color:#174e47}
+.motion-key[data-kind=idle]{background:#f4f7f9;border-color:#d5e2ea;border-inline-start-color:#8197a5}
+.stage svg .trace-e{filter:drop-shadow(0 0 2px #e0f8ff)}
+.legend{column-gap:5px;row-gap:4px}
+.legend .chip{font-size:11px}
+.tabs button{line-height:1.43;min-height:47px}
+@media(max-width:455px){.motion-key{flex-direction:column;gap:1px;font-size:12px}.tabs button{font-size:11px}.playbar-line{font-size:11px}}
+.scope-choices{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.scope-choices button{min-height:37px;border-radius:8px;border:1px solid #bdd6df;padding:4px 8px;background:#f3f9fa;color:#164956;font-size:12px;font-weight:700}
+.scope-choices button[aria-pressed=true]{background:#155b61;color:#fff;border-color:#155b61}
+@media(max-width:480px){.scope-choices button{flex:1 1 43%;font-size:11px}}
+#basics{scroll-margin-top:12px}
+.basics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:14px}
+.basics article{display:flex;align-items:flex-start;gap:10px;padding:12px;border:1px solid #cddfe8;border-radius:13px;background:#fff;min-width:0}
+.basics h2{font-size:16px;color:#174856;margin:0 0 4px}
+.basics p{font-size:13px;line-height:1.65;color:#375468;margin:0}
+.basic-icon{display:grid;place-items:center;width:29px;height:29px;flex:0 0 29px;border-radius:8px;background:#e5f3f1;color:#125c54;font-size:19px;font-weight:800}
+.basic-icon.ebonite-icon,.basic-icon.glass-icon{width:26px;height:12px;flex-basis:26px;transform:rotate(-26deg);margin-top:9px;background:linear-gradient(#526879,#1f3038);border:1px solid #4a616b}
+.basic-icon.glass-icon{background:linear-gradient(#e7fffc,#80b0b6,#d4f3ed);border-color:#55848e}
+#glassStart{margin-top:7px;min-height:35px;border:1px solid #b5d6de;border-radius:8px;background:#eff9f9;color:#125460;padding:4px 9px;font-size:12px;font-weight:800}
+.scope-choices .rod-pair{display:flex;align-items:center;flex-wrap:wrap;gap:5px;width:100%}
+.rod-pair small{color:#385769;font-weight:800;font-size:12px}
+@media(max-width:710px){.basics{grid-template-columns:1fr}.basics article{padding:9px 10px}.basics p{font-size:12px}}
+html{scroll-padding-top:14px}
+.hero nav a{min-height:42px;line-height:1.3}
+.hero nav .life-jump{background:#d8f2e8;border-color:#d8f2e8;color:#133f3e;font-weight:800}
+.hero nav .life-jump:hover{background:#effaf5}
+.bench-controls{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.presenter-nav{display:flex;gap:6px;align-items:center;margin:0 0 10px;padding:8px;border:1px solid #cddfe7;border-radius:10px;background:#edf6f7}
+.presenter-nav label{font-weight:700;font-size:12px;flex:none}
+.presenter-nav select{width:auto;min-width:0;flex:1;min-height:38px}
+.bench:not(:fullscreen):not(.lab-focus) .presenter-nav{display:none}
+#everyday{padding:0;overflow:hidden;scroll-margin-top:14px;border-color:#bdd6d9}
+.life-head{background:linear-gradient(116deg,#174a4b,#173751 70%);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:clamp(17px,3.3vw,34px)}
+.life-head h2{color:#fff;margin:2px 0 6px}
+.life-head p:not(.life-eyebrow){max-width:64ch;color:#e0eff3;font-size:clamp(13px,1.5vw,16px);line-height:1.72}
+.life-eyebrow{color:#b0efe1;font-size:12px;font-weight:800}
+.life-seal{flex:0 0 58px;width:58px;height:58px;border-radius:16px;background:#ffffff1c;border:1px solid #bde5e380;display:grid;place-items:center;color:#ffe0a7}
+.life-seal svg{width:24px;height:29px}
+.life-grid{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(0,1fr);gap:15px;padding:clamp(11px,2.6vw,25px)}
+.life-demo,.life-task{min-width:0}
+.life-demo-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.life-demo-title h3,.life-task h3{margin:0;color:#173b51;font-size:17px}
+.life-demo-title span{color:#4a6675;font-size:11px;white-space:nowrap}
+.life-modes,.life-phases{display:flex;gap:5px;margin:0 0 8px;flex-wrap:wrap}
+.life-modes button,.life-phases button,.life-play{border:1px solid #bcd3da;border-radius:8px;color:#184b58;background:#f4fafb;min-height:42px;font-weight:700;font-size:12px;padding:5px 9px}
+.life-modes button[aria-pressed=true]{background:#165957;border-color:#165957;color:white}
+.life-phases{margin:8px 0}
+.life-phases button{flex:1 1 auto}
+.life-phases button[aria-pressed=true]{background:#deefed;color:#124b46;border-color:#79b6ae}
+.life-play{background:#164f58;color:white;border-color:#164f58}
+.life-caption{min-height:55px;background:#edf6f7;border-inline-start:3px solid #2d8880;padding:8px 10px;border-radius:8px;color:#234c5a;margin:8px 0 2px;font-size:13px}
+.life-note,.life-sources{font-size:11px;color:#425c6b}
+.life-sources{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:9px clamp(11px,2.6vw,25px);border-top:1px solid #dbe9ec;background:#f5fafb}
+.life-sources a{text-decoration:underline;text-underline-offset:2px}
+.life-task{padding:12px;background:#f4f9fa;border:1px solid #dbe8ec;border-radius:12px}
+#lifeQuestions .question{background:#fff;margin-top:7px;padding:8px}
+#lifeQuestions .question.good{background:#edf9f1}
+#lifeQuestions .question.bad{background:#fff6e9}
+#lifeQuestions .field{margin-bottom:0}
+#lifeQuestions p:empty,#lifeResult:empty{display:none}
+.life-result{color:#175957;font-weight:800;margin-top:7px;font-size:13px}
+.life-answer{margin-top:9px;padding:8px 9px;border-radius:8px;border:1px solid #c5dfdc;background:#eef8f5}
+.life-answer p{margin:6px 0 0;line-height:1.7}
+.life-answer .life-safety{background:#fff5df;border-inline-start:3px solid #bd812d;padding:6px 8px;border-radius:5px;color:#503b1d}
+@media(max-width:750px){.life-grid{grid-template-columns:1fr}}
+@media(max-width:460px){.life-head{align-items:flex-start}.life-seal{flex-basis:38px;width:38px;height:38px;border-radius:10px}.life-seal svg{width:16px;height:20px}.life-phases button{font-size:11px;padding-inline:4px}.tabs button{min-height:48px;overflow-wrap:break-word}}
+@media print{.life-grid{display:block}.life-modes,.life-phases,.life-play,.life-seal{display:none}.life-answer>p{display:block}}
+
+/* Classroom edition: presentation only. */
+:root{--ink:#122d43;--muted:#455f70;--teal:#12645e;--line:#d7e6ea;--night:#10283e;--focus:#955000;--deep:#0f484a;--sea:#1a6f65;--mint:#c2f1e3;--gold:#ffe1a8;--shadow-soft:0 8px 26px #173e5210}
+body{font-family:"Noto Sans Arabic",Tahoma,Arial,sans-serif;background-color:#edf4f6;background-image:radial-gradient(ellipse at 95% 0,#dcefea 0,transparent 51%),radial-gradient(ellipse at 4% 38%,#e0e9f5 0,transparent 48%)}
+.wrap{max-width:1340px;padding-block:24px 35px}
+.hero{padding:clamp(19px,3.7vw,46px) clamp(17px,3.9vw,50px) 17px;border:1px solid #315872;border-radius:25px;background:radial-gradient(ellipse at 13% 25%,#245b68 0,transparent 60%),linear-gradient(112deg,#0e2a40 8%,#122d47 63%,#163d52);box-shadow:0 15px 36px #10334332}
+.hero::before{inset:0;z-index:0;background-image:radial-gradient(circle,#ccfff029 1px,transparent 1.5px);background-size:17px 17px;mask-image:linear-gradient(90deg,#000,transparent 83%);pointer-events:none}
+.hero-copy{max-width:59%}
+.hero h1{font-size:clamp(34px,5.7vw,68px);letter-spacing:0;line-height:1.3;margin:10px 0 5px}
+.hero h1 em{color:#a1f0dc}
+.hero-copy>p{max-width:42ch;font-size:clamp(14px,1.9vw,20px);color:#eff8fa}
+.hero-art{width:min(39%,445px);top:12px;left:clamp(10px,2.3vw,31px);opacity:1;pointer-events:none}
+.hero-facts{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0;padding:0;list-style:none}
+.hero-facts li{display:inline-flex;align-items:center;gap:5px;border:1px solid #77aab682;background:#21465c88;color:#e1f8f2;border-radius:999px;padding:3px 10px;font-size:12px}
+.hero-facts b{color:#ffdda1}
+.hero .credit{margin-top:9px;color:#cce2ea}
+.hero nav{position:relative;z-index:1;gap:6px;border-color:#b4d5db42;margin-top:20px;padding-top:11px}
+.hero nav a{border-radius:9px;font-size:12px;padding:4px 10px;transition:background .18s,border-color .18s}
+.hero nav a:not(.featured):not(.exam-jump):not(.life-jump){background:#22475a8c}
+.hero nav a:not(.featured):not(.exam-jump):not(.life-jump):hover{background:#34677a}
+.basics{gap:9px;margin-top:13px}
+.basics article{background:linear-gradient(145deg,#fff,#f6fbfc);border-color:#d0e3e8;box-shadow:var(--shadow-soft);padding:13px 12px}
+.basics h2{color:#164d56}
+.basics p{font-size:13px}
+.indexline{align-items:center;flex-wrap:wrap;margin:17px 1px 9px}
+.lab-caption{display:flex;gap:8px;align-items:center}
+.lab-caption svg{width:19px;height:19px;flex:none;color:#167568}
+.progress-shell{display:flex;align-items:center;flex-wrap:wrap;gap:8px;border:1px solid #c6dfdc;border-radius:999px;padding:4px 9px;background:#f5fcfa;color:#155c54;font-size:12px}
+.progress-shell progress{appearance:none;width:58px;height:6px;border:none;border-radius:99px;overflow:hidden;background:#d9e8e7;accent-color:#218477}
+.progress-shell progress::-webkit-progress-bar{background:#d9e8e7;border-radius:99px}
+.progress-shell progress::-webkit-progress-value{background:#218477;border-radius:99px}
+.progress-shell progress::-moz-progress-bar{background:#218477;border-radius:99px}
+.tabs{gap:6px}
+.tabs button{min-width:0;min-height:52px;border-color:#cbdfe5;background:#fbfdfe;box-shadow:0 2px 5px #153c510a;font-size:clamp(11px,1.13vw,13px);padding:6px;gap:6px}
+.tabs button:not([aria-pressed=true]):hover{border-color:#82b7b3;background:#eef8f7}
+.tabs button[aria-pressed=true]{background:#154851;border-color:#154851;box-shadow:inset 0 -3px #74d0bf,0 2px 6px #17485338}
+.tabs button span{color:#315a6b;background:#e8f1f4;font-variant-numeric:tabular-nums}
+.tabs button[aria-pressed=true] span{background:#ccf4e7;color:#174b49}
+.bench,.bottom{border-color:#c7dfe5;box-shadow:var(--shadow-soft)}
+.bench{border-radius:17px}
+.title-row h2,.bottom h2{letter-spacing:0}
+.stage-status{border-radius:10px 10px 5px 5px;background:#174553;padding-block:7px}
+.stage-status #playBadge{padding:2px 7px;border-radius:6px;background:#d9f1ec;color:#154b4a}
+.stage-status[data-run=running] #playBadge{background:#b0ecda}
+.stage-status[data-run=paused] #playBadge{background:#ffe2ac;color:#533a20}
+.stage{border-radius:12px}
+.stage:has(svg){box-shadow:0 4px 12px #24434d18}
+.scope-choices button,.stepper button,.pend-tools button,.stage-tools #fullView{min-height:42px}
+.stage-tools #fullView{border-color:#a2c6c6;color:#144b50;background:#edf8f6}
+.stage-tools #fullView:hover{background:#daf1ec}
+.pend-tools #sceneRun{background:#14655d;border-color:#14655d;color:white}
+.pend-tools #sceneRun:hover,.actions button:first-child:hover,.quiz-actions button:first-child:hover,.life-play:hover{background:#0f514a}
+.phase-notes>div{background:#fff;border-color:#c9e1de}
+.phase-notes>div:nth-child(2){background:#f5fafe;border-color:#c9dce9}
+.readout{background:#eff8f6}
+.legend .arrow-key{color:#21485f;background:#f6fafb;border-color:#cbdfe5}
+.arrow-key svg{width:22px;height:9px;flex:none}
+.bem-intro,.life-head{background:radial-gradient(ellipse at 8% 15%,#286963,transparent 60%),#163d50}
+.quiz-head .score{font-variant-numeric:tabular-nums}
+.lab-footer{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:7px 13px;color:#294e61}
+.lab-footer a{border:1px solid #bed6db;border-radius:8px;padding:5px 9px;background:#f7fcfc;text-decoration:none;color:#164f55;font-weight:700}
+.lab-footer a:hover{background:#e1f3ef}
+.bench:is(:fullscreen,.lab-focus) .observation{width:min(1170px,100%)}
+.bench:is(:fullscreen,.lab-focus) .stage svg{max-height:57dvh}
+.bench:is(:fullscreen,.lab-focus) .phase-notes{font-size:clamp(13px,1.5vw,17px)}
+@media(max-width:950px){.hero-copy{max-width:65%}.hero-art{width:35%;top:18px;left:10px}.tabs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:660px){.wrap{padding:9px 9px 20px}.hero{border-radius:17px}.hero-copy{max-width:100%}.hero-art{width:36%;left:2px;top:8px;opacity:.31}.hero nav{margin-top:13px}.hero-copy>p{max-width:37ch}.hero-facts{margin-top:9px}.hero-facts li{font-size:11px;padding-inline:8px}.basics article{padding:9px}.tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.tabs button{padding:4px;gap:4px}.lab-caption{font-size:12px}.lab-caption svg{width:15px}.progress-shell{font-size:11px}}
+@media(max-width:385px){.hero-art{display:none}.tabs button{font-size:10px}.tabs button span{width:19px}.hero nav a{font-size:11px;padding-inline:7px}.stage-status{gap:4px;padding-inline:6px}}
+@media print{.hero{border:none;box-shadow:none;background:white}.hero h1 em,.hero .hero-copy>p,.hero .credit,.hero .eyebrow{color:#172f46}.hero-facts li{color:#172f46;background:#fff;border-color:#888}.hero-facts b{color:#172f46}.lab-footer a{display:none}}
+
+</style>
+</head>
+<body>
+<a href="#lab" class="skip">انتقل إلى منصة التجارب</a>
+<div class="wrap">
+<header class="hero" id="top">
+ <div class="hero-copy">
+ <div class="eyebrow"><span class="status-dot"></span> مختبر العلوم الفيزيائية والتكنولوجيا <span class="eyeline"></span> الرابعة متوسط</div>
+ <h1>مختبر <em>التكهرب</em></h1>
+ <p>كيف يتكهرب جسم؟ ولماذا قد ينجذب جسم متعادل إلى جسم مشحون؟</p>
+ <ul class="hero-facts" aria-label="محتويات المختبر"><li><b>7</b> تجارب تفاعلية</li><li><b>3</b> دورات من الشهادة</li><li>وضعية من الحياة اليومية</li></ul>
+ <div class="credit">متوسطة الإخوة ختال <span>·</span> الأستاذ جباري نورالدين</div>
+ </div>
+ <svg class="hero-art" viewBox="0 0 450 300" aria-hidden="true" focusable="false">
+ <defs>
+  <radialGradient id="coverGlow"><stop stop-color="#39cdb8" stop-opacity=".32"/><stop offset="1" stop-color="#39cdb8" stop-opacity="0"/></radialGradient>
+  <linearGradient id="coverRail" x2="0" y2="1"><stop stop-color="#d3ecee"/><stop offset=".48" stop-color="#80b4be"/><stop offset="1" stop-color="#37677f"/></linearGradient>
+  <linearGradient id="coverGlass" x2="1" y2="0"><stop stop-color="#d9ffff" stop-opacity=".24"/><stop offset=".24" stop-color="#a6e9e6" stop-opacity=".14"/><stop offset=".78" stop-color="#b8f4ec" stop-opacity=".03"/><stop offset="1" stop-color="#b7f8f0" stop-opacity=".38"/></linearGradient>
+  <linearGradient id="coverGold" x2="0" y2="1"><stop stop-color="#fff2c7"/><stop offset=".46" stop-color="#efbe72"/><stop offset="1" stop-color="#a36c3c"/></linearGradient>
+  <linearGradient id="coverRod" x2="0" y2="1"><stop stop-color="#aec8d5"/><stop offset=".25" stop-color="#526c84"/><stop offset="1" stop-color="#1d354a"/></linearGradient>
+  <linearGradient id="coverPlane" x2="1" y2="1"><stop stop-color="#234962"/><stop offset="1" stop-color="#153348"/></linearGradient>
+  <pattern id="coverGrid" width="21" height="21" patternUnits="userSpaceOnUse"><path d="M0 0h21M0 0v21" fill="none" stroke="#91dadc" opacity=".15"/></pattern>
+ </defs>
+ <rect x="19" y="18" width="416" height="262" rx="24" fill="#0d283e" fill-opacity=".45" stroke="#79b3c8" stroke-opacity=".23"/>
+ <rect x="31" y="30" width="392" height="238" rx="17" fill="url(#coverGrid)"/>
+ <ellipse cx="260" cy="142" rx="165" ry="131" fill="url(#coverGlow)"/>
+ <path d="M34 74V47q0-14 14-14h24m341 42V47q0-14-14-14h-24M34 226v25q0 14 14 14h23m342-39v25q0 14-14 14h-24" fill="none" stroke="#b3e7e0" stroke-opacity=".45" stroke-width="1.4"/>
+ <path d="M84 216h271l37 28H50Z" fill="url(#coverPlane)" stroke="#71a4b4" stroke-opacity=".45"/>
+ <path d="M50 244h342l-7 10H57Z" fill="#102a42" stroke="#427381"/>
+ <path d="M74 239h294m-257-13h236" fill="none" stroke="#9bd2d2" stroke-opacity=".17"/>
+ <ellipse cx="266" cy="232" rx="84" ry="10" fill="#081d33" opacity=".7"/>
+ <ellipse cx="261" cy="222" rx="72" ry="14" fill="url(#coverRail)" stroke="#b4d4d6" stroke-width="1.3"/>
+ <path d="M201 204v-94q0-14 14-14h92q14 0 14 14v94q0 17-60 17t-60-17Z" fill="url(#coverGlass)" stroke="#9cdddd" stroke-width="2"/>
+ <path d="M210 112v84m102-73v71" stroke="#e5fffa" stroke-opacity=".47" stroke-width="2.3" stroke-linecap="round"/>
+ <path d="M258 78h6v75h-6Z" fill="url(#coverGold)"/>
+ <ellipse cx="261" cy="76" rx="34" ry="9" fill="url(#coverGold)" stroke="#ffebb4" stroke-width="1.4"/>
+ <path d="M257 151l-19 35 7 5 17-37m3-2 22 34-7 6-20-37" fill="url(#coverGold)" stroke="#fbd894" stroke-linejoin="round"/>
+ <path d="M257 152l-15 30m22-30 19 30" stroke="#ffebbb" stroke-width="1.2" opacity=".76"/>
+ <g transform="translate(68 92) rotate(-5)"><rect width="133" height="21" rx="9" fill="url(#coverRod)" stroke="#b4cfd8" stroke-width="1.1"/><path d="M9 4h111" stroke="#ecfbff" stroke-opacity=".55"/><ellipse cx="129" cy="10.5" rx="5" ry="9" fill="#698596" stroke="#bcd7de"/></g>
+ <path d="M110 140h71m-13-5 12 5-12 5m163 43h42m-42 0v-34" fill="none" stroke="#99dcd8" stroke-opacity=".42" stroke-dasharray="4 5" stroke-width="1.5"/>
+ <g stroke-width="1.5"><circle cx="153" cy="66" r="14" fill="#143c51" stroke="#8deadd"/><path d="M147 66h12" stroke="#a2f8ea" stroke-linecap="round"/><circle cx="344" cy="82" r="15" fill="#3c4651" stroke="#f3c982"/><path d="M338 82h12m-6-6v12" stroke="#ffe2a8" stroke-linecap="round"/></g>
+ <path d="M364 131h9m-4.5-4.5v9M109 164h9m-4.5-4.5v9m251 32h6" stroke="#89e9df" stroke-opacity=".68" stroke-linecap="round"/>
+ <circle cx="89" cy="67" r="2.6" fill="#eec984"/><circle cx="382" cy="106" r="2.6" fill="#9df2df"/><circle cx="140" cy="198" r="2" fill="#9df2df"/>
+</svg>
+ <nav aria-label="أقسام المختبر"><a class="featured" id="pendLink" href="#lab">جرّب القضيبين مع كرية الألمنيوم</a><a href="#lab">التجارب</a><a href="#basics">تعاريف سريعة</a><a href="#recap">خريطة المفاهيم</a><a class="exam-jump" href="#bem">تمارين الشهادة</a><a class="life-jump" href="#everyday">التكهرب في حياتنا</a><a href="#challenge">اختبر فهمك</a></nav>
+</header>
+<noscript><p class="notice">يلزم تفعيل JavaScript في المتصفح لتشغيل التجارب.</p></noscript>
+<section id="basics" class="basics" aria-label="تعاريف قبل التجربة">
+ <article><span class="basic-icon">±</span><div><h2>ما التكهرب؟</h2><p>التكهرب هو اكتساب جسمٍ شحنةً كهربائيةً صافية. يصبح الجسم المتعادل سالبًا إذا اكتسب إلكترونات، وموجبًا إذا فقد بعضها. إعادة توزيع الشحنات وحدها لا تغيّر صافي الشحنة.</p></div></article>
+ <article><span class="basic-icon ebonite-icon" aria-hidden="true"></span><div><h2>ما الإيبونيت؟</h2><p>الإيبونيت مطّاط صلب داكن يُصنَع بمعالجة المطّاط بالكبريت، وهو عازل كهربائي. ليس خشب الأبنوس رغم تشابه الاسمين.</p></div></article>
+ <article><span class="basic-icon glass-icon" aria-hidden="true"></span><div><h2>الإيبونيت والزجاج</h2><p>في أمثلة المحاكاة، يكتسب الإيبونيت إلكترونات عند دلكه بالصوف فيصبح سالبًا، ويفقد الزجاج إلكترونات عند دلكه بالحرير فيصبح موجبًا. كلاهما عازل.</p><button id="glassStart" type="button">جرّب قضيب الزجاج</button></div></article>
+</section>
+<main id="lab">
+ <div class="indexline"><span class="lab-caption"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 18h18M6 18V6h12m-7 0v3l3 5m0 0 3-5m-7 5h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>منصّة التجارب</span><div class="progress-shell"><progress id="progressMeter" max="7" value="0" aria-label="تقدّم إنجاز التجارب"></progress><span id="progress" aria-live="polite">0 من 7 تجارب مكتملة</span></div></div>
+ <div id="tabs" class="tabs" role="group" aria-label="اختر التجربة"></div>
+ <section class="bench" id="bench" aria-labelledby="expTitle">
+  <div class="observation">
+   <div class="presenter-nav"><label for="presenterExperiment">انتقل إلى تجربة</label><select id="presenterExperiment"></select></div>
+   <div class="title-row"><div><div id="expTag" class="kicker"></div><h2 id="expTitle"></h2></div><div class="stage-tools"><div class="view-switch" role="group" aria-label="مستوى الملاحظة"><button id="macro" type="button" aria-pressed="true">طاولة التجربة</button><button id="overlay" type="button" aria-pressed="false">الشحنات فوق المشهد</button><button id="micro" type="button" aria-pressed="false">نموذج الشحنات</button></div><button id="fullView" type="button" aria-pressed="false">عرض للقسم</button></div></div>
+   <div id="stageStatus" class="stage-status" data-run="ready"><span><i class="status-dot" aria-hidden="true"></i><span id="viewBadge">طاولة التجربة</span></span><span id="playBadge">جاهز للعرض</span></div><p class="scene-key" id="sceneKey"></p>
+   <div class="scope-choices" id="scopeChoices" role="group" aria-label="اختيار الحالة" hidden></div><div class="stage" id="scene"></div>
+   <div id="pendTools" class="pend-tools"><button type="button" id="sceneRun">شغّل المشهد</button><button type="button" id="slowPlay" aria-pressed="false">عرض بطيء</button><button type="button" id="closeView" aria-pressed="false">لقطة مقرّبة</button><button type="button" id="nearOnly" aria-pressed="false" hidden>جرّب دون لمس</button></div>
+   <div class="playbar" id="playbar"><div class="playbar-line"><label for="scrub">تقدّم المشهد</label><output id="framePhase" for="scrub"></output></div><input id="scrub" type="range" min="0" max="2800" value="0" step="1" dir="ltr"></div>
+   <div class="stepper" aria-label="التنقّل في المشهد"><button type="button" id="prevStep">السابق</button><p id="phase" class="phase" aria-live="polite"></p><button type="button" id="nextStep">التالي</button></div>
+   <div id="legend" class="legend"><span class="chip minus"><bdi dir="ltr">−</bdi> شحنة سالبة</span><span class="chip plus"><bdi dir="ltr">+</bdi> شحنة موجبة</span><span class="chip neutral">0 صافي الشحنة يساوي صفرًا</span><span class="chip arrow-key"><svg viewBox="0 0 25 10" aria-hidden="true" focusable="false" dir="ltr"><path d="M1 5h22m-5-3 5 3-5 3" fill="none" stroke="#176b90" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>انتقال الإلكترونات</span><span class="chip arrow-key"><svg viewBox="0 0 25 10" aria-hidden="true" focusable="false" dir="ltr"><path d="M1 5h16m1-3 5 3-5 3" fill="none" stroke="#176b90" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 2"/></svg>إعادة توزّع</span><span class="chip arrow-key"><svg viewBox="0 0 25 10" aria-hidden="true" focusable="false" dir="ltr"><path d="M1 5h22m-5-3 5 3-5 3" fill="none" stroke="#1b6e62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>قوّة كهربائية</span></div>
+   <div id="motionKey" class="motion-key" hidden></div>
+   <div id="readout" class="readout" aria-live="polite"></div>
+   <details class="comparison" id="compareBox" hidden><summary id="compareTitle">قارن بين الحالتين</summary><div id="compareGrid" class="comparison-grid"></div></details>
+  </div>
+  <div class="controls">
+   <p class="kicker">دفتر التجربة</p><h3 id="prompt"></h3>
+   <div id="setup"></div>
+   <div class="predict"><label for="prediction">ما توقّعك؟ <small>اختياري</small></label><select id="prediction"></select></div>
+   <div class="actions"><button type="button" id="run">نفِّذ التجربة</button><button type="button" id="reset">إعادة الضبط</button></div>
+   <p class="action-tip" id="actionTip">تتوقّف التجربة عند كل مرحلة. اضغط «التالي» أسفل المشهد للمتابعة.</p>
+   <div id="timeline" class="timeline" role="group" aria-label="مراحل التجربة"></div>
+   <p id="feedback" class="feedback" role="status"></p>
+   <details id="explain"><summary>التفسير العلمي</summary><p id="reason"></p></details>
+  </div>
+ </section>
+</main>
+<section id="recap" class="bottom">
+ <p class="kicker">خريطة المفاهيم</p><h2>ما الذي يتغيّر في كلّ طريقة؟</h2>
+ <div class="charge-primer"><p><b>متعادل</b> فيه شحنات موجبة وسالبة متساوية في المقدار. صافي الشحنة صفر.</p><p><b>موجب <bdi dir="ltr">+</bdi></b> فقد بعض الإلكترونات.</p><p><b>سالب <bdi dir="ltr">−</bdi></b> اكتسب إلكترونات.</p></div>
+ <div class="concepts">
+ <article><b>1</b><h3>بالدلك</h3><p>في المثالين المعروضين تنتقل إلكترونات بين جسمين متعادلين، فيكتسبان شحنتين متساويتين في المقدار ومتعاكستين في الإشارة.</p></article>
+ <article><b>2</b><h3>اللمس بجسم مكهرب</h3><p>تنتقل بعض الإلكترونات من الإيبونيت السالب إلى كرية الألمنيوم، أو من الكرية إلى طرف الزجاج الموجب. في كلّ حالة، تتنافر الكرية بعد أن تحمل شحنةً من نوع شحنة القضيب.</p></article>
+ <article><b>3</b><h3>التأثير بجسم مكهرب</h3><p>التقريب وحده يعيد توزيع الشحنات. ولإبقاء الكرة مشحونة في هذه التجربة، نصِلها بالأرض ثم نفصل الوصلة قبل إبعاد القضيب.</p></article>
+ </div>
+ <details class="resource"><summary>حدود النموذج والمراجع العلمية</summary>
+ <p>طاولة التجربة محاكاة مرسومة وليست تسجيلًا حقيقيًا. زوايا الميل وسرعة الحركة وزمن التلامس في المشهد تقريبية للتعليم وليست قياسات. العرض البطيء يمدّد زمن الحركة لتسهيل الملاحظة. رسم الشحنات، بما في ذلك عند وضعه فوق المشهد، نموذج تفسيري. الرموز وعددها وزمن الحركة معروضة للتوضيح وليست قياسًا. الأسهم الزرقاء المتّصلة توضّح مسار الإلكترونات، والمتقطّعة توضّح إعادة توزّعها. الأسهم الخضراء تمثّل القوّة الكهربائية. عدد العلامات داخل الأجسام ليس قياسًا لعدد الإلكترونات. أمّا الأعداد في تجربة الكرتين فتُمثِّل وحدات تعليمية فقط. مقياس التأثير الكهربائي نسبي ويخصّ النموذج النقطي في تجربة الشحنتين.</p>
+ <ul><li><a href="https://www.dictionnaire-academie.fr/article/A9E0036" target="_blank" rel="noopener">الأكاديمية الفرنسية — تعريف الإيبونيت</a></li><li><a href="https://instructional-resources.physics.uiowa.edu/5a2020-electrostatics-pith-balls-balloons" target="_blank" rel="noopener">جامعة آيوا — عروض التكهرب بقضيب الإيبونيت والكرات المعلّقة</a></li><li><a href="https://www.dzpen.com/content/1650719997" target="_blank" rel="noopener">قلم الجزائر — التكهرب في السنة الرابعة متوسط</a></li><li><a href="https://openstax.org/books/physics/pages/18-1-electrical-charges-conservation-of-charge-and-transfer-of-charge" target="_blank" rel="noopener"><bdi dir="ltr">OpenStax</bdi> — الشحنة الكهربائية وانتقالها</a></li><li><a href="https://openstax.org/books/university-physics-volume-2/pages/5-2-conductors-insulators-and-charging-by-induction" target="_blank" rel="noopener"><bdi dir="ltr">OpenStax</bdi> — النواقل والعوازل والتكهرب بالتأثير</a></li><li><a href="https://pirl.mit.edu/demo/D_4.html" target="_blank" rel="noopener">معهد MIT — تجربة الكشّاف وتفريغه باليد</a></li><li><a href="https://openstax.org/books/physics/pages/18-2-coulombs-law" target="_blank" rel="noopener"><bdi dir="ltr">OpenStax</bdi> — الأفعال المتبادلة بين الشحنات</a></li></ul>
+ </details>
+</section>
+<section id="bem" class="bottom bem" aria-labelledby="bemTitle">
+ <div class="bem-intro">
+  <div><p class="bem-kicker">من طاولة التجربة إلى ورقة الامتحان</p><h2 id="bemTitle">تدرّب على تمارين الشهادة</h2><p>شاهد الوضعية، أجب، ثم قارِن تعليلك بالتصحيح. أُعيدت صياغة الأسئلة وتبسيط رسومها للتدريب، وأُرفق كل تمرين بموضوعه الأصلي.</p></div>
+  <span class="bem-stamp"><b>3</b> دورات موثّقة</span>
+ </div>
+ <div class="bem-tabs" id="bemTabs" role="group" aria-label="دورات شهادة التعليم المتوسط"></div>
+ <div class="bem-content">
+  <div class="bem-watch">
+   <p id="bemMeta" class="kicker"></p><h3 id="bemSceneTitle"></h3><p id="bemContext"></p>
+   <div id="bemVariants" class="bem-variants" role="group" aria-label="وضعيات التمرين"></div>
+   <div class="stage bem-stage" id="bemStage"></div>
+   <div class="bem-transport"><button id="bemPlay" type="button">شغّل المشهد</button><button id="bemStep" type="button">المرحلة التالية</button><button id="bemLabels" type="button" aria-pressed="false">أظهر الشحنات</button></div>
+   <div class="bem-phase"><output id="bemPhase" for="bemScrub"></output><input id="bemScrub" type="range" min="0" max="1000" step="1" value="0" dir="ltr" aria-label="تقدّم مشهد تمرين الشهادة"></div>
+   <div class="bem-links"><a id="bemSource" target="_blank" rel="noopener">الموضوع الأصلي ↗</a><a id="bemSolution" target="_blank" rel="noopener">التصحيح المرجعي ↗</a></div>
+  </div>
+  <div class="bem-work"><p class="kicker">أجب وعلّل</p><h3>أسئلة الوضعية</h3><div id="bemQuestions"></div><label class="bem-writing" for="bemWritten">اكتب تعليلك في جملة أو جملتين <small>اختياري · قارنه بالجواب النموذجي بعد التصحيح</small></label><textarea id="bemWritten" rows="2" placeholder="ألاحظ أن… وأفسّر ذلك بأن…"></textarea><div class="quiz-actions"><button id="bemGrade" type="button">صحِّح محاولتي</button><button id="bemReset" type="button">أعد المحاولة</button></div><p id="bemResult" role="status"></p><details id="bemModel"><summary>اطّلع على صياغة جواب نموذجي</summary><p id="bemModelText"></p></details></div>
+ </div>
+</section>
+
+<section id="everyday" class="bottom everyday" aria-labelledby="lifeTitle">
+ <header class="life-head">
+  <div><p class="life-eyebrow">طبّق ما تعلّمت</p><h2 id="lifeTitle" tabindex="-1">لماذا وخزني مقبض الباب؟</h2><p>في يوم جافّ، جرّ أمين قدميه فوق السجّاد. وعندما قرّب إصبعه من المقبض المعدني شعر بوخزة خفيفة. كيف تفسّر ما حدث؟ وكيف تقلّل تكراره؟</p></div>
+  <div class="life-seal" aria-hidden="true"><svg viewBox="0 0 28 32" fill="none"><path d="M16 2 3 18h10l-1 12 13-17H15l1-11Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+ </header>
+ <div class="life-grid">
+  <div class="life-demo">
+   <div class="life-demo-title"><h3>جرّب طريقتين للمشي</h3><span>نموذج نوعي</span></div>
+   <div id="lifeModes" class="life-modes" role="group" aria-label="طريقة المشي"><button id="lifeDrag" type="button" aria-pressed="true">جرّ القدمين</button><button id="lifeLift" type="button" aria-pressed="false">رفع القدمين</button></div>
+   <div id="lifeStage" class="stage life-stage"></div>
+   <div id="lifePhases" class="life-phases" role="group" aria-label="مراحل الوضعية"></div>
+   <button id="lifeRun" type="button" class="life-play">شغّل المشهد</button>
+   <p id="lifeCaption" class="life-caption" role="status"></p>
+   <p class="life-note">تمثّل الرموز مثالًا لشحنة سالبة، ولا تعبّر عن قياس حقيقي. وقد تختلف إشارة الشحنة باختلاف المواد.</p>
+  </div>
+  <div class="life-task">
+   <p class="kicker">من الملاحظة إلى التفسير</p><h3>فسّر واقترح حلًا</h3>
+   <div id="lifeQuestions"></div>
+   <div class="quiz-actions"><button id="lifeGrade" type="button">صحّح إجاباتي</button><button id="lifeReset" type="button">أعد المحاولة</button></div>
+   <p id="lifeResult" class="life-result" role="status"></p>
+   <details id="lifeAnswer" class="life-answer"><summary>الجواب النموذجي</summary>
+    <p>تراكمت شحنة كهربائية ساكنة على جسم أمين نتيجة الاحتكاك بالسجّاد. عند تقريب إصبعه من المقبض المعدني حدث تفريغ سريع للشحنة، فشعر بالوخزة.</p>
+    <p>لتقليلها، يرفع قدميه بدل جرّهما فوق السجّاد، ويرطّب هواء الغرفة باعتدال إن كان جافًّا جدًا. ويمكنه اختيار ملابس قطنية إذا تكرّر التصاق بعض الأقمشة بجسمه.</p>
+    <p class="life-safety"><strong>في محطة الوقود</strong> لا تعد إلى السيارة أثناء التعبئة، فقد يولّد احتكاك الملابس بالمقعد شحنةً تُفرَّغ على هيئة شرارة قرب أبخرة الوقود.</p>
+   </details>
+  </div>
+ </div>
+ <p class="life-sources">المراجع <a href="https://www.mcgill.ca/oss/article/environment-general-science/how-can-i-stop-getting-static-shocks" target="_blank" rel="noopener">جامعة ماكغيل</a><span>·</span><a href="https://testing.pei.org/static" target="_blank" rel="noopener">معهد معدات البترول</a></p>
+</section>
+
+<section id="challenge" class="bottom" aria-labelledby="qtitle">
+ <div class="quiz-head"><div><p class="kicker">اختبر فهمك</p><h2 id="qtitle">من الملاحظة إلى التفسير</h2></div><span id="score" class="score" aria-live="polite">7 أسئلة</span></div>
+ <div id="questions"></div>
+ <div class="quiz-actions"><button id="grade" type="button">صحِّح إجاباتي</button><button id="clear" type="button">أعد التقويم</button></div>
+</section>
+</div>
+<footer class="lab-footer"><span>مختبر التكهرب · متوسطة الإخوة ختال · الأستاذ جباري نورالدين</span><a href="#top">العودة إلى الأعلى ↑</a></footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), num=n=>String(n);
+const signs={1:'+',0:'0','-1':'−'}, names={1:'موجب',0:'متعادل','-1':'سالب'};
+const data=[
+ {id:'rub',tab:'الدَّلك',title:'التكهرب بالدَّلك',prompt:'كيف تتغيّر شحنة القضيب بعد دلكه؟',steps:['قبل الدلك','أثناء الدلك','بعد الفصل'],
+  choices:['شحنة موجبة','شحنة سالبة','يبقى متعادلًا'],
+  why:'في المثالين، ينتقل جزء من الإلكترونات بين السطحين. الجسم الذي يفقد إلكترونات يصبح موجب الشحنة، والذي يكتسبها يصبح سالب الشحنة. لا تنتقل البروتونات في هذا النموذج، وتبقى الشحنة الكلّية محفوظة.'},
+ {id:'touch',tab:'اللمس بجسم مكهرب',title:'التكهرب باللمس بجسم مكهرب',prompt:'ما نوع شحنة الكرة ب بعد ملامسة الكرة أ؟',steps:['قبل اللمس','أثناء اللمس','بعد الفصل'],
+  choices:['موجبة','سالبة','متعادلة'],
+  why:'تنتقل الإلكترونات بين الكرتين عبر التماس، من الكرة السالبة إلى المتعادلة في الحالة السالبة، ومن المتعادلة نحو الموجبة في الحالة الموجبة. في النموذج كرتان ناقلتان متماثلتان، معزولتان عن الأرض، وتُفصلان بصورة متماثلة. لا تتغيّر الشحنة الكلّية.'},
+ {id:'ind',tab:'التأثير بجسم مكهرب',title:'التكهرب بالتأثير بجسم مكهرب',prompt:'ماذا يبقى على الكرة بعد إبعاد القضيب؟',steps:['قبل التقريب','تقريب القضيب دون لمس','وصل الكرة بالأرض','فصل وصلة الأرض أولًا','إبعاد القضيب'],
+  choices:['شحنة موجبة','شحنة سالبة','تبقى متعادلة'],
+  why:'في ناقل معزول، يغيّر القضيب القريب توزيع الإلكترونات، ولا يغيّر صافي شحنة الكرة. عند وصلها بالأرض قد تنتقل إلكترونات بين الأرض والكرة. نفصل الوصلة قبل إبعاد القضيب فتبقى للكرة شحنة معاكسة لشحنته.'},
+ {id:'force',tab:'الأفعال المتبادلة',title:'التجاذب والتنافر بين شحنتين',prompt:'ماذا يحدث بين الشحنتين المختارتين؟',steps:['قبل الاختبار','اتجاه القوتين'],
+  choices:['تجاذب','تنافر'],
+  why:'الشحنتان من النوع نفسه تتنافران، والمختلفتان تتجاذبان. يؤثر كل جسم في الآخر بقوة على المستقيم الواصل بينهما. القوتان متساويتان في الشدة ومتعاكستان في الاتجاه وتؤثران في جسمين مختلفين. تثبيت الجسمين في الرسم يسمح بمقارنة القوى من دون الخلط بينها وبين الحركة.'},
+ {id:'paper',tab:'جسم متعادل',title:'لماذا تنجذب قصاصات الورق؟',prompt:'هل يمكن لقضيب مشحون جذب ورق متعادل من دون لمسه؟',steps:['قبل التقريب','تقريب القضيب','إبعاده من دون لمس'],
+  choices:['نعم، ينجذب ويبقى متعادلًا','لا، لأن الورق متعادل','لا بدّ من لمس الورق أولًا'],
+  why:'في الورق العازل لا تتحرك الإلكترونات بحرّية عبر القصاصة كما في المعدن. يحدث استقطاب موضعي صغير، فتكون الشحنات المخالفة أقرب إلى القضيب، ويغلب أثر الجذب على التنافر. لذلك يمكن أن يحدث تجاذب من دون انتقال إلكترونات بين القضيب والورق.'},
+ {id:'scope',tab:'الكشّاف الكهربائي',title:'الكشّاف الكهربائي ذو الورقتين',prompt:'ماذا يحدث للورقتين بعد إبعاد القضيب؟',steps:['البداية','القضيب قريب','إبعاد القضيب'],
+  choices:['تبقيان منفرجتين','تعودان إلى وضعهما الأول','لا تتحركان عند تقريب القضيب'],
+  why:'القرص والساق والورقتان أجزاء متصلة كهربائيًا. عندما يحمل الفرعان السفليان شحنة من النوع نفسه تتنافر الورقتان. التقريب فقط يستقطب الكشّاف، لذلك يزول الانفراج بعد الإبعاد. في وضع اللمس يستقبل الكشّاف أو يفقد إلكترونات، فيمكن أن يبقى مشحونًا بعد الإبعاد. الانفراج وحده لا يحدّد نوع الشحنة.'},
+ {id:'materials',tab:'النواقل والعوازل',title:'النواقل والعوازل الكهربائية',prompt:'هل يبقى انفراج الورقتين بعد إبعاد القضيب؟',steps:['كشّاف متعادل وطرف العيّنة يلامس القرص','ملامسة الطرف البعيد بجسم مكهرب','إبعاد الجسم وملاحظة الورقتين'],
+ choices:['نعم، يبقى الانفراج','لا، لا يظهر انفراج مستمر'],
+ why:'في الألمنيوم يمكن للإلكترونات الحركة عبر العيّنة حتى تصل إلى الكشّاف. في البلاستيك لا تنتقل بحرّية على امتداد العيّنة. نقارن بقاء الانفراج بعد إبعاد القضيب حتى لا نخلط بين انتقال الشحنة والتأثير من بعيد.'}
+];
+const state={exp:0,step:0,view:'macro',rub:'eb',source:-1,ground:true,a:-1,b:1,distance:2,scope:'neg',sample:'metal',prediction:'',furthest:0,touchMode:'pendulum',slow:false,nearOnly:false,closeView:false,groundOrder:'lead'};
+const key='electricLabKhettalV1';
+let seen=new Set();
+try{const prev=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(prev))seen=new Set(prev.filter(id=>data.some(e=>e.id===id)));}catch{}
+const exp=()=>data[state.exp];
+const showMicro=()=>state.view==='micro';
+function answer(i=state.exp,s=state){
+ switch(i){case 0:return s.rub==='eb'?1:0;case 1:return s.touchMode==='pendulum'?(s.nearOnly?1:0):s.source>0?0:1;case 2:return s.ground&&s.groundOrder==='lead'?(s.source<0?0:1):2;case 3:return s.a===s.b?1:0;case 4:return 0;case 5:return s.scope==='near'||s.scope==='finger'?1:0;case 6:return s.sample==='metal'?0:1;}
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);}
+function selectField(label,id,entries,value){return '<div class="field"><label for="'+id+'">'+label+'</label><select id="'+id+'">'+entries.map(([v,t])=>'<option value="'+v+'"'+(String(v)===String(value)?' selected':'')+'>'+t+'</option>').join('')+'</select></div>';}
+const signOptions=[[-1,'سالبة ⁦(−)⁩'],[1,'موجبة ⁦(+)⁩']];
+const rodOptions=[[-1,'إيبونيت مدلوك بالصوف · سالب (−)'],[1,'زجاج مدلوك بالحرير · موجب (+)']];
+const rodName=s=>s<0?'قضيب الإيبونيت':'قضيب الزجاج';
+const rodMaterial=s=>s<0?'ebony':'glass';
+const rodState=s=>s<0?'سالب':'موجب';
+const rodPrep=s=>s<0?'دُلِكَ الإيبونيت بالصوف':'دُلِكَ الزجاج بالحرير';
+const pendSign=()=>state.source;
+function setup(){
+ let str='';
+ if(state.exp===0)str=selectField('زوج المواد','rub',[['eb','إيبونيت وصوف'],['glass','زجاج وحرير']],state.rub);
+ if(state.exp===1)str=selectField('اختر المشهد','touchMode',[['pendulum','قضيب مكهرب وكرية ألمنيوم معلّقة'],['spheres','كرتان معدنيتان متماثلتان']],state.touchMode);
+ if(state.exp===1&&state.touchMode==='spheres')str+=selectField('الشحنة الابتدائية للكرة أ','source',signOptions,state.source);
+ if(isPend()||[2,4,6].includes(state.exp))str+=selectField('اختر القضيب المكهرب','source',rodOptions,state.source);
+ if(state.exp===2)str+=selectField('ترتيب خطوات التجربة','ground',[['no','تقريب فقط، دون تأريض'],['yes','نفصل الوصلة أولًا، ثم نبعد القضيب'],['early','نبعد القضيب أولًا، ثم نفصل الوصلة']],state.ground?(state.groundOrder==='lead'?'yes':'early'):'no');
+ if(state.exp===3)str='<div class="split">'+selectField('شحنة أ','a',signOptions,state.a)+selectField('شحنة ب','b',signOptions,state.b)+'</div><div class="field"><label for="distance">المسافة بين الشحنتين <output id="distText" for="distance"></output></label><input id="distance" type="range" min="1" max="4" step="1" value="'+state.distance+'" dir="ltr"><small>المسافة بوحدات نموذجية. جرّب مضاعفتها.</small></div>';
+ if(state.exp===5){
+  str+=selectField('حالة الكشّاف','scope',scopeModes,state.scope);
+  if(!scopeContact())str+=selectField(state.scope==='finger'?'شحنة الكشّاف قبل التفريغ':'اختر القضيب المقرَّب','source',state.scope==='finger'?signOptions:rodOptions,state.source);
+ }
+ if(state.exp===6)str+=selectField('المادّة بين القضيب والكشّاف','sample',conductorKinds,state.sample);
+ $('setup').innerHTML=str;
+ const mode=$('touchMode');
+ if(mode)mode.addEventListener('change',()=>{state.touchMode=mode.value;updateExperimentCopy();setup();reset();$('touchMode').focus();});
+ for(const id of ['rub','source','ground','a','b','scope','sample']){
+  const e=$(id);if(e)e.addEventListener('change',()=>{
+   if(id==='ground')setGround(e.value);
+   else if(id==='scope')setScope(e.value);
+   else state[id]=['source','a','b'].includes(id)?Number(e.value):e.value;
+   if(id==='scope'){updateExperimentCopy();setup();$('scope').focus();}
+   else if(id==='source'&&isPend())updateExperimentCopy();
+   reset(false);renderComparison();setTimeline();render();
+  });
+ }
+ if($('distance')){
+  const e=$('distance');e.addEventListener('input',()=>{state.distance=Number(e.value);render();});
+ }
+}
+function setGround(v){state.ground=v!=='no';state.groundOrder=v==='early'?'rod':'lead';}
+function setProgress(){$('progress').textContent=num(seen.size)+' من '+data.length+' تجارب مكتملة';$('progressMeter').max=data.length;$('progressMeter').value=seen.size;}
+function finish(){
+ seen.add(exp().id);setProgress();try{localStorage.setItem(key,JSON.stringify([...seen]));}catch{}
+ const f=$('feedback');
+ if(state.prediction===''){f.className='feedback';f.textContent='قارن النتيجة بتوقّعك أو غيّر أحد الشروط وأعد التجربة.';return;}
+ const good=Number(state.prediction)===answer();
+ f.className='feedback '+(good?'good':'bad');
+ f.textContent=good?'توقّع صحيح. هل تستطيع تفسيره؟':'النتيجة تختلف عن توقّعك. راجع الملاحظة ثم افتح التفسير العلمي.';
+}
+function reset(draw=true){
+ pendStop();state.slow=false;
+ state.step=0;state.furthest=0;state.prediction='';$('prediction').value='';$('explain').open=false;
+ $('feedback').className='feedback';$('feedback').textContent='يمكنك التنفيذ مباشرة أو تسجيل توقّعك أولًا.';
+ if(draw){setTimeline();render();}
+}
+function phaseNames(){
+ if(isPend())return state.nearOnly?['الكرية متعادلة','انجذاب قبل اللمس','توقّف القضيب دون تماس','إبعاد القضيب']:['الكرية متعادلة','انجذاب قبل اللمس','تلامس وانتقال إلكترونات','تنافر بعد التلامس'];
+ if(state.exp===2&&state.ground&&state.groundOrder==='rod')return ['قبل التقريب','تقريب القضيب دون لمس','وصل الكرة بالأرض','إبعاد القضيب قبل فصل الوصلة','فصل الوصلة بعد الإبعاد'];
+ if(state.exp===2&&!state.ground)return ['قبل التقريب','تقريب القضيب دون لمس','إبعاده دون تأريض'];
+ if(state.exp===5)return scopeSteps();
+ return exp().steps;
+}
+function limit(){return phaseNames().length-1;}
+function showStep(n){
+ pendStop();state.prediction=$('prediction').value;
+ state.step=n;state.furthest=Math.max(state.furthest,n);
+ if(n===limit())finish();
+ else {$('feedback').className='feedback';$('feedback').textContent=n>0?'راقب ما تغيّر، ثم اضغط «التالي» أسفل المشهد.':'يمكنك التنفيذ مباشرة أو تسجيل توقّعك أولًا.';}
+ setTimeline();render();
+}
+function syncTimeline(){
+ $('phase').textContent='المرحلة '+num(state.step+1)+' من '+num(phaseNames().length)+' · '+phaseNames()[state.step];
+ $('timeline').querySelectorAll('button').forEach((e,i)=>{e.disabled=i>state.furthest;e.setAttribute('aria-current',i===state.step?'step':'false');});
+}
+function setTimeline(){
+ const steps=phaseNames(), stamp=steps.join('|');
+ if($('timeline').dataset.steps!==stamp){
+  $('timeline').dataset.steps=stamp;
+  $('timeline').innerHTML=steps.map((label,i)=>'<button type="button" data-step="'+i+'" title="'+label+'" aria-label="المرحلة '+num(i+1)+' — '+label+'">'+num(i+1)+'</button>').join('');
+  $('timeline').querySelectorAll('button').forEach((e,i)=>e.onclick=()=>{showStep(i);});
+ }
+ syncTimeline();
+}
+function run(){pendPlay();}
+$('prevStep').onclick=()=>{if(state.step>0)showStep(state.step-1);};
+$('nextStep').onclick=()=>{if(state.step<limit())showStep(state.step+1);};
+$('prediction').addEventListener('change',()=>{
+ if(state.step>0){state.prediction=$('prediction').value;if(state.step===limit()&&!motion.active&&(!motion.paused||motion.clock>=sceneDuration()))finish();}
+});
+function choose(i){
+ pendStop();state.closeView=false;state.exp=i;state.source=-1;state.ground=false;state.groundOrder='lead';state.scope='neg';state.sample='metal';state.distance=2;state.a=-1;state.b=1;
+ $('tabs').querySelectorAll('button').forEach((b,k)=>b.setAttribute('aria-pressed',String(k===i)));
+ $('expTag').textContent='التجربة '+num(i+1)+' من '+data.length;
+ $('presenterExperiment').value=String(i);
+ updateExperimentCopy();
+ $('compareBox').open=false;renderComparison();setup();reset();
+}
+function updateExperimentCopy(){
+ const e=state.exp===5&&state.scope==='finger'?{...exp(),prompt:'ماذا يحدث للورقتين بعد لمس القرص بالإصبع ثم رفعه؟',why:'يُبعَد القضيب أولًا. عند لمس القرص بإصبع شخص متصل بالأرض، تنتقل إلكترونات بين الأرض والكشّاف عبر الجسم حتى يقترب الكشّاف من التعادل وتزول حالة الانفراج.'}:isPend()&&state.nearOnly?{title:'التأثير بجسم مكهرب دون لمس',prompt:'هل تبقى كرية الألمنيوم مشحونة بعد إبعاد القضيب دون تماس؟',why:'القضيب لا يلامس الكرية، والكرية معزولة عن الأرض. يحدث استقطاب عند التقريب، لكن لا تنتقل إلكترونات بين الجسمين. بعد الإبعاد تزول إعادة التوزيع وتبقى الكرية متعادلة.',choices:['نعم، تصبح سالبة','لا، تبقى متعادلة','نعم، تصبح موجبة']}:isPend()?{title:'اللمس بجسم مكهرب',prompt:'ماذا تفعل كرية الألمنيوم بعد ملامسة '+rodName(pendSign())+'؟',why:pendWhy(),choices:['تبتعد عنه وتكتسب شحنةً من نوع شحنته','تبقى ملتصقة به','تبتعد عنه وتكتسب شحنةً مخالفةً لشحنته']}:exp();
+ $('expTitle').textContent=e.title;$('prompt').textContent=e.prompt;$('reason').textContent=e.why;
+ $('prediction').innerHTML='<option value="">لم أحدّد توقّعًا</option>'+e.choices.map((t,k)=>'<option value="'+k+'">'+t+'</option>').join('');
+ $('actionTip').textContent='شغّل المشهد كاملًا، أو حرّك شريط التقدّم، أو انتقل مرحلةً مرحلةً بالزرّين «السابق» و«التالي».';
+}
+const keys=[
+ 'راقب القضيب وقطعة القماش. السهم الأزرق يبيّن اتجاه انتقال الإلكترونات.',
+ 'الكرة أ على اليسار، والكرة ب على اليمين. السهم الأزرق يبيّن اتجاه انتقال الإلكترونات.',
+ 'القضيب لا يلمس الكرة. شغّل عرض «نموذج الشحنات» لترى كيف تتوزّع داخلها.',
+ 'السهمان الأخضران يمثّلان قوتين، كل قوة تؤثر في جسم مختلف. لا يمثّلان حركة الإلكترونات.',
+ 'راقب القصاصات قبل اللمس. السهم الأخضر يبيّن اتجاه انجذاب الورق.',
+ 'راقب الورقتين داخل الكشّاف، ثم قارن وضعهما بعد إبعاد القضيب.'
+];
+const studioKeys=[
+ 'راقب احتكاك القضيب بقطعة القماش، ثم انتقل إلى «نموذج الشحنات» لتفسير ما حدث.',
+ 'راقب نقطة تماس الكرتين. أظهر الشحنات لتتبّع اتجاه انتقال الإلكترونات.',
+ 'لاحظ أن طرف القضيب لا يلمس الكرة، حتى عند توصيلها بالأرض.',
+ 'راقب ميل الكرتين المعلّقتين في العرض النوعي. لقراءة اتجاه القوتين ومقارنة شدّتهما، افتح «نموذج الشحنات».',
+ 'راقب حركة قصاصات الورق عند اقتراب القضيب وعند إبعاده.',
+ 'اختر حالة الكشّاف، ثم راقب الورقتين قبل التلامس أو التقريب وبعده.',
+ 'جرّب الألمنيوم ثم البلاستيك، وراقب الورقتين بعد إبعاد القضيب.'
+];
+const descriptions=[
+ ['هل انتقلت إلكترونات بين الجسمين؟','يحدث الانتقال عند احتكاك السطحين فقط.'],
+ ['هل انتقلت إلكترونات بين الجسمين؟','يحدث الانتقال عندما تتلامس الكرتان.'],
+ ['هل تعبر الإلكترونات الفراغ بين القضيب والكرة؟','لا. تتحرّك داخل الكرة، أو بينها وبين الأرض عند توصيل الوصلة.'],
+ ['كيف نقرأ السهمين؟','يشير كل سهم إلى اتجاه القوة المؤثرة في الجسم الموجود تحته.'],
+ ['هل اكتسب الورق إلكترونات من القضيب؟','لا. تتحرّك الشحنات قليلًا داخل مادّة الورق، وتبقى القصاصة متعادلة.'],
+ ['هل الانفراج دليل على أن الكشّاف أصبح مشحونًا؟','ليس دائمًا. راقب هل يبقى الانفراج بعد إبعاد القضيب.']
+];
+const comparison={
+ 2:['قارن ترتيب الخطوات والنتيجة النهائية',['من دون تأريض','لا تدخل إلكترونات إلى الكرة ولا تخرج منها. النتيجة: متعادلة.','جرّب هذه الحالة','no'],['فصل الوصلة أولًا','تبقى الشحنة التي اكتسبتها الكرة بالتأثير. النتيجة: شحنة مخالفة للقضيب.','جرّب هذه الحالة','yes'],['إبعاد القضيب أولًا','تتبادل الكرة إلكترونات مع الأرض وهي ما تزال موصولة بها. النتيجة: متعادلة.','جرّب هذه الحالة','early']],
+ 5:['قارن الحالات الأربع',['لمس بقضيب سالب','يكتسب الكشّاف إلكترونات ويبقى سالبًا بعد إبعاد القضيب.','جرّب هذه الحالة','neg'],['لمس بقضيب موجب','يفقد الكشّاف إلكترونات ويبقى موجبًا بعد إبعاد القضيب.','جرّب هذه الحالة','pos'],['تقريب دون لمس','تنفرج الورقتان مؤقتًا والكشّاف يبقى متعادلًا.','جرّب هذه الحالة','near'],['تفريغ بلمس الإصبع','تتقارب الورقتان عندما يُفرّغ الكشّاف عبر جسم متصل بالأرض.','جرّب هذه الحالة','finger']],
+ 6:['قارن المادتين بعد إبعاد القضيب',['الألمنيوم','ينتقل بعض الشحنة عبر الناقل، فيبقى انفراج الورقتين.','جرّب الناقل','metal'],['البلاستيك','لا تنتقل الشحنة بحرية عبر العازل، فلا يبقى انفراج.','جرّب العازل','plastic']]
+};
+function renderComparison(){
+ const c=comparison[state.exp];
+ $('compareBox').hidden=!c;if(!c)return;
+ $('compareTitle').textContent=c[0];
+ $('compareGrid').className=state.exp===2?'mini-results':'comparison-grid';
+ $('compareGrid').innerHTML=c.slice(1).map(([title,description,label,v])=>'<div class="'+(v==='yes'?'retain':'')+'"><strong>'+title+'</strong><p>'+description+'</p><button type="button" value="'+v+'">'+label+'</button></div>').join('');
+ const el=state.exp===2?'ground':state.exp===5?'scope':'sample', now=state.exp===2?(state.ground?(state.groundOrder==='lead'?'yes':'early'):'no'):state[el];
+ $('compareGrid').querySelectorAll('button').forEach(button=>{
+  button.disabled=button.value===now;
+  button.onclick=()=>{const value=button.value;if(el==='ground')setGround(value);else if(el==='scope')setScope(value);else state[el]=value;updateExperimentCopy();setup();reset();renderComparison();$('run').focus();};
+ });
+}
+function view(v){state.view=v;render();}
+$('tabs').innerHTML=data.map((e,i)=>'<button type="button" aria-pressed="false"><span>'+num(i+1)+'</span>'+e.tab+'</button>').join('');
+$('tabs').querySelectorAll('button').forEach((el,i)=>el.onclick=()=>choose(i));
+$('presenterExperiment').innerHTML=data.map((e,i)=>'<option value="'+i+'">'+(i+1)+' · '+e.tab+'</option>').join('');
+$('presenterExperiment').onchange=()=>choose(Number($('presenterExperiment').value));
+$('macro').onclick=()=>view('macro');$('micro').onclick=()=>view('micro');$('overlay').onclick=()=>view('overlay');
+$('run').onclick=run;$('reset').onclick=()=>reset();
+$('sceneRun').onclick=()=>pendPlay();
+$('slowPlay').onclick=()=>{state.slow=!state.slow;pendButton();};
+$('closeView').onclick=()=>{
+ state.closeView=!state.closeView;syncCamera();
+};
+$('nearOnly').onclick=()=>{
+ state.nearOnly=!state.nearOnly;updateExperimentCopy();reset();
+};
+$('scrub').oninput=()=>{
+ const t=Number($('scrub').value);
+ cancelAnimationFrame(motion.id);
+ motion={clock:t,id:0,prev:null,active:false,paused:true};
+ state.prediction=$('prediction').value;
+ const p=scenePhase(t);state.step=p;state.furthest=Math.max(state.furthest,p);
+ setTimeline();sceneText();paintFrame(t);syncScrub(t);pendButton();
+ if(t===sceneDuration())finish();
+};
+$('pendLink').onclick=()=>{state.touchMode='pendulum';state.nearOnly=false;view('macro');choose(1);};
+$('glassStart').onclick=()=>{state.touchMode='pendulum';state.nearOnly=false;choose(1);state.source=1;state.view='overlay';updateExperimentCopy();setup();reset();$('lab').scrollIntoView({block:'start'});};
+function isFocused(){return document.fullscreenElement===$('bench')||$('bench').classList.contains('lab-focus');}
+function syncFocus(){
+ const on=isFocused();$('fullView').textContent=on?'خروج من عرض القسم':'عرض للقسم';$('fullView').setAttribute('aria-pressed',String(on));
+}
+function fallbackFocus(on){
+ $('bench').classList.toggle('lab-focus',on);document.body.classList.toggle('lab-fallback',on);syncFocus();
+}
+$('fullView').onclick=async()=>{
+ if(document.fullscreenElement===$('bench')){await document.exitFullscreen();return;}
+ if(isFocused()){fallbackFocus(false);return;}
+ if($('bench').requestFullscreen){try{await $('bench').requestFullscreen();return;}catch{}}
+ fallbackFocus(true);
+};
+document.addEventListener('fullscreenchange',syncFocus);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('bench').classList.contains('lab-focus'))fallbackFocus(false);});
+const blue='#176b90', amber='#9b501d', teal='#1b6e62', ink='#1b3b57';
+function S(n){return signs[Math.sign(n)];}
+function fill(s){return s>0?'#fce8cb':s<0?'#d8eff9':'#e6edf4';}
+function color(s){return s>0?amber:s<0?blue:'#456786';}
+const sceneDefs='<defs><pattern id="grid" width="19" height="19" patternUnits="userSpaceOnUse"><path d="M0 19V0H19" fill="none" stroke="#dae8ed" stroke-width=".65"/></pattern><linearGradient id="glass" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dcecf0"/></linearGradient><marker id="electron" markerWidth="7" markerHeight="7" refX="6.2" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7z" fill="'+blue+'"/></marker><marker id="forceArrow" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" viewBox="0 0 7 7" refX="6.2" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7z" fill="'+teal+'"/></marker></defs>';
+function txt(x,y,str,size=19,c=ink,latin=false){return '<text x="'+x+'" y="'+y+'" text-anchor="middle" fill="'+c+'" font-weight="700" font-size="'+size+'"'+(latin?' class="latin"':' direction="rtl"')+'>'+escapeHtml(str)+'</text>';}
+function badge(x,y,s){return '<circle cx="'+x+'" cy="'+y+'" r="16" fill="'+fill(s)+'" stroke="'+color(s)+'"/>'+txt(x,y+6,S(s),22,color(s),true);}
+function sign(x,y,s,small=false){return txt(x,y,S(s),small?17:22,color(s),true);}
+function mini(x,y,items){return items.map(([dx,dy,s])=>sign(x+dx,y+dy,s,true)).join('');}
+function panel(inner,label){
+ return '<svg viewBox="0 0 640 300" role="img" aria-label="'+escapeHtml(label)+'" xmlns="http://www.w3.org/2000/svg">'+sceneDefs+
+ '<rect width="640" height="300" fill="#f4f9fb"/><rect width="640" height="300" fill="url(#grid)"/><path d="M0 249H640" stroke="#d7e7eb"/><rect x="0" y="250" width="640" height="50" fill="#edf5f6"/>'+inner+'</svg>';
+}
+function sphere(x,y,s,label,{micro=[],r=48,support=false}={}){
+ return '<ellipse cx="'+x+'" cy="'+(y+r+10)+'" rx="'+(r+13)+'" ry="7" fill="#7894a6" opacity=".16"/>'+
+ (support?'<path d="M'+x+' '+(y+r-3)+'v38m-31 0h62" stroke="#66849b" stroke-width="5" fill="none" stroke-linecap="round"/>':'')+
+ '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+fill(s)+'" stroke="'+color(s)+'" stroke-width="2.3"/><path d="M'+(x-r*.66)+' '+(y-r*.36)+'q'+r*.37+' -'+r*.51+' '+r*.83+' -'+r*.35+'" fill="none" stroke="#fff" opacity=".76" stroke-width="4" stroke-linecap="round"/>'+
+ (showMicro()&&micro.length?mini(x,y,micro):txt(x,y+10,S(s),33,color(s),true))+txt(x,281,label,23);
+}
+function rod(x,y,s,vertical=false){
+ const w=vertical?42:158,h=vertical?119:38;
+ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="12" fill="'+fill(s)+'" stroke="'+color(s)+'" stroke-width="2.6"/><path d="M'+(x+11)+' '+(y+8)+'h'+(w-22)+'" stroke="white" opacity=".85" stroke-width="3"/>'+
+ (showMicro()?(vertical?[0,1,2].map(i=>sign(x+21,y+29+32*i,s||((i%2)?1:-1))).join(''):[0,1,2,3].map(i=>sign(x+24+36*i,y+26,s||((i%2)?1:-1))).join('')):txt(x+w/2,y+h/2+7,S(s),25,color(s),true));
+}
+function arrow(d,label,x,y,cls='flow'){
+ return '<path d="'+d+'" class="'+cls+'" fill="none" stroke="'+blue+'" stroke-width="4" stroke-linecap="round" marker-end="url(#electron)"/>'+txt(x,y,label,18,blue);
+}
+function groundSymbol(x,y){return '<path d="M'+x+' '+y+'v11m-15 0h30m-25 6h20m-16 6h12" stroke="'+teal+'" stroke-width="3" fill="none" stroke-linecap="round"/>';}
+function cluster(s){
+ return s===0?[[-19,-3,1],[18,-3,-1],[-19,22,-1],[18,22,1]]:[[-20,0,s],[18,0,s],[-13,24,s],[13,24,s]];
+}
+function polarized(s){return [[-24,-10,-s],[-24,17,-s],[-12,35,-s],[23,-10,s],[23,17,s],[13,35,s]];}
+function chargeText(n){return n===0?'0':(n>0?'+':'−')+num(Math.abs(n));}
+function chargeMetric(name,n){return name+' <bdi dir="ltr">'+chargeText(n)+'</bdi>'+(n===0?' (متعادل)':'');}
+function observation(title,detail,metrics=[]){return {title,detail,metrics};}
+function renderRub(p){
+ const sr=state.rub==='eb'?-1:1, a=p?sr:0,b=-a, name=state.rub==='eb'?'قضيب الإيبونيت':'قضيب الزجاج', cloth=state.rub==='eb'?'الصوف':'الحرير';
+ const rx=p===1?238:90, ry=p===1?126:117, cx=p===1?258:392, cy=p===1?163:105;
+ let shape='<path d="M'+cx+' '+cy+'h155l-13 15 13 14-13 12 13 11H'+cx+'q-15-25 0-52Z" fill="'+fill(b)+'" stroke="'+color(b)+'" stroke-width="2.5"/>'+
+ '<path d="M'+(cx+19)+' '+(cy+14)+'h100m-100 11h110m-108 11h103" fill="none" stroke="'+color(b)+'" opacity=".24" stroke-width="2"/>'+rod(rx,ry,a)+
+ (p!==1?badge(cx+76,cy+26,b):badge(cx+81,cy+36,b))+(showMicro()?[-24,-6,47,65].map((t,i)=>sign(cx+48+t,cy+28,b||((i%2)?1:-1),true)).join(''):'')+
+ txt(174,280,name,22)+txt(468,280,cloth,22);
+ if(p===1)shape+=arrow(sr<0?'M344 184Q307 160 305 140':'M305 140Q306 166 344 184','انتقال إلكترونات',321,102);
+ const metrics=[name+' <bdi dir="ltr">'+S(a)+'</bdi>',cloth+' <bdi dir="ltr">'+S(b)+'</bdi>','المجموع <bdi dir="ltr">0</bdi>'];
+ const o=p===0?observation('الجسمان متعادلان','التعادل لا يعني غياب الشحنات. شغّل عرض «نموذج الشحنات» ثم نفِّذ التجربة.',metrics):
+ p===1?observation('انتقال إلكترونات عند سطح الاحتكاك',sr<0?'تنتقل إلكترونات من الصوف إلى الإيبونيت في هذا المثال.':'تنتقل إلكترونات من الزجاج إلى الحرير في هذا المثال.',metrics):
+ observation('شحنتان متعاكستان بعد الفصل',name+' '+names[a]+' الشحنة، وقطعة '+cloth+(b>0?' موجبة':' سالبة')+' الشحنة. مجموع الشحنتين بعد الفصل يساوي صفرًا في النموذج.',metrics);
+ return [shape,o];
+}
+function renderTouch(p){
+ const s=state.source,a=p===0?8*s:4*s,b=p===0?0:4*s;
+ const x1=p===1?268:172,x2=p===1?364:468;
+ let shape=sphere(x1,145,a,'الكرة أ',{micro:cluster(a)})+sphere(x2,145,b,'الكرة ب',{micro:cluster(b)});
+ if(p===1)shape+=arrow(s<0?'M245 104Q317 43 389 104':'M389 104Q317 43 245 104','اتجاه انتقال الإلكترونات',320,51);
+ const metrics=[chargeMetric('الكرة أ',a),chargeMetric('الكرة ب',b),chargeMetric('المجموع',a+b)];
+ return [shape,p===0?observation('كرة مشحونة وأخرى متعادلة','الكرتان معدنيتان ومتماثلتان، ولا تتصلان بالأرض.',metrics):
+ p===1?observation('توزّع الشحنة عند التماس',s<0?'تنتقل إلكترونات من أ إلى ب.':'تنتقل إلكترونات من ب إلى أ.',metrics):
+ observation('للكرتين الشحنة من النوع نفسه','توزّعت الشحنة بين الكرتين المتماثلتين في النموذج، ولم يتغيّر مجموعها.',metrics)];
+}
+function renderInd(p){
+ const src=state.source, use=state.ground, early=use&&state.groundOrder==='rod';
+ const near=p>0&&p<(early?3:limit()), net=use&&p>=2&&(!early||p===2)?-src:0;
+ const returns=early&&p===3, grounding=use&&(p===2||returns), x=near?273:82;
+ let shape=rod(x,72,src,true)+sphere(405,132,net,'الكرة المعدنية',{micro:near&&!net?polarized(src):near?polarized(src).filter(v=>v[2]===net):cluster(net),r:54,support:true})+txt(x+21,280,'القضيب',22);
+ if(grounding){shape+='<path d="M458 133h80v70" fill="none" stroke="'+teal+'" stroke-width="4"/>'+groundSymbol(538,203)+txt(565,191,'الأرض',19,teal);
+  shape+=arrow((src<0)!==returns?'M477 126H530V186':'M530 186V126H477','إلكترونات',535,103);
+ }
+ if(use&&p===(early?4:3)){shape+='<path d="M458 133h40m20 0h20v70" fill="none" stroke="'+teal+'" stroke-width="3" stroke-dasharray="4 4"/>'+groundSymbol(538,203)+txt(535,111,'الوصلة مفصولة',19,teal);}
+ const m=['القضيب <bdi dir="ltr">'+S(src)+'</bdi>','صافي شحنة الكرة <bdi dir="ltr">'+S(net)+'</bdi> · '+(net===0?'متعادلة':net>0?'موجبة':'سالبة')];
+ let o;
+ if(p===0)o=observation('الكرة متعادلة قبل التقريب','القضيب مشحون، والكرة على حامل عازل.',m);
+ else if(p===1){
+  if(showMicro())shape+=arrow(src<0?'M374 65Q405 46 438 65':'M438 65Q405 46 374 65','إعادة توزيع داخل الكرة',405,40,'inside-arrow');
+  o=observation('استقطاب دون شحن صافٍ',src<0?'ابتعدت بعض الإلكترونات عن القضيب السالب داخل الكرة. لم تخرج منها أيّ إلكترونات، فبقيت متعادلة.':'اقتربت بعض الإلكترونات من القضيب الموجب داخل الكرة. لم تدخل إليها أيّ إلكترونات، فبقيت متعادلة.',m);
+ }
+ else if(returns)o=observation('أُبعد القضيب بينما الوصلة لا تزال متصلة',src<0?'عادت إلكترونات من الأرض إلى الكرة، فعادت متعادلة.':'غادرت إلكترونات الكرة نحو الأرض، فعادت متعادلة.',m);
+ else if(early&&p===4)o=observation('فصلنا الوصلة بعد أن عادت الكرة متعادلة','إبعاد القضيب قبل فصل الوصلة لا يترك صافي شحنة على الكرة.',m);
+ else if(grounding)o=observation('تنتقل إلكترونات عبر الوصلة',src<0?'تغادر إلكترونات الكرة نحو الأرض.':'تنتقل إلكترونات من الأرض إلى الكرة.',m);
+ else if(use&&p===3)o=observation('فصل الوصلة والقضيب ما زال قريبًا','تتوقّف مبادلة الإلكترونات مع الأرض، وتحتفظ الكرة بصافي شحنتها.',m);
+ else if(use)o=observation('تبقى الكرة مشحونة بعد الإبعاد','شحنة الكرة معاكسة لشحنة القضيب، مع أنه لم يلمسها.',m);
+ else o=observation('تعود الشحنات إلى توزيعها المعتاد','لم تُوصَل الكرة بالأرض. تغيّر التوزيع مؤقّتًا فقط، وبقي صافي الشحنة صفرًا.',m);
+ return [shape,o];
+}
+function renderForce(p){
+ const d=state.distance,a=state.a,b=state.b,x1=320-(100*d)/2,x2=320+(100*d)/2, r=28,f=1/d**2;
+ const repel=a===b, L=48*Math.sqrt(f), c1=repel?-1:1,c2=-c1;
+ let shape=sphere(x1,150,a,'أ',{r,micro:[[-8,-1,a],[8,15,a]]})+sphere(x2,150,b,'ب',{r,micro:[[-8,-1,b],[8,15,b]]});
+ shape+='<path d="M'+x1+' 200H'+x2+'M'+x1+' 195v10M'+x2+' 195v10" stroke="#7289a0" stroke-width="1.6" fill="none"/>'+txt(320,224,'المسافة '+num(d),21);
+ if(p){
+  for(const [x,c,n] of [[x1,c1,'أ'],[x2,c2,'ب']]){
+   shape+='<path d="M'+x+' 105h'+c*L+'" fill="none" stroke="'+teal+'" stroke-width="4" stroke-linecap="round" marker-end="url(#forceArrow)"/><path d="M'+x+' 108V120" stroke="#6c9b96" stroke-dasharray="3 2"/>'+txt(x,83,'على '+n,19,teal);
+  }
+  shape+=txt(320,38,repel?'تنافر':'تجاذب',24,teal);
+ }
+ const pcent=new Intl.NumberFormat('en-US',{maximumFractionDigits:1,numberingSystem:'latn'}).format(100*f);
+ const m=p?['المسافة <bdi dir="ltr">'+num(d)+'</bdi>','شدّة القوة النسبية <bdi dir="ltr">'+pcent+'%</bdi>','المرجع: عند المسافة 1 تكون الشدّة 100٪']:[];
+ return [shape,p?observation(repel?'تنافر بين شحنتين متماثلتين':'تجاذب بين شحنتين مختلفتين','تؤثر القوتان في جسمين مختلفين. لهما الشدّة نفسها واتجاهان متعاكسان. في النموذج النقطي، جرّب المسافة 1 ثم 2: تصبح الشدّة ربع قيمتها.',m):observation('الشحنتان مثبتتان في النموذج','توقّع اتجاه القوة على كلّ جسم. بعد التنفيذ، غيّر المسافة وقارن. الأرقام نسبية، ولا تمثّل شدّة بالنيوتن. أطوال الأسهم توضّح التغيّر دون مقياس رسم.')];
+}
+function renderPaper(p){
+ const src=state.source, near=p===1,x=near?182:82;
+ let shape=rod(x,72,src,true)+txt(x+21,280,'القضيب المشحون',22)+txt(456,280,'قصاصات ورق متعادلة',22);
+ shape+='<path d="M313 213H554" stroke="#a3b5c3" stroke-width="3" stroke-linecap="round"/>';
+ const pieces=near?[[284,146,-24],[339,160,-16],[385,182,10]]:[[347,192,7],[418,193,-6],[489,191,6]];
+ for(const [px,py,rot] of pieces){shape+='<g class="'+(near?'paper-lift':'')+'" transform="translate('+px+' '+py+') rotate('+rot+')"><path d="M-22-12h43l-1 23-40 2z" fill="#fff" stroke="#607f99" stroke-width="2"/>'+
+ (showMicro()?sign(-10,6,near?-src:1,true)+sign(10,6,near?src:-1,true):'')+'</g>';}
+ if(near)shape+='<path d="M376 118H271" stroke="'+teal+'" stroke-width="4" fill="none" marker-end="url(#forceArrow)"/>'+txt(325,99,'تجاذب',23,teal);
+ const m=['القضيب <bdi dir="ltr">'+S(src)+'</bdi>','صافي شحنة الورق <bdi dir="ltr">0</bdi>'];
+ return [shape,p===0?observation('الورق متعادل والقضيب بعيد','قرّب القضيب في المحاكاة من دون أن يلمس القصاصات.',m):near?observation('ينجذب الورق مع بقاء صافي شحنته صفرًا','في عرض «نموذج الشحنات»، لاحظ أن الشحنات المخالفة أقرب إلى القضيب، لكن كل قصاصة ما زالت متعادلة.',m):observation('يزول أثر التقريب بإبعاد القضيب','لم يحدث تماس ولم تنتقل إلكترونات بين القضيب والورق.',m)];
+}
+function renderScope(p){return ['',scopeObservation(p)];}
+function renderBridge(p){return ['',bridgeObservation(p)];}
+const renderers=[renderRub,renderTouch,renderInd,renderForce,renderPaper,renderScope,renderBridge];
+// Observation layer. Geometry is kept separate from the explanatory charge model.
+const studioDefs=`<defs>
+ <linearGradient id="wall" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#d5e7e7"/><stop offset="1" stop-color="#a8c4c7"/></linearGradient>
+ <linearGradient id="wood" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#c4a17b"/><stop offset=".46" stop-color="#ddc4a1"/><stop offset="1" stop-color="#bc986f"/></linearGradient>
+ <pattern id="grain" width="180" height="26" patternUnits="userSpaceOnUse"><path d="M-20 7Q38 2 89 9T200 10M-8 17Q45 23 103 16T189 15M24 21Q61 25 80 21T156 21" fill="none" stroke="#8c613a" stroke-opacity=".20" stroke-width=".75"/></pattern>
+ <radialGradient id="metal" cx=".31" cy=".23" r=".77"><stop stop-color="#fff"/><stop offset=".23" stop-color="#e9f1f5"/><stop offset=".49" stop-color="#a9bec8"/><stop offset=".69" stop-color="#526b79"/><stop offset=".84" stop-color="#90a9b4"/><stop offset="1" stop-color="#314b5b"/></radialGradient>
+ <linearGradient id="ebony" x2="0" y2="1"><stop stop-color="#202e36"/><stop offset=".22" stop-color="#475661"/><stop offset=".52" stop-color="#293640"/><stop offset="1" stop-color="#14232b"/></linearGradient>
+ <linearGradient id="glassTube" x2="0" y2="1"><stop stop-color="#608b91"/><stop offset=".24" stop-color="#e6faf8"/><stop offset=".56" stop-color="#b4d9d7"/><stop offset=".8" stop-color="#e5f9f5"/><stop offset="1" stop-color="#68969d"/></linearGradient>
+ <linearGradient id="brass" x2="1" y2="0"><stop stop-color="#83501d"/><stop offset=".34" stop-color="#f7d488"/><stop offset=".55" stop-color="#ffe6a7"/><stop offset="1" stop-color="#9a682c"/></linearGradient>
+ <linearGradient id="insulator" x2="1" y2="0"><stop stop-color="#587784"/><stop offset=".36" stop-color="#eaf4f4"/><stop offset=".66" stop-color="#b6ccd0"/><stop offset="1" stop-color="#64838c"/></linearGradient>
+ <linearGradient id="glassJar" x2="1" y2="0"><stop stop-color="#629ba4" stop-opacity=".45"/><stop offset=".14" stop-color="#e7feff" stop-opacity=".63"/><stop offset=".31" stop-color="#eafdfd" stop-opacity=".06"/><stop offset=".72" stop-color="#eafdfd" stop-opacity=".08"/><stop offset=".92" stop-color="#ddf9fb" stop-opacity=".63"/><stop offset="1" stop-color="#6c9da9" stop-opacity=".6"/></linearGradient>
+ <pattern id="wool" width="8" height="6" patternUnits="userSpaceOnUse"><path d="M0 3q2-3 4 0t4 0M-4 6q2-3 4 0t4 0t4 0" fill="none" stroke="#fee7c8" stroke-opacity=".42" stroke-width=".7"/></pattern>
+ <linearGradient id="silk" x2="0" y2="1"><stop stop-color="#3d606a"/><stop offset=".35" stop-color="#b2dcdb"/><stop offset=".56" stop-color="#58858a"/><stop offset=".78" stop-color="#90b6b7"/><stop offset="1" stop-color="#375c69"/></linearGradient>
+ <linearGradient id="paperStock" x2="0" y2="1"><stop stop-color="#fffef6"/><stop offset="1" stop-color="#ded5bc"/></linearGradient>
+ <linearGradient id="metalSide" x2="0" y2="1"><stop stop-color="#a0b7bd"/><stop offset="1" stop-color="#526970"/></linearGradient>
+ <marker id="studioForce" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" viewBox="0 0 6 6"><path d="M0 0L6 3L0 6z" fill="#176959"/></marker>
+ <clipPath id="studioClip"><rect width="640" height="300"/></clipPath>
+ </defs>`;
+function studioPanel(inner,label){
+ return `<svg class="studio-svg" viewBox="0 0 640 300" role="img" aria-label="${escapeHtml(label)}" xmlns="http://www.w3.org/2000/svg">${studioDefs}
+ <rect width="640" height="208" fill="url(#wall)"/>
+ <path d="M0 68H640M0 133H640M110 0v208M265 0v208M420 0v208M575 0v208" fill="none" stroke="#f7ffff" stroke-opacity=".26"/>
+ <path d="M32 16h148v93H32z" fill="#d7e9e8" stroke="#95b3b7" stroke-width="3" opacity=".36"/><path d="M106 16v93M32 63h148" stroke="#9eb8be" opacity=".45"/>
+ <path d="M0 189H640v17H0z" fill="#829ba0" opacity=".28"/>
+ <path d="M0 198H640V260H0z" fill="url(#wood)"/><path d="M0 198H640V260H0z" fill="url(#grain)"/>
+ <path d="M0 198H640" stroke="#9f8161" opacity=".58"/><path d="M0 258H640" stroke="#7d664f" stroke-width="3"/>
+ <rect y="260" width="640" height="40" fill="#f2f5f1"/><path d="M0 260H640" stroke="#ddd7ca"/>
+ <g clip-path="url(#studioClip)">${inner}</g></svg>`;
+}
+function studioLabel(x,str){return txt(x,285,str,22,'#23394b');}
+function studioShadow(x,y,rx,ry=6){return `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="#443629" opacity=".17"/><ellipse cx="${x}" cy="${y}" rx="${Math.round(rx*.68)}" ry="${ry*.58}" fill="#3e342e" opacity=".13"/>`;}
+function stand(x,y,scale=1){
+ return `<g transform="translate(${x} ${y}) scale(${scale})">${studioShadow(0,6,39)}
+ <path d="M-32 0v6q0 5 32 5t32-5V0Z" fill="#3b5561"/><ellipse rx="32" ry="7" fill="#607983" stroke="#304a59"/>
+ <path d="M-6-62H6v60Q0 3-6-2z" fill="url(#insulator)" stroke="#4c7580" stroke-width="1"/>
+ <path d="M-7-48H7m-14 11H7m-14 11H7" stroke="#83a5ae" stroke-width="1.6" opacity=".65"/></g>`;
+}
+function metalBall(r=40){
+ return `<circle r="${r}" fill="url(#metal)" stroke="#4b6471" stroke-width="1.6"/>
+ <ellipse cx="${-r*.30}" cy="${-r*.38}" rx="${r*.37}" ry="${r*.17}" transform="rotate(-26)" fill="#f7feff" opacity=".60"/>
+ <path d="M${-r*.73} ${r*.22}Q0 ${r*.90} ${r*.69} ${r*.32}" fill="none" stroke="#dcecef" stroke-width="1.3" opacity=".53"/>`;
+}
+function labRod(material='ebony',w=166){
+ const g=material==='metal'?'metalSide':material==='glass'?'glassTube':'ebony', cap=material==='glass'?'#c5e4e4':material==='metal'?'#bdcdd1':'#3c4f5b';
+ return `<path d="M0-12H${w}V12H0Z" fill="url(#${g})" stroke="#344e57" stroke-width="1.2"/>
+ <ellipse cy="0" rx="5" ry="12" fill="#344e57" opacity=".64"/><ellipse cx="${w}" rx="5" ry="12" fill="${cap}" stroke="#344e57" stroke-width="1.1"/>
+ <path d="M4-7H${w-5}" stroke="#fff" opacity="${material==='glass'?.68:.32}" stroke-width="2.4" stroke-linecap="round"/>`;
+}
+function movable(x,y,body,dx=0,dy=0){
+ return `<g transform="translate(${x} ${y})"><g ${dx||dy?`class="apparatus-move" style="--from-x:${dx}px;--from-y:${dy}px"`:''}>${body}</g></g>`;
+}
+function clothStudio(silk){
+ const p='M-61-16Q-37-32-12-14Q10-31 37-16Q58-22 79-5L66 32Q41 39 16 31Q-9 42-35 32L-70 39Q-59 19-68 8Z';
+ return `<path d="${p}" fill="${silk?'url(#silk)':'#a26848'}" stroke="${silk?'#41656e':'#804e3b'}" stroke-width="1.7"/>
+ ${silk?'':`<path d="${p}" fill="url(#wool)"/>`}
+ <path d="M-54-7Q-32 12-4 2T44 7M-53 20Q-25 22 5 13T60 20" fill="none" stroke="${silk?'#d7f8f1':'#f5d4ad'}" opacity=".55" stroke-width="2"/>
+ <path d="M-66 37l-10 6m22-6-6 8m17-10-5 9m16-8-4 7m18-6-4 6" stroke="${silk?'#648a91':'#a9775a'}" stroke-width="1.4"/>`;
+}
+function studioRub(p){
+ const silk=state.rub==='glass', rodName=silk?'قضيب الزجاج':'قضيب الإيبونيت', clothName=silk?'قطعة حرير':'قطعة صوف';
+ return studioShadow(148,233,87)+studioShadow(p===1?342:458,235,81)+
+  movable(67,p===1?171:186,`<g ${p===1?'class="rubbing"':''}>${labRod(silk?'glass':'ebony',206)}</g>`,0,p===1?15:0)+
+  movable(p===1?311:452,p===1?184:175,clothStudio(silk),p===1?141:(p===2?-141:0),p===1?-9:p===2?9:0)+
+  studioLabel(171,rodName)+studioLabel(452,clothName);
+}
+function studioTouch(p){
+ const a=p===1?279:175,b=p===1?361:465, back=p===2;
+ return movable(a,0,stand(0,228)+`<g transform="translate(0 139)">${metalBall(41)}</g>`,p===1?-104:back?104:0)+
+  movable(b,0,stand(0,228)+`<g transform="translate(0 139)">${metalBall(41)}</g>`,p===1?104:back?-104:0)+
+  studioLabel(171,'الكرة أ')+studioLabel(469,'الكرة ب');
+}
+function studioInd(p){
+ const early=state.ground&&state.groundOrder==='rod', active=p>0&&p<(early?3:limit()), x=active?118:45;
+ const grounding=state.ground&&(p===2||(early&&p===3)), detached=state.ground&&p===(early?4:3);
+ let ground='';
+ if(grounding||detached){
+  const sx=grounding?441:478;
+  ground=`<path d="M${sx} 130C480 126 480 183 500 204S554 229 563 221" fill="none" stroke="#294e41" stroke-width="7" stroke-linecap="round"/><path d="M${sx+2} 128C480 125 482 182 502 202S554 226 562 220" fill="none" stroke="#83b28f" stroke-width="2.3" opacity=".8"/><rect x="552" y="207" width="36" height="34" rx="6" fill="#e7efe5" stroke="#6e8c77"/><path d="M570 211v7m-10 0h20m-16 5h12m-9 5h6" fill="none" stroke="#325b49" stroke-width="1.6" stroke-linecap="round"/><path d="M${sx-4} 125h12l5 5-5 5h-12z" fill="url(#brass)" stroke="#774c27"/>`;
+ }
+ return stand(398,230)+`<g transform="translate(398 128)">${metalBall(43)}</g>`+
+  movable(x,129,labRod(state.source<0?'ebony':'glass',205),p===1?-73:p===(early?3:limit())?73:0)+ground+studioLabel(165,'القضيب')+studioLabel(410,'كرة على حامل عازل');
+}
+function studioForceScene(p){
+ const d=state.distance,left=320-d*50,right=320+d*50,repel=state.a===state.b, swing=Math.min(13,Math.round(15/d**.65));
+ const frame=`<path d="M55 225V38H585v187" fill="none" stroke="#364e5e" stroke-width="8" stroke-linejoin="round"/><path d="M55 36H585" stroke="#a9bcc2" stroke-width="2" opacity=".8"/><path d="M27 225h55m476 0h55" stroke="#405d68" stroke-width="8" stroke-linecap="round"/>`;
+ const pend=(x,angle)=>`<g transform="translate(${x} 41)"><g class="pendulum" style="--angle:${angle}deg" transform="rotate(${angle})"><path d="M0 0v99" stroke="#435a66" stroke-width="1.4"/><g transform="translate(0 112)">${metalBall(24)}</g></g><circle r="4" fill="url(#brass)" stroke="#4b5152"/></g>`;
+ return frame+pend(left,p?(repel?swing:-swing):0)+pend(right,p?(repel?-swing:swing):0)+
+  `<path d="M${left} 219H${right}M${left} 214v10M${right} 214v10" fill="none" stroke="#5d584c" stroke-width="1.2"/>`+
+  txt(320,244,'تباعد نقطتَي التعليق',18,'#4f4133')+
+  studioLabel(left-12,'الكرة أ')+studioLabel(right+12,'الكرة ب');
+}
+function paperPiece(i){
+ const p=['M-19-9L15-12l7 17-35 7Z','M-18-12l29 4 8 17-35 2Z','M-20-5l9-8 29 6-6 17-30-2Z','M-17-9l34-4 6 19-34 6Z'][i%4];
+ return `<path d="${p}" fill="url(#paperStock)" stroke="#948e7d" stroke-width="1.1"/><path d="M-14-3l17-2m-15 8 23-2" stroke="#a4aeaa" stroke-width=".6" opacity=".7"/>`;
+}
+function studioPaper(p){
+ const near=p===1;
+ const base=[[329,210,10],[377,215,-10],[415,213,14],[458,218,3],[488,209,-15]];
+ const raised=[[258,149,-28],[303,172,-22],[354,189,0],[432,212,-4],[486,209,-15]];
+ let pieces='';
+ for(let i=0;i<base.length;i++){
+  const [x,y,rot]=(near?raised:base)[i], [bx,by]=base[i], [hx,hy]=raised[i];
+  const shadow=studioShadow(x+7,222,near&&i<3?13:17,near&&i<3?3:4);
+  pieces+=shadow+movable(x,y,`<g transform="rotate(${rot})">${paperPiece(i)}</g>`,near?bx-x:p===2?hx-x:0,near?by-y:p===2?hy-y:0);
+ }
+ return `<path d="M288 204h239l33 27H260Z" fill="#667c7e" stroke="#3f575a" stroke-width="1.5"/><path d="M260 231h300v5H260Z" fill="#4b6367"/><path d="M300 208h216l22 17H278Z" fill="#93a6a3"/>`+
+  movable(near?48:23,near?128:88,`<g transform="rotate(${near?14:-10})">${labRod('ebony',192)}</g>`,near?-25:p===2?25:0,near?-40:p===2?40:0)+pieces+
+  studioLabel(164,'القضيب')+studioLabel(434,'قصاصات الورق');
+}
+function studioScope(p){
+ const contact=state.scope==='contact', near=p===1, open=near||(p===2&&contact), a=open?31:3;
+ const x=near?(contact?243:215):73;
+ const leaf=(sign)=>`<g class="foil-leaf" style="--leaf:${sign*a}deg;--leaf-start:${sign*(p===1?3:contact?31:31)}deg" transform="rotate(${sign*a})"><path d="M-4-3H4l5 50-9 7-8-7Z" fill="url(#brass)" stroke="#9e6c2b" stroke-width=".75"/><path d="M-2 4l-3 39" stroke="#fff0ba" opacity=".65" stroke-width="1.2"/></g>`;
+ const jar=`<g>
+ ${studioShadow(444,245,86,8)}<ellipse cx="444" cy="234" rx="73" ry="13" fill="#315060"/><path d="M374 219V106q0-16 16-16h108q16 0 16 16v113q0 13-70 13t-70-13Z" fill="#e2f1ec" fill-opacity=".30" stroke="#617f8c" stroke-width="2"/>
+ <ellipse cx="444" cy="217" rx="64" ry="9" fill="#a9d0cf" fill-opacity=".48"/>
+ <path d="M441 69H447V152H441Z" fill="url(#brass)" stroke="#8f6030" stroke-width="1"/>
+ <rect x="427" y="84" width="34" height="15" rx="5" fill="#628685" stroke="#46696c"/><ellipse cx="444" cy="69" rx="32" ry="8" fill="url(#brass)" stroke="#805523" stroke-width="1.1"/>
+ <g transform="translate(441 149)">${leaf(1)}</g><g transform="translate(447 149)">${leaf(-1)}</g>
+ <path d="M374 219V106q0-16 16-16h108q16 0 16 16v113q0 13-70 13t-70-13Z" fill="url(#glassJar)" stroke="#668996" stroke-width="1.3"/>
+ <path d="M386 112v76m118-72v70" stroke="#fff" opacity=".65" stroke-width="3" stroke-linecap="round"/></g>`;
+ return jar+movable(x,69,labRod(contact?'metal':'ebony',164),near?73-x:p===2?(contact?170:142):0)+
+  studioLabel(165,'القضيب')+studioLabel(443,'الكشّاف ذو الورقتين');
+}
+const studioRenderers=[studioRub,studioTouch,studioInd,studioForceScene,studioPaper,studioScope];
+
+/* The timing and geometry are illustrative, not measured. The rod stops at contact. */
+const pend={pivotX:450,pivotY:65,length:151,radius:31,angle:18,rodWidth:189};
+const toRad=d=>d*Math.PI/180;
+const swingX=a=>pend.pivotX-pend.length*Math.sin(toRad(a));
+const swingY=a=>pend.pivotY+pend.length*Math.cos(toRad(a));
+const contactX=swingX(pend.angle)-pend.radius, contactY=swingY(pend.angle);
+const timing=[0,870,1530,2170,3440];
+const stepTimes=[0,1200,1850,3440];
+const clamp01=x=>Math.max(0,Math.min(1,x));
+const mix=(a,b,t)=>a+(b-a)*clamp01(t);
+const smooth=x=>{const u=clamp01(x);return u*u*(3-2*u);};
+let motion={clock:0,id:0,prev:null,active:false,paused:false};
+const isPend=()=>state.exp===1&&state.touchMode==='pendulum';
+const neutralPoints=[[-18,-17],[18,-17],[18,17],[-18,17],[0,-25],[0,25]];
+const polarizedPoints=[[9,-23],[20,-16],[25,-6],[25,6],[20,16],[9,23]];
+const excessPoints=[[-22,-13],[-25,0],[-22,13],[-12,22]];
+const finalNeutral=[[0,-25],[14,-20],[23,-10],[23,9],[15,19],[1,25]];
+const finalExcess=[[-20,-15],[-25,-4],[-24,9],[-12,22]];
+const positivePoints=[[-9,-13],[7,-13],[-12,0],[4,0],[-9,13],[7,13]];
+const rodElectrons=[[-13,-7],[-26,5],[-39,-7],[-52,5],[-65,-7],[-78,5],[-91,-7],[-104,5]];
+function pendFrame(t){
+ let tip=218,angle=0,pol=0,phase=0,transfer=0;
+ if(state.nearOnly){
+  if(t<timing[1]){
+   tip=mix(218,contactX-50,smooth(t/timing[1]));pol=.25*smooth(t/timing[1]);
+  }else if(t<timing[2]){
+   phase=1;const f=smooth((t-timing[1])/(timing[2]-timing[1]));
+   tip=mix(contactX-50,contactX-22,f);angle=13*f;pol=mix(.25,.83,f);
+  }else if(t<1870){
+   phase=2;tip=contactX-22;angle=13;pol=.83;
+  }else{
+   phase=3;const f=smooth((t-1870)/480);
+   tip=mix(contactX-22,218,f);pol=.83*(1-f);
+   const u=(t-1870)/1000;
+   angle=13*Math.exp(-3.5*u)*Math.cos(7*u);
+  }
+  return {tip,angle,pol,phase,transfer};
+ }
+ if(t<timing[1]){
+  tip=mix(218,contactX-34,smooth(t/timing[1]));
+  pol=.35*smooth((t-540)/330);
+ } else if(t<timing[2]){
+  phase=1;
+  const f=smooth((t-timing[1])/(timing[2]-timing[1]));
+  angle=pend.angle*f;tip=mix(contactX-34,contactX,f);pol=mix(.35,1,f);
+ } else if(t<timing[3]){
+  phase=2;tip=contactX;angle=pend.angle;pol=1;
+  transfer=clamp01((t-timing[2])/(timing[3]-timing[2]));
+ } else{
+  phase=3;tip=contactX;pol=0;transfer=1;
+  const u=t-timing[3];
+  // First arc departs quickly, then the hanging ball swings back and settles away from the rod.
+  angle=u<420?mix(pend.angle,-27,1-Math.pow(1-u/420,2.45)):
+    -13-14*Math.exp(-(u-420)/255)*Math.cos((u-420)*2*Math.PI/640);
+ }
+ return {tip,angle,pol,phase,transfer};
+}
+function pendRead(p){
+ const s=pendSign(), n=rodName(s);
+ const m=[n+' <bdi dir="ltr">'+S(s)+'</bdi>',state.nearOnly||p<2?'الكرية متعادلة <bdi dir="ltr">0</bdi>':p===2?'الكرية '+(s<0?'تكتسب':'تفقد')+' إلكترونات':'الكرية '+(s<0?'سالبة':'موجبة')+' <bdi dir="ltr">'+S(s)+'</bdi>'];
+ if(p===0)return observation('الكرية متعادلة قبل تقريب القضيب',rodPrep(s)+' فأصبح القضيب '+(s<0?'سالبًا':'موجبًا')+'، والكرية متعادلة ومعلّقة بخيط عازل.',m);
+ if(p===1)return observation('تنجذب الكرية قبل أن تلمس القضيب',(s<0?'تبتعد بعض إلكترونات الكرية عن الجهة القريبة من القضيب.':'تنجذب بعض إلكترونات الكرية نحو الجهة القريبة من القضيب.')+' تبقى الكرية متعادلة ولا يعبر أي إلكترون الفجوة.',m);
+ if(state.nearOnly&&p===2)return observation('توقّف القضيب قبل أن يلامس الكرية','تبقى فجوة مرئية بينهما. داخل الكرية فقط، تغيّر توزيع الإلكترونات. صافي شحنتها ما يزال صفرًا.',m);
+ if(state.nearOnly&&p===3)return observation('تعود الكرية إلى وضعها الأول بعد الإبعاد','تتأرجح الكرية ثم تستقرّ. يزول الاستقطاب، ولم يحدث انتقال إلكترونات بين الجسمين.',m);
+ if(p===2)return observation('تلامس لحظي وانتقال إلكترونات',(s<0?'تنتقل بعض الإلكترونات من طرف الإيبونيت إلى الكرية.':'تنتقل بعض الإلكترونات من الكرية إلى الطرف الموجب من الزجاج.')+' يحدث الانتقال عند التلامس، ولا تتحرك البروتونات بين الجسمين.',m);
+ return observation('تتنافر الكرية مع القضيب بعد التلامس',s<0?'اكتسبت الكرية إلكترونات فأصبحت سالبة مثل الإيبونيت.':'فقدت الكرية إلكترونات فأصبحت موجبة مثل الزجاج.',m);
+}
+function pendWhy(){
+ const s=pendSign();
+ return 'قبل اللمس تستقطب الكرية المتعادلة فتنجذب إلى القضيب. عند التلامس '+(s<0?'ينقل الإيبونيت بعض الإلكترونات إلى الكرية فتصبح سالبة.':'يستقبل طرف الزجاج الموجب بعض الإلكترونات من الكرية فتصبح موجبة.')+' بعد اللمس تحمل الكرية شحنة من نوع شحنة القضيب فتتنافر معه.';
+}
+function pendBackground(micro){
+ if(micro)return '<rect width="640" height="338" fill="#f1f8fc"/><rect width="640" height="292" fill="url(#grid)"/><path d="M0 292H640" stroke="#d2e4ee"/><rect y="293" width="640" height="45" fill="#e9f2f7"/>';
+ return `<rect width="640" height="278" fill="url(#wall)"/>
+ <rect x="20" y="24" width="153" height="111" rx="5" fill="url(#pendWindow)" stroke="#94a8ac" stroke-width="5" opacity=".78"/>
+ <path d="M96 24v111m-76-57h153" stroke="#e6eff0" stroke-width="3" opacity=".65"/>
+ <path d="M-5 150L168 9h78L36 182z" fill="#f8f9e8" opacity=".12"/>
+ <rect y="221" width="640" height="76" fill="url(#wood)"/><rect y="221" width="640" height="76" fill="url(#grain)"/>
+ <path d="M0 221H640" stroke="#876c57" stroke-opacity=".33"/>
+ <path d="M0 297H640" stroke="#75583f" stroke-width="4"/><rect y="299" width="640" height="39" fill="#f0f2ee"/>`;
+}
+function pendRig(micro){
+ if(micro)return '<path d="M450 65h111v211" fill="none" stroke="#7894a4" stroke-width="3" stroke-linejoin="round"/><path d="M521 276h80" stroke="#7894a4" stroke-width="3" stroke-linecap="round"/>';
+ return `${studioShadow(563,277,75,10)}
+ <path d="M493 261l111-3 24 14v8l-130 3-22-10v-6z" fill="#243a47" stroke="#233a44" stroke-width="1.4"/>
+ <path d="M493 261l111-3 24 14-130 3-22-8z" fill="#425f6c"/><path d="M499 275l128-3" stroke="#95a8a9" opacity=".5"/>
+ <ellipse cx="563" cy="265" rx="21" ry="5" fill="#2d4654"/><ellipse cx="563" cy="262" rx="14" ry="5" fill="url(#metalSide)"/>
+ <rect x="556" y="34" width="14" height="230" rx="6" fill="url(#insulator)" stroke="#3e5967"/>
+ <rect x="448" y="55" width="124" height="9" rx="4.5" fill="url(#insulator)" stroke="#385664"/>
+ <rect x="550" y="49" width="25" height="22" rx="5" fill="#354e59" stroke="#263e48"/>
+ <circle cx="564" cy="60" r="5" fill="url(#brass)"/><path d="M564 56v8m-4-4h8" stroke="#684c33"/>
+ <path d="M450 57v7" stroke="#4e6872" stroke-width="3" stroke-linecap="round"/>`;
+}
+function pendHand(){
+ return `<path id="pendArm" d="" fill="#354d68" stroke="#263d57" stroke-width="1.5"/>
+ <path d="M-209 1q13-13 24-15l10 37-31 8z" fill="#465c77" stroke="#293e57" stroke-width="1.3"/>
+ <path d="M-190 3q11-7 20-15l8-12q7-8 18-8l23 4q7 2 5 8-2 7-9 6l-13-2 16 17q6 6 4 14-3 10-13 10l-19 3q-19 2-33-8z" fill="url(#pendSkin)" stroke="#8d5941" stroke-width="1.3"/>`;
+}
+function pendGrip(){
+ return `<path d="M-163 4q15-5 25 0l14 8q7 6 2 12-4 5-11 2l-22-7m19 1q8 3 8 8-1 6-9 7l-25-9m15 1q10 5 8 10-2 5-12 3l-20-9-9-11" fill="url(#pendSkin)" stroke="#8d5941" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M-184 7q12-17 24-16l23 3q8 1 7 7 0 7-9 8l-18-1-11 9" fill="url(#pendSkin)" stroke="#8d5941" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M-141-4q5 0 6 4-1 4-5 4l-5-1-1-5z" fill="#edb79b" opacity=".75"/>`;
+}
+function glyph(id,cls,s,x=0,y=0,r=5){
+ return `<g${id?' id="'+id+'"':''} class="${cls}" transform="translate(${x} ${y})" aria-hidden="true"><circle r="${r}" fill="${s<0?'#1477a9':'#fff3df'}" stroke="${s<0?'#e6faff':'#a76a32'}"/><path d="M-2.6 0h5.2${s>0?'M0-2.6v5.2':''}" fill="none" stroke="${s<0?'#ffffff':'#9a511e'}" stroke-width="1.5" stroke-linecap="round"/></g>`;
+}
+function pendSvg(micro){
+ const charges=micro||state.view==='overlay', polarity=pendSign();
+ const model=charges?`<g id="pendRodElectrons">${rodElectrons.map(([x,y],i)=>glyph('pr'+i,polarity<0?'el':'plusmark',polarity,x,y)).join('')}</g>`:'';
+ const sites=charges?positivePoints.map(([x,y],i)=>glyph('pp'+i,'plusmark',1,x,y)).join('')+
+  neutralPoints.map(([x,y],i)=>glyph('pn'+i,'el',-1,x,y)).join('')+excessPoints.map(([x,y],i)=>glyph('pe'+i,'el',-1,x,y)).join(''):'';
+ return `<svg class="${micro?'pend-svg model-svg':'pend-svg studio-svg'}" viewBox="0 0 640 338" role="img" aria-labelledby="pendSvgTitle" aria-describedby="pendSvgDesc" xmlns="http://www.w3.org/2000/svg">
+ <title id="pendSvgTitle">${rodName(polarity)} وكرية ألمنيوم معلّقة</title><desc id="pendSvgDesc"></desc>
+ ${charges?studioDefs+sceneDefs:studioDefs}<defs>
+ <linearGradient id="pendWindow" x2="0" y2="1"><stop stop-color="#edf6f2"/><stop offset="1" stop-color="#b7d5dd"/></linearGradient>
+ <linearGradient id="pendSkin" x2="0" y2="1"><stop stop-color="#e4af8a"/><stop offset=".54" stop-color="#c68f6a"/><stop offset="1" stop-color="#ad7358"/></linearGradient>
+ </defs>
+ ${pendBackground(micro)}
+ ${micro?'':`<ellipse id="pendShadow" cx="450" cy="270" rx="35" ry="6" fill="#3c2e28" opacity=".25"/><ellipse id="pendRodShadow" cx="158" cy="272" rx="99" ry="7" fill="#3c2e28" opacity=".13"/>`}
+ ${pendRig(micro)}
+ <path id="pendThread" d="" stroke="${micro?'#608096':'#3c4f52'}" stroke-width="${micro?1.8:1.9}" fill="none"/>
+ <circle cx="450" cy="65" r="3.9" fill="${micro?'#526f80':'#c69b5a'}" stroke="#435564"/>
+ <g id="pendRod">
+  ${(micro?'':pendHand())+`<g transform="translate(-194 0)">${labRod(rodMaterial(polarity),pend.rodWidth)}</g>`+(micro?'':pendGrip())}
+  ${charges?chargeTag(-127,-31,polarity):''}
+  ${model}
+ </g>
+ <g id="pendBall">${micro?'<circle r="31" fill="#eaf4fa" stroke="#315e7b" stroke-width="2.1"/>':metalBall(pend.radius)}${sites}</g>
+ ${charges?`<g id="pendTransfer"><circle r="12" fill="none" stroke="#1487bd" stroke-width="2" opacity=".65"/>
+  <path d="${polarity<0?'M-13-17h28':'M15-17h-28'}" fill="none" stroke="#176b90" stroke-width="2.8" marker-end="url(#electron)"/></g>
+  ${excessPoints.map((_,i)=>glyph('pt'+i,'el travel trace-e',-1,0,0,6)).join('')}
+  <g id="pendInternal"><path d="${polarity<0?'M-18 0h39':'M21 0h-39'}" fill="none" stroke="#176b90" stroke-width="3" stroke-dasharray="4 3" marker-end="url(#electron)"/></g>
+  <g id="pendNet"></g>
+  <g id="pendForce"><path id="pendForcePath" fill="none" stroke="#1b6e62" stroke-width="4" stroke-linecap="round" marker-end="url(#forceArrow)"/><text id="pendForceLabel" class="model-halo" text-anchor="middle" font-size="24" font-weight="700" fill="#176657" direction="rtl"></text></g>`:''}
+ ${txt(184,322,rodName(polarity),24,'#223c50')}${txt(473,322,'كرية الألمنيوم',24,'#223c50')}
+ </svg>`;
+}
+function pendPaint(t,frozen=false){
+ const {tip,angle,pol,phase,transfer}=pendFrame(t), x=swingX(angle),y=swingY(angle);
+ $('pendRod').setAttribute('transform',`translate(${tip} ${contactY})`);
+ $('pendBall').setAttribute('transform',`translate(${x} ${y})`);
+ const k=(pend.length-pend.radius+1)/pend.length;
+ $('pendThread').setAttribute('d',`M450 65L${450+(x-450)*k} ${65+(y-65)*k}`);
+ if(!showMicro()){
+  $('pendShadow').setAttribute('cx',x+5);
+  $('pendRodShadow').setAttribute('cx',Math.max(55,tip-126));
+  $('pendArm').setAttribute('d',`M${-tip-4} -3Q-252-2-208-2l17 32-17 5Q-248 39 ${-tip-4} 50z`);
+  if(state.view!=='overlay')return;
+ }
+ const move=(el,a,b)=>el.setAttribute('transform',`translate(${a} ${b})`), glass=pendSign()>0;
+ for(let i=0;i<neutralPoints.length;i++){
+  const [nx,ny]=neutralPoints[i],[px,py]=polarizedPoints[i];
+  const re=phase===3&&!state.nearOnly?smooth((t-timing[3])/220):0;
+  const q=phase===3&&!state.nearOnly?1:pol;
+  move($('pn'+i),mix(mix(nx,glass?-px:px,q),glass?-finalNeutral[i][0]:finalNeutral[i][0],re),mix(mix(ny,py,q),finalNeutral[i][1],re));
+  $('pn'+i).style.visibility='visible';
+ }
+ for(let i=0;i<excessPoints.length;i++){
+  const pr=$('pr'+i), pt=$('pt'+i), pe=$('pe'+i);
+  const w=state.nearOnly?0:frozen&&phase===2?[1,.57,.27,0][i]:clamp01((transfer-i*.15)/.55);
+  const re=phase===3&&!state.nearOnly?smooth((t-timing[3])/220):0;
+  move(pe,mix(excessPoints[i][0],finalExcess[i][0],re),mix(excessPoints[i][1],finalExcess[i][1],re));
+  const flying=phase===2&&w>0&&w<1;
+  pr.style.visibility=glass?(w<1?'visible':'hidden'):state.nearOnly||phase<2||(phase===2&&w===0)?'visible':'hidden';
+  pe.style.visibility=!glass&&!state.nearOnly&&(phase===3||(phase===2&&w===1))?'visible':'hidden';
+  pt.style.visibility=flying?'visible':'hidden';
+  if(glass&&w>0)$('pn'+i).style.visibility='hidden';
+  if(flying){
+   const k=glass?1-w:w;
+   const end=glass?[-polarizedPoints[i][0],polarizedPoints[i][1]]:excessPoints[i];
+   if(k<.5)move(pt,tip+mix(rodElectrons[i][0],0,k*2),contactY+mix(rodElectrons[i][1],0,k*2));
+   else move(pt,mix(tip,x+end[0],(k-.5)*2),mix(contactY,y+end[1],(k-.5)*2));
+  }
+ }
+ const trans=$('pendTransfer');trans.style.visibility=phase===2&&!state.nearOnly?'visible':'hidden';move(trans,tip,contactY);
+ const internal=$('pendInternal'), distributed=phase===1||(state.nearOnly&&phase===2);
+ internal.style.visibility=distributed?'visible':'hidden';move(internal,x,y+45);
+ const net=$('pendNet'), signNow=!state.nearOnly&&phase===3?pendSign():0;
+ if(net.dataset.sign!==String(signNow)){net.dataset.sign=String(signNow);net.innerHTML=chargeTag(0,0,signNow);}
+ net.style.visibility=phase===2&&!state.nearOnly?'hidden':'visible';move(net,x+48,y+16);
+ const force=$('pendForce'), label=$('pendForceLabel'), line=$('pendForcePath');
+ const drawsForce=state.nearOnly?(phase===1||phase===2):(phase===1||phase===3);
+ force.style.visibility=drawsForce?'visible':'hidden';
+ if(drawsForce){
+  const dir=phase===3?1:-1;
+  line.setAttribute('d',`M${x} ${y-47}h${dir*61}`);
+  label.setAttribute('x',x+dir*31);label.setAttribute('y',y-56);
+  label.textContent=dir<0?'قوة جذب':'قوة تنافر';
+ }
+}
+/* Every experiment uses the same scene clock, including its explanatory view. */
+const sceneDuration=()=>isPend()?timing[4]:sceneStops().at(-1);
+function sceneStops(){
+ if(isPend())return state.nearOnly?[0,1200,1670,3440]:stepTimes;
+ return [[0,2880,5700],[0,1250,2600],state.ground?[0,1000,2150,3300,4450]:[0,1050,2350],[0,2350],[0,1450,2900],[0,state.scope==='finger'?1610:1450,scopeEnd()],[0,1560,3200]][state.exp];
+}
+function scenePhase(t){
+ if(isPend())return pendFrame(t).phase;
+ const b=[[1050,4650],[875,1590],state.ground?[760,1710,state.groundOrder==='rod'?2340:2320,3470]:[760,1240],[570],[980,1700],state.scope==='finger'?[1190,2140]:[1020,1690],[1080,2260]][state.exp];
+ let p=0;for(const edge of b)if(t>=edge)p++;
+ return p;
+}
+function sceneTime(){return motion.active||motion.paused?motion.clock:sceneStops()[state.step];}
+const cameraBoxes=['159 74 318 158','74 83 490 230','118 67 478 224','53 65 535 251','129 96 449 211','222 35 365 193','209 20 394 209'];
+const V=(x,y,body)=>'<g transform="translate('+x+' '+y+')">'+body+'</g>';
+const rot=(angle,body)=>'<g transform="rotate('+angle+')">'+body+'</g>';
+function videoBody(){
+ const lab=state.view!=='micro', stock=lab?'<rect width="640" height="216" fill="url(#wall)"/><path d="M0 68H640M0 135H640M113 0v218M272 0v218M431 0v218M589 0v218" fill="none" stroke="#fff" opacity=".21"/><rect x="24" y="18" width="144" height="91" rx="5" fill="#d9ebe8" stroke="#a0b4b6" stroke-width="4"/><path d="M96 20v87M26 64h140" stroke="#f8ffff" opacity=".64" stroke-width="3"/><path d="M0 216H640V299H0Z" fill="url(#wood)"/><path d="M0 216H640V299H0Z" fill="url(#grain)"/><path d="M0 298H640" stroke="#7d654d" stroke-width="3"/><rect y="300" width="640" height="38" fill="#f5f4ed"/>':'<rect width="640" height="338" fill="#f1f8fc"/><rect width="640" height="299" fill="url(#grid)"/><rect y="300" width="640" height="38" fill="#e9f2f7"/>';
+ return '<svg class="'+(lab?'studio-svg':'model-svg')+' video-svg" viewBox="0 0 640 338" role="img" aria-labelledby="videoTitle" aria-describedby="videoDesc" xmlns="http://www.w3.org/2000/svg"><title id="videoTitle">'+escapeHtml(exp().title)+'</title><desc id="videoDesc"></desc>'+studioDefs+sceneDefs+'<defs><linearGradient id="pendSkin" x2="0" y2="1"><stop stop-color="#e7b292"/><stop offset="1" stop-color="#aa7156"/></linearGradient></defs>'+stock+'<g id="videoActors"></g></svg>';
+}
+function videoHand(x,y,flipped=false){
+ if(showMicro())return '';
+ return V(x,y,'<g transform="scale('+(flipped?-1:1)+' 1)">'+
+ '<path d="M-180 6l137-18 13 33-142 33z" fill="#36536a" stroke="#263e54" stroke-width="1.4"/><path d="M-58-11l21-3 14 38-25 7z" fill="#567185" stroke="#314c62"/><path d="M-39-7Q-20-22-6-13L7-8Q17-4 12 4L-1 7Q15 10 13 20Q8 28-14 23L-28 20Z" fill="url(#pendSkin)" stroke="#925b45" stroke-width="1.3"/><path d="M-20 4Q-9 1 0 6M-15 12Q-5 10 4 15" fill="none" stroke="#a86d51" opacity=".85"/></g>');
+}
+const vb=(x,str)=>txt(x,324,str,22,'#23394b');
+function vball(x,y,r){
+ return V(x,y,showMicro()?'<circle r="'+r+'" fill="#e9f6fb" stroke="#315e7b" stroke-width="2"/>':metalBall(r));
+}
+function vrod(x,y,material,width,a=0,hand=true){
+ return V(x,y,rot(a,(hand?videoHand(29,5):'')+labRod(material,width)+(hand&&!showMicro()?'<path d="M16 3q17-7 29-2l9 6q6 5 1 11-4 3-10-1l-11-5-15 5" fill="url(#pendSkin)" stroke="#925b45" stroke-width="1.2"/>':'')));
+}
+function chargeTag(x,y,s){
+ const c=color(s);
+ return V(x,y,'<rect x="-17" y="-14" width="34" height="28" rx="10" fill="'+fill(s)+'" stroke="'+c+'"/>'+txt(0,7,S(s),22,c,true));
+}
+function chargeDots(x,y,s,r=28,pol=0){
+ const pp=[[-.5,-.46],[.04,-.45],[.5,-.37],[-.5,.38],[.04,.48],[.51,.42]];
+ const nn=[[-.68,-.03],[-.21,-.15],[.23,-.13],[.67,-.03],[-.2,.16],[.25,.17]];
+ const f=Math.min(1,Math.abs(pol)/.31), d=Math.sign(pol);
+ const polarized=[[.10,-.72],[.46,-.54],[.7,-.29],[.76,.05],[.66,.38],[.40,.65]];
+ const electrons=s>0?nn.filter((_,i)=>i!==1&&i!==4):nn;
+ return V(x,y,pp.map(([a,b])=>glyph('','',1,a*r,b*r,4.2)).join('')+
+ electrons.map(([a,b],i)=>glyph('','',-1,mix(a,d*polarized[i][0],f)*r,mix(b,polarized[i][1],f)*r,4.3)).join('')+
+ (s<0?glyph('','',-1,-.24*r,-.7*r,4.3)+glyph('','',-1,.25*r,.72*r,4.3):''));
+}
+function electron(x,y){return glyph('','el trace-e',-1,x,y,6);}
+function traceArrow(x,y,x2,y2,label='',inside=false){
+ const dash=inside?' stroke-dasharray="5 4"':'';
+ return '<path d="M'+x+' '+y+'L'+x2+' '+y2+'" fill="none" stroke="#f2fbff" stroke-width="7" stroke-linecap="round"/>'+
+ '<path d="M'+x+' '+y+'L'+x2+' '+y2+'" fill="none" stroke="#176b90" stroke-width="3.4" stroke-linecap="round"'+dash+' marker-end="url(#electron)"/>'+
+ (label?txt((x+x2)/2,Math.min(y,y2)-9,label,17,'#174b67'):'');
+}
+function trail(t,a,b,points,n=4){
+ if(t<a||t>=b)return '';
+ const f=(t-a)/(b-a), lengths=points.slice(1).map((p,i)=>Math.hypot(p[0]-points[i][0],p[1]-points[i][1])), total=lengths.reduce((x,y)=>x+y,0);
+ return Array.from({length:n},(_,i)=>(f*1.55-i*.17)).filter(u=>u>=0&&u<=1).map(u=>{
+  let d=u*total,i=0;while(i<lengths.length-1&&d>lengths[i])d-=lengths[i++];
+  return electron(...mixPoint(points[i],points[i+1],d/lengths[i]));
+ }).join('');
+}
+function forceCue(x,y,dx,label=''){
+ return '<path d="M'+x+' '+y+'h'+dx+'" fill="none" stroke="#f4fbfa" stroke-width="7"/><path d="M'+x+' '+y+'h'+dx+'" fill="none" stroke="'+teal+'" stroke-width="3.8" stroke-linecap="round" marker-end="url(#forceArrow)"/>'+(label?txt(x+dx*.5,y-10,label,19,teal):'');
+}
+function stagePart(t,a,b){return smooth((t-a)/(b-a));}
+function mixPoint(a,b,u){return [mix(a[0],b[0],u),mix(a[1],b[1],u)];}
+function flowDots(t,from,to,at,stop){
+ if(t<at||t>=stop)return '';
+ const u=(t-at)/(stop-at);
+ return [0,.14,.28].filter(lag=>u>=lag).map(lag=>electron(...mixPoint(from,to,Math.min(1,(u-lag)/(1-lag))))).join('');
+}
+const rubStart=1050,rubEnd=4650;
+function rubbingCloth(silk){
+ const p='M-66-16H66Q75-7 69 2L77 26Q52 39 31 27T-10 29T-45 30L-73 25Q-61 5-66-16Z';
+ return '<path d="'+p+'" fill="'+(silk?'url(#silk)':'#a26848')+'" stroke="'+(silk?'#45686d':'#81553a')+'" stroke-width="1.5"/>'+
+ (silk?'':'<path d="'+p+'" fill="url(#wool)"/>')+
+ '<path d="M-65-16H66M-58 2Q-28 10 0 1T56 6M-52 17Q-25 25 4 16T55 18" fill="none" stroke="'+(silk?'#c5e6e0':'#f6d6ae')+'" stroke-width="1.6" opacity=".75"/>';
+}
+function rubFrame(t){
+ const a=stagePart(t,220,rubStart), b=stagePart(t,rubEnd,5480), u=clamp01((t-rubStart)/(rubEnd-rubStart));
+ return {x:96+80*a-46*b+25*Math.sin(8*Math.PI*u),y:137+32*a-43*b,cx:428-75*a+68*b,cy:197, u};
+}
+function sceneRub(t){
+ const silk=state.rub==='glass', m=silk?'glass':'ebony', {x,y,cx,cy}=rubFrame(t);
+ const lane=[1430,2190,2950,3710], delivered=lane.filter(k=>t>=k+700).length, departed=lane.filter(k=>t>=k).length, active=t>=rubStart&&t<rubEnd;
+ let inner=studioShadow(x+91,240,91)+studioShadow(cx,245,70)+videoHand(cx+51,cy+6,true)+
+ V(cx,cy,rubbingCloth(silk))+vrod(x,y,m,222)+vb(174,silk?'قضيب الزجاج':'قضيب الإيبونيت')+vb(469,silk?'قطعة حرير':'قطعة صوف');
+ if(state.view!=='macro'){
+  const px=active?Math.min(cx,x+166):x+146;
+  const vR=silk?departed:-delivered,vC=silk?-delivered:departed, cell=(base,row,k,sgn,r)=>Array.from({length:k},(_,i)=>glyph('','',sgn,base+(i-(k-1)/2)*14,row,r)).join('');
+  inner+=cell(px,y-5,5,1,4.1)+cell(px,y+5,5-vR,-1,4.1)+cell(cx,cy-1,5,1,4.4)+cell(cx,cy+14,5-vC,-1,4.4);
+  inner+=chargeTag(x+115,y-39,Math.sign(vR))+chargeTag(cx+37,cy+60,Math.sign(vC));
+  if(active){
+   const from=[cx,cy+10],to=[cx,y-5], route=silk?[to,[cx,181],from]:[from,[cx,181],to];
+   inner+=traceArrow(px-78,silk?y-20:cy+15,px-78,silk?cy+15:y-20);
+   for(const a of lane){
+    if(t<a||t>=a+700)continue;
+    const k=smooth((t-a)/700), i=k<.5?0:1;
+    inner+=electron(...mixPoint(route[i],route[i+1],(k-i*.5)*2));
+   }
+  }
+ }
+ return inner;
+}
+function sceneTouch(t){
+ const f=stagePart(t,150,875)-stagePart(t,1580,2430), l=170+107*f, r=470-107*f, y=139, R=43;
+ const s=state.source, charged=t>=950;
+ let inner=stand(l,235)+stand(r,235)+V(l,177,'<rect x="-5" y="0" width="10" height="17" rx="3" fill="url(#insulator)" stroke="#557680"/>')+V(r,177,'<rect x="-5" y="0" width="10" height="17" rx="3" fill="url(#insulator)" stroke="#557680"/>')+vball(l,y,R)+vball(r,y,R)+vb(171,'الكرة أ')+vb(469,'الكرة ب');
+ if(state.view!=='macro'){
+  inner+=chargeDots(l,y,s,36)+chargeDots(r,y,charged?s:0,36)+chargeTag(l,y-68,s)+chargeTag(r,y-68,charged?s:0);
+  const a=[l+18,y], b=[r-18,y];
+  inner+=trail(t,910,1530,s<0?[a,[320,y],b]:[b,[320,y],a]);
+  if(t>=875&&t<1580)inner+=traceArrow(s<0?l+10:r-10,y-53,s<0?r-10:l+10,y-53);
+
+ }
+ return inner;
+}
+function groundingCable(x,attached){
+ const y=127;
+ return '<path d="M'+x+' '+y+'C494 124 469 202 524 221S567 226 575 228" fill="none" stroke="#315d49" stroke-width="7" stroke-linecap="round"/><path d="M'+x+' 125C494 124 471 200 524 218S568 224 575 226" fill="none" stroke="#8fb797" stroke-width="2" opacity=".85"/>'+V(x,y,'<path d="M-4-5h13l5 5-5 5H-4Z" fill="url(#brass)" stroke="#77572c"/>')+
+  '<rect x="563" y="215" width="36" height="34" rx="6" fill="#edf3e9" stroke="#789987"/>'+groundSymbol(581,218)+(attached?'':txt(516,95,'المشبك غير موصول',17,teal));
+}
+function sceneInd(t){
+ const use=state.ground, early=use&&state.groundOrder==='rod', s=state.source;
+ const retreat=use?(early?2340:3470):1240, retreatEnd=use?(early?2910:4140):2030;
+ const f=stagePart(t,160,760)-stagePart(t,retreat,retreatEnd), x=51+88*f;
+ const attach=use?stagePart(t,1130,1710):0, cut=use?stagePart(t,early?3470:2320,early?4080:2900):0;
+ const cx=485-43*attach+43*cut, live=use&&attach===1&&cut===0;
+ const outgoing=s<0, net=use&&t>=1760&&(!early||t<2840)?-s:0;
+ let inner=stand(399,232)+V(399,167,'<rect x="-5" y="0" width="10" height="14" rx="3" fill="url(#insulator)" stroke="#557680"/>')+vball(399,127,43)+vrod(x,127,rodMaterial(s),168)+vb(164,rodName(s))+vb(420,'الكرة المعدنية');
+ if(use)inner+=groundingCable(cx,live);
+ if(state.view!=='macro'){
+  inner+=chargeTag(x+130,86,s)+chargeTag(402,56,net)+chargeDots(399,127,net,35,net?0:-s*f*.31);
+  if(f>.25&&!live&&attach<1)inner+=traceArrow(s<0?367:431,77,s<0?431:367,77,'',true);
+  if(live){
+   const route=[[442,127],[463,141],[477,169],[491,200],[524,220],[570,227]];
+   function cableDots(reverse,from,to){
+    if(t<from||t>=to)return '';
+    const a=(t-from)/(to-from), points=reverse?route.slice().reverse():route;
+    return [0,.13,.26,.39].filter(l=>a>=l).map(l=>{
+     const u=Math.min(points.length-1,(a-l)/(1-l)*(points.length-1)), i=Math.min(points.length-2,Math.floor(u));
+     return electron(...mixPoint(points[i],points[i+1],u-i));
+    }).join('');
+   }
+   inner+=cableDots(!outgoing,1760,2290)+(early?cableDots(outgoing,2450,2880):'');
+   if((t>=1760&&t<2320)||(early&&t>=2450&&t<2920)){
+    const toGround=(t<2320)===outgoing;
+    inner+=traceArrow(toGround?492:543,toGround?155:205,toGround?543:492,toGround?205:155);
+   }
+  }
+ }
+ return inner;
+}
+function sceneForce(t){
+ const d=state.distance, s=state.a, q=state.b, repel=s===q;
+ const u=(t-450)/1000, response=u<=0?0:1-Math.exp(-2.4*u)*Math.cos(6.8*u);
+ const a=(repel?1:-1)*Math.min(repel?14:8.3,16/d**.7)*response;
+ const left=320-50*d,right=320+50*d, length=116, cy=68;
+ const geom=(x,angle)=>[x-length*Math.sin(toRad(angle)),cy+length*Math.cos(toRad(angle))];
+ const A=geom(left,a),B=geom(right,-a);
+ const pivot=(x,c)=>'<path d="M'+x+' '+cy+'L'+c[0]+' '+c[1]+'" stroke="#536f76" stroke-width="2.3"/><circle cx="'+x+'" cy="'+cy+'" r="4" fill="url(#brass)" stroke="#4f5657"/>';
+ let inner='<path d="M52 260V62H588V260M30 260h48m485 0h48" fill="none" stroke="#4e6874" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M53 59H586" stroke="#a0b7bc" stroke-width="2"/>'+
+ pivot(left,A)+pivot(right,B)+vball(...A,24)+vball(...B,24)+vb(left,'الكرة أ')+vb(right,'الكرة ب');
+ if(state.view!=='macro'){
+  inner+=chargeTag(A[0],A[1]+48,s)+chargeTag(B[0],B[1]+48,q);
+  if(t>450){const len=(d===1&&!repel?27:54)/Math.sqrt(d);inner+=forceCue(A[0],A[1]-36,(repel?-1:1)*len)+forceCue(B[0],B[1]-36,(repel?1:-1)*len)+txt(320,40,repel?'تنافر':'تجاذب',21,teal);}
+ }
+ return inner;
+}
+function scenePaper(t){
+ const s=state.source, f=stagePart(t,170,1020)-stagePart(t,1670,2450), x=24+37*f, y=111+27*f;
+ const base=[[326,226,10],[377,229,-10],[416,224,14],[458,232,3],[503,224,-15]];
+ let inner='<path d="M287 216h239l34 28H255Z" fill="#708889" stroke="#425f61" stroke-width="1.4"/><path d="M255 244h305v6H255Z" fill="#4b6367"/><path d="M300 220h213l22 17H277Z" fill="#9aada8"/>'+vrod(x,y,rodMaterial(s),160,10)+vb(170,rodName(s))+vb(431,'قصاصات الورق');
+ for(let i=0;i<base.length;i++){
+  const [bx,by,r]=base[i], w=stagePart(t,730+105*i,1240+80*i)-stagePart(t,1700+60*i,2370+75*i);
+  const lift=(1-i/5)*w, px=bx-49*lift, py=by-58*lift;
+  inner+=studioShadow(px+9,234,15-5*lift,3)+V(px,py,rot(r-27*lift,paperPiece(i)));
+  if(state.view!=='macro'&&i<3){
+   const ax=7+3*lift;
+   inner+=V(px,py,rot(r-27*lift,glyph('','',-s,-ax,-3,3.3)+glyph('','',-s,mix(ax,-ax,w),4,3.3)+glyph('','',s,ax,-3,3.3)+glyph('','',s,mix(-ax,ax,w),4,3.3)));
+  }
+ }
+ if(state.view!=='macro'){
+  inner+=chargeTag(x+110,y-29,s)+chargeTag(443,184,0);
+  if(f>.35)inner+=forceCue(329,114,-58,'جذب');
+ }
+ return inner;
+}
+function sceneScope(t,material=null,discharge=0,options=null){
+ const s=options?.sign??state.source, contact=options?.contact??(state.scope==='contact'), approach=stagePart(t,170,1020), retreat=stagePart(t,1690,2450);
+ const tip=239+(contact?168:146)*(approach-retreat), y=70, open=(stagePart(t,contact?1010:800,1300)-(contact?0:stagePart(t,1670,2470)))*(1-discharge), a=3+29*open;
+ let inner=scopeVessel(a)+vrod(tip-164,y,material??rodMaterial(s),164)+vb(169,options?rodName(s):'القضيب المشحون')+vb(443,'الكشّاف ذو الورقتين');
+ if(state.view!=='macro'){
+  inner+=chargeTag(tip-72,34,s)+chargeTag(543,125,contact&&t>=1110&&discharge<1?s:0);
+  if(open>.24)inner+=scopeSigns(a,contact?s:-s,s);
+  if(contact&&t>=1030&&t<1680){
+   const route=[[tip-26,y],[412,y],[444,y],[444,115],[444,150],[448+32*Math.sin(toRad(a)),150+32*Math.cos(toRad(a))]];
+   inner+=trail(t,1030,1640,s<0?route:route.slice().reverse(),4)+traceArrow(476,s<0?85:130,476,s<0?130:85);
+  } else if(!contact&&t>630&&t<1730)inner+=traceArrow(475,s<0?86:129,475,s<0?129:86,'',true);
+ }
+ return inner;
+}
+function scopeVessel(a){
+ const lead=side=>rot(side*a,'<path d="M-4-2H4l5 54-9 7-8-7Z" fill="url(#brass)" stroke="#996b31"/><path d="M-2 3l-3 43" stroke="#ffedba" opacity=".7"/>');
+ return studioShadow(444,255,86,8)+'<ellipse cx="444" cy="245" rx="73" ry="13" fill="#315060"/><path d="M374 229V106q0-16 16-16h108q16 0 16 16v123q0 13-70 13t-70-13Z" fill="#e2f1ec" fill-opacity=".30" stroke="#617f8c" stroke-width="2"/><path d="M441 70H447V153H441Z" fill="url(#brass)" stroke="#8f6030"/><rect x="427" y="84" width="34" height="15" rx="5" fill="#628685" stroke="#46696c"/><ellipse cx="444" cy="70" rx="32" ry="8" fill="url(#brass)" stroke="#805523"/>'+
+ V(441,150,lead(1))+V(447,150,lead(-1))+
+ '<path d="M374 229V106q0-16 16-16h108q16 0 16 16v123q0 13-70 13t-70-13Z" fill="url(#glassJar)" stroke="#668996" stroke-width="1.3"/><path d="M386 112v88m118-84v82" stroke="#fff" opacity=".65" stroke-width="3" stroke-linecap="round"/>';
+}
+function scopeSigns(a,top,leaves){
+ return [432,445,458].map(x=>glyph('','',top,x,69,4.5)).join('')+
+ [22,37,50].map(d=>glyph('','',leaves,441-d*Math.sin(toRad(a)),150+d*Math.cos(toRad(a)),4.3)+glyph('','',leaves,447+d*Math.sin(toRad(a)),150+d*Math.cos(toRad(a)),4.3)).join('');
+}
+const scopeModes=[
+ ['neg','لمس بالإيبونيت السالب'],
+ ['pos','لمس بالزجاج الموجب'],
+ ['near','تقريب دون لمس'],
+ ['finger','تفريغ بلمس الإصبع']
+];
+const scopeSign=()=>state.scope==='neg'?-1:state.scope==='pos'?1:state.source;
+const scopeContact=()=>state.scope==='neg'||state.scope==='pos';
+function setScope(mode){if(mode==='finger'&&scopeContact())state.source=scopeSign();state.scope=mode;}
+const scopeEnd=()=>state.scope==='finger'?3250:2800;
+function scopeSteps(){
+ return state.scope==='finger'?['كشّاف مكهرب والقضيب بعيد','لمس القرص بالإصبع','رفع الإصبع بعد التفريغ']:
+ scopeContact()?['كشّاف متعادل','لمس القرص بقضيب '+(scopeSign()<0?'سالب':'موجب'),'إبعاد القضيب وبقاء الانفراج']:
+ ['كشّاف متعادل','تقريب القضيب دون لمس','إبعاد القضيب وزوال الانفراج'];
+}
+const scopeDischarge=t=>stagePart(t,1190,2140);
+function scopeObservation(p){
+ const s=scopeSign(), hand=state.scope==='finger', contact=scopeContact();
+ const q=hand?(p<2?s:0):contact&&p>0?s:0;
+ const spread=hand?p<2:p===1||(p===2&&contact);
+ const m=[hand&&p===1?'صافي الشحنة يقترب من الصفر':'صافي شحنة الكشّاف <bdi dir="ltr">'+S(q)+'</bdi>','الورقتان '+(spread?(hand&&p===1?'تتقاربان تدريجيًا':'منفرجتان'):'متقاربتان')];
+ if(hand){
+  if(!p)return observation('الكشّاف مكهرب والقضيب مُبعَد','تتنافر الورقتان لأنهما تحملان شحنتين من النوع نفسه.',m);
+  if(p===1)return observation('تتقارب الورقتان أثناء لمس القرص بالإصبع',s<0?'تغادر إلكترونات زائدة من الكشّاف إلى الأرض عبر اليد والجسم المتصل بالأرض.':'تنتقل إلكترونات من الأرض عبر الجسم والإصبع إلى الكشّاف الموجب لتعويض النقص.',m);
+  return observation('عاد الكشّاف إلى التعادل','بعد رفع الإصبع تبقى الورقتان متقاربتين. لا حاجة إلى تقريب القضيب أثناء التفريغ.',m);
+ }
+ if(!p)return observation('الكشّاف متعادل قبل التجربة','القرص والساق والورقتان متصلة كهربائيًا. لاحظ وضع الورقتين قبل تقريب القضيب.',m);
+ if(p===1)return contact?observation('تنفرج الورقتان عند اللمس',s<0?'تنتقل بعض الإلكترونات من القضيب السالب إلى الكشّاف، فتصبح الورقتان سالبتين وتتنافران.':'تنتقل بعض الإلكترونات من الكشّاف إلى القضيب الموجب، فتصبح الورقتان موجبتين وتتنافران.',m):
+ observation('تنفرج الورقتان دون تماس',s<0?'يدفع القضيب السالب بعض الإلكترونات نحو الورقتين داخل الكشّاف. صافي شحنة الكشّاف يظل صفرًا.':'يجذب القضيب الموجب بعض الإلكترونات من جهة الورقتين إلى جهة القرص داخل الكشّاف. صافي شحنته يظل صفرًا.',m);
+ return contact?observation('تبقيان منفرجتين بعد إبعاد القضيب','احتفظ الكشّاف بشحنة '+(s<0?'سالبة':'موجبة')+' في النموذج. لا يكشف الانفراج وحده عن نوع الشحنة.',m):
+ observation('يزول الانفراج بعد إبعاد القضيب','تزول إعادة توزيع الشحنات. لم تنتقل إلكترونات بين القضيب والكشّاف.',m);
+}
+function scopeFinger(t,show){
+ const s=scopeSign(), reach=stagePart(t,350,1190), back=stagePart(t,2280,2990);
+ const x=559-103*(reach-back), y=49+13*(reach-back), neutral=t>=2140;
+ const nail='<path d="M2 0q5-5 15-1l6 4-3 4H6Q1 7 2 0Z" fill="#f6c1a9" stroke="#a26d57" stroke-width="1"/>';
+ let o=scopeVessel(32-29*scopeDischarge(t))+
+ V(x,y,'<path d="M169 4L184 47 114 53 93 19Z" fill="#3d5c75" stroke="#2d475d" stroke-width="1.5"/>'+
+ '<path d="M107 9Q92-3 76-3L57-7Q50-7 42-4L12-7Q-3-7-6 0Q-9 7 2 8L40 11Q38 16 50 22L72 31Q84 36 106 27L122 26Z" fill="url(#pendSkin)" stroke="#8f5c48" stroke-width="1.5"/>'+
+ '<path d="M45 11l20 4m-18 6 18 4m-9 5 15 3" fill="none" stroke="#a8735c" stroke-width="1.3"/>'+nail)+
+ vb(442,'الكشّاف ذو الورقتين');
+ if(t<2990)o+=txt(557,139,'الإصبع',17,'#4b3541');
+ if(show){
+  o+=chargeTag(552,161,neutral?0:s);
+  if(!neutral)o+=scopeSigns(32-29*scopeDischarge(t),s,s);
+  if(t>=1190&&t<2140){
+   const route=[[444,151],[444,103],[444,70],[451,69],[480,65],[523,70],[573,80],[620,83]];
+   o+=trail(t,1190,2140,s<0?route:route.slice().reverse(),5)+traceArrow(s<0?478:568,106,s<0?568:478,106);
+   o+=txt(552,184,'عبر الجسم المتصل بالأرض',16,'#174b67');
+  }
+ }
+ return o;
+}
+const scopeMainScene=t=>state.scope==='finger'?scopeFinger(t,state.view!=='macro'):sceneScope(t,null,0,{contact:scopeContact(),sign:scopeSign()});
+const conductorKinds=[['metal','ناقل معدني (ألمنيوم)'],['plastic','عازل بلاستيكي']];
+const isMetal=()=>state.sample==='metal';
+const bridgeStages=['كشّاف متعادل وطرف العيّنة يلامس القرص','ملامسة الطرف البعيد بجسم مكهرب','إبعاد الجسم وملاحظة الورقتين'];
+function bridgeObservation(p){
+ const metal=isMetal(), s=state.source, q=p>0&&metal?s:0, m=['العيّنة: '+(metal?'ألمنيوم':'بلاستيك'),'صافي شحنة الكشّاف <bdi dir="ltr">'+S(q)+'</bdi>'];
+ if(!p)return observation('اختبار مادتين بالطريقة نفسها','الكشّاف متعادل. يلامس أحد طرفَي العيّنة قرصه، ثم نلمس طرفها البعيد بطرف '+rodName(s)+' '+rodState(s)+'.',m);
+ if(metal)return observation(p===1?'تنفرج الورقتان مع الناقل':'يبقى الانفراج بعد إبعاد القضيب',s<0?'تنتقل بعض الإلكترونات من الإيبونيت عبر الألمنيوم إلى الكشّاف، فيصبح سالبًا.':'تنتقل بعض الإلكترونات من الكشّاف عبر الألمنيوم نحو طرف الزجاج الموجب، فيصبح الكشّاف موجبًا.',m);
+ return observation(p===1?'لا يظهر انفراج ملحوظ مع البلاستيك':'لا يبقى انفراج بعد إبعاد القضيب','لا تنتقل الإلكترونات بحرّية من الطرف الملامَس إلى الطرف الآخر عبر البلاستيك في هذه التجربة. هذا الاختبار يتعلّق بانتقال الشحنة، لا بمجرد تقريب جسم مكهرب.',m);
+}
+function bridgeScene(t){
+ const metal=isMetal(), s=state.source, reach=stagePart(t,210,1080), back=stagePart(t,2260,3000), x=24+62*(reach-back);
+ const charged=metal&&t>1230, angle=3+29*(metal?stagePart(t,1200,1780):0);
+ const sample=metal?labRod('metal',153):'<path d="M0-12h153v24H0z" fill="url(#plasticBar)" stroke="#795143" stroke-width="1.4"/><ellipse cx="153" cy="0" rx="5" ry="12" fill="#b87e61" stroke="#795143"/><path d="M3-7h144" stroke="#fbd9bc" opacity=".6" stroke-width="2"/>';
+ let o='<defs><linearGradient id="plasticBar" x2="0" y2="1"><stop stop-color="#edbd9a"/><stop offset="1" stop-color="#98604c"/></linearGradient></defs>'+
+ scopeVessel(angle)+stand(320,206)+V(320,81,'<rect x="-5" y="0" width="10" height="67" rx="3" fill="url(#insulator)" stroke="#587784"/>')+
+ V(254,70,sample)+vrod(x,70,rodMaterial(s),163)+txt(319,123,metal?'عيّنة ألمنيوم':'عيّنة بلاستيكية',18,'#263e53')+vb(163,rodName(s))+vb(443,'الكشّاف ذو الورقتين');
+ if(state.view!=='macro'){
+  o+=chargeTag(x+120,33,s)+chargeTag(551,137,charged?s:0);
+  if(charged)o+=scopeSigns(angle,s,s);
+  if(metal&&t>=1080&&t<2140){
+   const route=[[x+140,70],[254,70],[330,70],[412,70],[444,70],[444,150],[462,186]];
+   o+=trail(t,1080,2140,s<0?route:route.slice().reverse(),5)+traceArrow(s<0?273:398,43,s<0?398:273,43);
+  }else if(!metal&&t>=1080&&t<2260){
+   o+=(s<0?glyph('','',-1,261,68,5)+glyph('','',-1,274,70,5):'')+txt(324,45,'لا عبور إلى الطرف الآخر',17,'#753d2b');
+  }
+ }
+ return o;
+}
+
+const sceneVideo=[sceneRub,sceneTouch,sceneInd,sceneForce,scenePaper,scopeMainScene,bridgeScene];
+const visibleNotes=[
+ ['القضيب والقماش منفصلان قبل الدلك.','يتحرّك القضيب ذهابًا وإيابًا على القماش خلال 3.6 ثوانٍ في المحاكاة.','ينفصل القضيب عن قطعة القماش.'],
+ ['الكرتان المعدنيتان منفصلتان على حاملين عازلين.','تتلامس الكرتان عند نقطة واحدة.','تنفصل الكرتان من جديد.'],
+ ['القضيب بعيد عن الكرة المعدنية.','يقترب القضيب وتبقى فجوة بينه وبين الكرة.'],
+ ['الكرّيتان معلّقتان بخيطين عازلين.','يميل الخيطان نحو بعضهما عند التجاذب، وفي اتجاهين متباعدين عند التنافر.'],
+ ['القصاصات ساكنة على الطاولة والقضيب بعيد.','تتحرّك القصاصات الأقرب نحو القضيب دون أن تلمسه.','تعود القصاصات إلى الطاولة عند إبعاد القضيب.'],
+ ['ورقتا الكشّاف متقاربتان قبل التجربة.','تنفرج الورقتان عندما يصبح القضيب عند القرص أو قريبًا منه.','بعد إبعاد القضيب، راقب هل يبقى الانفراج أم يزول.']
+];
+function visualNote(){
+ if(state.exp===5)return (state.scope==='finger'?['القضيب بعيد والورقتان منفرجتان.','يلمس الإصبع القرص المعدني وتبدأ الورقتان بالتقارب.','يرتفع الإصبع وتبقى الورقتان متقاربتين.']:scopeContact()?['الورقتان متقاربتان قبل التماس.','يلامس طرف القضيب القرص فتنفرج الورقتان.','ابتعد القضيب وبقيت الورقتان منفرجتين.']:['الورقتان متقاربتان قبل التقريب.','تنفرج الورقتان رغم بقاء فجوة بين القضيب والقرص.','ابتعد القضيب وعادت الورقتان إلى وضعهما الأول.'])[state.step];
+ if(state.exp===6)return ['طرف العيّنة يلامس القرص والورقتان متقاربتان.','يلامس '+rodName(state.source)+' الطرف البعيد من العيّنة.','بعد إبعاد القضيب، '+(isMetal()?'يبقى الانفراج.':'تبقى الورقتان متقاربتين.')][state.step];
+ if(state.exp!==2)return visibleNotes[state.exp][state.step];
+ return visibleNotes[2][state.step]??(!state.ground?'يبتعد القضيب، ولا تظهر أي وصلة تأريض.':
+ state.step===2?'تلامس مشبكة وصلة التأريض سطح الكرة، والقضيب لا يلمسها.':
+ state.groundOrder==='rod'?(state.step===3?'يبتعد القضيب بينما تبقى وصلة التأريض ملامسة للكرة.':'تُرفع مشبكة التأريض بعد إبعاد القضيب.'):
+ (state.step===3?'تُرفع مشبكة التأريض والقضيب ما يزال قريبًا.':'يبتعد القضيب بعد فصل الوصلة.'));
+}
+function videoText(){
+ const p=state.step;
+ const o=renderers[state.exp](p)[1];
+ if(state.exp===3&&p===0){o.title='كرّيتان مشحونتان قبل الاختبار';o.detail='اختر نوع شحنة كل كرّية وتوقّع اتجاه القوتين. يقارن المؤشّر العددي شدّة القوة في نموذج الشحنتين النقطيتين عند مسافات مختلفة.';}
+ $('videoDesc').textContent=o.title+' — '+o.detail;
+ paintReadout(o,['الملاحظة',visualNote()],true);
+ $('prevStep').disabled=p===0;$('nextStep').disabled=p===limit();
+ const d=$('distText');if(d)d.textContent='('+state.distance+')';
+}
+function paintFrame(t){
+ if(isPend()){pendPaint(t,!motion.active&&!motion.paused);return;}
+ $('videoActors').innerHTML=sceneVideo[state.exp](t);
+}
+function sceneText(){if(isPend())renderPendText();else videoText();motionCaption();}
+function motionCaption(){
+ const box=$('motionKey'), p=state.step, e=state.exp, s=state.source;
+ box.hidden=state.view==='macro';if(box.hidden)return;
+ const info=(k,h,v)=>[k,h,v], idle=(v)=>info('idle','حالة الشحنة',v),
+ path=(v)=>info('flow','مسار الإلكترونات',v), inside=(v)=>info('flow','إعادة توزّع',v),
+ force=(v)=>info('force','القوّة الكهربائية',v);
+ let out;
+ if(isPend())out=p===0?idle('الكرية متعادلة.'):p===1||(state.nearOnly&&p===2)?inside(pendSign()<0?'تتحرّك الإلكترونات نحو الجهة الأبعد من القضيب داخل الكرية.':'تتحرّك الإلكترونات نحو الجهة الأقرب من القضيب داخل الكرية. لا تعبر الفجوة.'):
+ state.nearOnly?idle('الكرية ما تزال متعادلة.'):p===2?path(pendSign()<0?'من الإيبونيت إلى الكرية عند التلامس.':'من الكرية إلى طرف الزجاج عند التلامس.'):force('تتنافر الكرية مع القضيب لأن شحنتيهما من النوع نفسه.');
+ else if(e===0)out=p===0?idle('القضيب والقماش متعادلان قبل الدلك.'):p===1?path(state.rub==='glass'?'من الزجاج إلى الحرير عند سطح الاحتكاك.':'من الصوف إلى الإيبونيت عند سطح الاحتكاك.'):idle('شحنتان متعاكستان. المجموع لا يتغيّر.');
+ else if(e===1)out=p===1?path(s<0?'من الكرة أ إلى الكرة ب عند التلامس.':'من الكرة ب إلى الكرة أ عند التلامس.'):idle(p===0?'الكرة أ مكهربة والكرة ب متعادلة.':'تحتفظ الكرتان بشحنتين من الإشارة نفسها.');
+ else if(e===2){
+  const reverse=state.ground&&state.groundOrder==='rod'&&p===3;
+  out=p===1?inside(s<0?'تبتعد إلكترونات الكرة عن القضيب السالب، دون مغادرة الكرة.':'تقترب إلكترونات الكرة من القضيب الموجب، دون مغادرة الكرة.'):
+  state.ground&&(p===2||reverse)?path((s<0)!==reverse?'من الكرة إلى الأرض عبر الوصلة.':'من الأرض إلى الكرة عبر الوصلة.'):idle('لا تنتقل إلكترونات عبر الفجوة بين القضيب والكرة.');
+ } else if(e===3)out=force('كل سهم يمثّل قوة على كرية مختلفة. السهمان ليسا مسارًا للإلكترونات.');
+ else if(e===4)out=p===1?inside('استقطاب موضعي في الورق. لا تنتقل إليه إلكترونات من القضيب.'):idle('قصاصات الورق متعادلة.');
+ else if(e===5){
+  const q=scopeSign(), hand=state.scope==='finger', contact=scopeContact();
+  out=p===1?(hand?path(q<0?'من الكشّاف إلى الأرض عبر الإصبع والجسم.':'من الأرض إلى الكشّاف عبر الجسم والإصبع.'):
+   contact?path(q<0?'من طرف القضيب إلى القرص والساق ثم الورقتين.':'من الكشّاف إلى القضيب الموجب عند التلامس.'):
+   inside(q<0?'من جهة القرص نحو الورقتين، داخل الكشّاف فقط.':'من جهة الورقتين نحو القرص، داخل الكشّاف فقط.')):
+   idle(hand?(p===0?'الكشّاف مكهرب قبل التفريغ.':'الكشّاف متعادل بعد التفريغ.'):p===2&&contact?'يبقى الكشّاف مكهربًا بعد إبعاد القضيب.':'الكشّاف متعادل.');
+ } else out=p===1?(isMetal()?path(s<0?'من الإيبونيت عبر الألمنيوم إلى الكشّاف.':'من الكشّاف عبر الألمنيوم إلى طرف الزجاج.'):idle('لا تنتقل الإلكترونات بحرّية على امتداد البلاستيك.')):
+ idle(p===0?'يبدأ الاختبار بكشّاف متعادل.':isMetal()?'بقي الكشّاف مكهربًا.':'بقي الكشّاف متعادلًا.');
+ const [kind,title,detail]=out;box.dataset.kind=kind;
+ box.innerHTML='<b>'+title+'</b><span>'+detail+'</span>';
+}
+
+function pendStop(){
+ cancelAnimationFrame(motion.id);motion={clock:0,id:0,prev:null,active:false,paused:false};
+}
+function pendButton(){
+ $('run').textContent=$('sceneRun').textContent=motion.active?'إيقاف مؤقت':motion.paused&&motion.clock<sceneDuration()?'تابع المشاهدة':state.step===limit()?'أعد المشاهدة':'شغّل المشهد';
+ $('stageStatus').dataset.run=motion.active?'running':motion.paused&&motion.clock<sceneDuration()?'paused':state.step===limit()?'finished':'ready';
+ $('playBadge').textContent=motion.active?(state.slow?'عرض بطيء جارٍ':'عرض جارٍ'):motion.paused&&motion.clock<sceneDuration()?'عرض متوقّف مؤقتًا':state.step===limit()?'نهاية المشهد':'جاهز للعرض';
+ $('slowPlay').textContent=state.slow?'العرض البطيء مفعّل':'عرض بطيء';
+ $('slowPlay').setAttribute('aria-pressed',String(state.slow));
+}
+function syncScrub(t){
+ const phase=phaseNames()[state.step];
+ $('scrub').max=sceneDuration();$('scrub').value=Math.round(t);
+ const caption=(state.step+1)+' / '+phaseNames().length+' · '+phase;
+ if($('framePhase').textContent!==caption){
+  $('framePhase').textContent=caption;$('scrub').setAttribute('aria-valuetext',caption);
+ }
+}
+function pendTick(now){
+ if(!motion.active)return;
+ const end=sceneDuration();
+ if(motion.prev!==null)motion.clock=Math.min(end,motion.clock+Math.min(55,now-motion.prev)/(state.slow?3:1));
+ motion.prev=now;
+ const p=scenePhase(motion.clock);
+ if(p!==state.step){state.step=p;state.furthest=Math.max(state.furthest,p);setTimeline();sceneText();}
+ paintFrame(motion.clock);syncScrub(motion.clock);
+ if(motion.clock>=end){motion.active=false;motion.paused=true;finish();pendButton();return;}
+ motion.id=requestAnimationFrame(pendTick);
+}
+function pendPlay(){
+ if(bemState.active){bemStop();bemPaint();}
+ if(motion.active){
+  cancelAnimationFrame(motion.id);motion.active=false;motion.paused=true;pendButton();return;
+ }
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+  showStep(state.step===limit()?0:state.step+1);return;
+ }
+ if(!motion.paused||motion.clock>=sceneDuration()){
+  state.prediction=$('prediction').value;state.step=0;state.furthest=0;motion.clock=0;
+  $('explain').open=false;
+  $('feedback').className='feedback';$('feedback').textContent='راقب ما يتغيّر في المشهد، ثم قارن النتيجة بتوقّعك.';
+ }
+ motion.active=true;motion.paused=false;motion.prev=null;
+ setTimeline();render();
+ motion.id=requestAnimationFrame(pendTick);
+ if(window.innerWidth<=655&&!document.fullscreenElement&&!document.body.classList.contains('lab-fallback'))document.querySelector('.observation').scrollIntoView({block:'start',behavior:'smooth'});
+}
+function renderPendText(){
+ const o=pendRead(state.step);
+  const phaseTip=[
+  ['الملاحظة','الكرية معلّقة والقضيب بعيد.'],
+  ['الملاحظة','تميل الكرية نحو القضيب مع بقاء فجوة بينهما.'],
+  ['الملاحظة',state.nearOnly?'تظلّ الفجوة موجودة.':'يصل طرف القضيب إلى سطح الكرية.'],
+  ['الملاحظة',state.nearOnly?'الكرية تتأرجح ثم تستقرّ بعد الإبعاد.':'تتأرجح الكرية مبتعدة بينما يظل القضيب ثابتًا.']
+ ][state.step];
+ paintReadout(o,phaseTip,true);
+ $('pendSvgDesc').textContent=o.title+' — '+o.detail;
+ $('prevStep').disabled=state.step===0;$('nextStep').disabled=state.step===3;
+}
+function syncCamera(){
+ $('scene').querySelector('svg').setAttribute('viewBox',state.closeView?(isPend()?'193 91 390 206':cameraBoxes[state.exp]):'0 0 640 338');
+ $('closeView').setAttribute('aria-pressed',String(state.closeView));
+ $('closeView').textContent=state.closeView?'المشهد الكامل':'لقطة مقرّبة';
+}
+function renderPend(){
+ $('sceneKey').textContent=state.view!=='macro'?'الرموز توضيحية. الأزرق للإلكترونات والأسهم الخضراء للقوة المؤثّرة في الكرية.':rodName(pendSign())+' '+rodState(pendSign())+'، وكرية ألمنيوم متعادلة. راقب الفجوة بينهما.';
+ $('scene').innerHTML=pendSvg(showMicro());
+ $('scene').className='stage pend-stage';syncCamera();
+ $('legend').hidden=state.view==='macro';
+ $('nearOnly').setAttribute('aria-pressed',String(state.nearOnly));
+ $('nearOnly').textContent=state.nearOnly?'العودة إلى تجربة اللمس':'جرّب دون لمس';
+ sceneText();
+ const t=motion.active||motion.paused?motion.clock:(state.nearOnly?[0,1200,1670,3440]:stepTimes)[state.step];
+ pendPaint(t,!motion.active&&!motion.paused);syncScrub(t);
+ pendButton();
+}
+
+function paintReadout(o,tip,split=false){
+ $('readout').innerHTML='<strong>'+escapeHtml(o.title)+'</strong>'+(split?'':'<p>'+escapeHtml(o.detail)+'</p>')+(o.metrics.length?'<div class="metrics">'+o.metrics.map(t=>'<span>'+t+'</span>').join('')+'</div>':'');
+ if(split){
+  $('readout').insertAdjacentHTML('beforeend','<div class="reading-tip phase-notes"><div><b>'+tip[0]+'</b>'+tip[1]+'</div><div><b>التفسير</b>'+escapeHtml(o.detail)+'</div></div>');
+ }else $('readout').insertAdjacentHTML('beforeend','<div class="reading-tip"><b>'+tip[0]+'</b> '+tip[1]+'</div>');
+}
+function renderQuickModes(){
+ const bar=$('scopeChoices'), e=state.exp;
+ const rows=[];
+ if(e===5)rows.push(['scope',scopeModes,'حالة الكشّاف']);
+ if(e===6)rows.push(['sample',conductorKinds,'المادّة']);
+ if(e===0)rows.push(['rub',[['eb','إيبونيت + صوف'],['glass','زجاج + حرير']],'زوج المواد']);
+ if(isPend()||[2,4,6].includes(e)||(e===5&&state.scope==='near'))rows.push(['source',[[-1,'إيبونيت سالب (−)'],[1,'زجاج موجب (+)']],'القضيب']);
+ bar.hidden=!rows.length;if(bar.hidden)return;
+ const tag=rows.map(([k])=>k+':'+state[k]).join('|');
+ if(bar.dataset.mode===tag)return;
+ bar.dataset.mode=tag;
+ bar.innerHTML=rows.map(([k,modes,label])=>'<div class="rod-pair"><small>'+label+'</small>'+modes.map(([v,name])=>'<button type="button" aria-pressed="'+String(v===state[k])+'">'+name+'</button>').join('')+'</div>').join('');
+ const items=rows.flatMap(([k,modes])=>modes.map(([v])=>[k,v]));
+ bar.querySelectorAll('button').forEach((button,i)=>button.onclick=()=>{
+  const [k,v]=items[i];if(k==='scope')setScope(v);else state[k]=v;
+  updateExperimentCopy();setup();reset();renderComparison();
+  bar.querySelectorAll('button')[i]?.focus();
+ });
+}
+function render(){
+ renderQuickModes();
+ $('nearOnly').hidden=!isPend();
+ $('viewBadge').textContent=state.view==='macro'?'طاولة التجربة':state.view==='overlay'?'المشهد مع الشحنات':'نموذج الشحنات';
+ for(const id of ['macro','overlay','micro'])$(id).setAttribute('aria-pressed',String(id===state.view));
+ $('legend').children[0].innerHTML=isPend()?'<bdi dir="ltr">−</bdi> إلكترون':'<bdi dir="ltr">−</bdi> شحنة سالبة أو إلكترون';
+ $('legend').children[1].innerHTML=isPend()?'<bdi dir="ltr">+</bdi> شحنة موجبة ثابتة':'<bdi dir="ltr">+</bdi> شحنة موجبة';
+ if(isPend()){renderPend();return;}
+ $('sceneKey').textContent=state.view==='macro'?studioKeys[state.exp]:[
+  'تُظهر النقاط الزرقاء الإلكترونات التي تنتقل أثناء الدَّلك.',
+  'تتحرّك الإلكترونات بين الكرتين عندما تتلامسان.',
+  'راقب الشحنات داخل الكرة وحركة الإلكترونات على وصلة التأريض.',
+  'السهمان الأخضران يبيّنان اتجاه القوّتَين على الكرّيتين.',
+  'تنجذب القصاصات وتبقى متعادلة. لا تنتقل إليها إلكترونات من القضيب.',
+  'تتبّع الإلكترونات عند اللمس أو التقريب أو التفريغ، ثم لاحظ وضع الورقتين.',
+  'راقب هل تصل الإلكترونات إلى القرص عبر العيّنة أم تبقى قرب الطرف الملامَس.'
+ ][state.exp];
+ $('scene').innerHTML=videoBody();$('scene').className='stage video-stage';
+ $('legend').hidden=state.view==='macro';
+ syncCamera();sceneText();
+ const t=sceneTime();paintFrame(t);syncScrub(t);pendButton();
+}
+const qs=[
+ ['ماذا ينتقل عند تماس الإيبونيت السالب مع كرية الألمنيوم المتعادلة؟',['البروتونات من الكرية إلى القضيب','بعض الإلكترونات من القضيب إلى الكرية','الإلكترونات من القضيب إلى الكرية قبل التلامس'],1,'لا تعبر الإلكترونات الفجوة. عند التلامس فقط تكتسب الكرية إلكترونات فتصبح سالبة وتتنافر مع القضيب السالب.'],
+ ['قضيب فقد إلكترونات عند الدلك. ما شحنته؟',['سالبة','موجبة','متعادل دائمًا'],1,'فقد الإلكترونات يجعل عدد الشحنات الموجبة أكبر من عدد الشحنات السالبة.'],
+ ['قُرّب قضيب مشحون من كرة معدنية متعادلة ومعزولة، دون لمس. ما صافي شحنتها؟',['صفر','مثل شحنة القضيب','عكس شحنة القضيب'],0,'تغيّر توزيع الشحنات، لكن لم تنتقل إلكترونات إلى الكرة أو منها.'],
+ ['أي ترتيب يُبقي الكرة مشحونة بالتأثير في التجربة؟',['إبعاد القضيب ثم وصل الكرة بالأرض','تقريب القضيب ثم إبعاده من دون وصلة','تقريب القضيب، ثم وصل الكرة بالأرض، ثم فصل الوصلة، ثم إبعاد القضيب'],2,'فصل الوصلة قبل إبعاد القضيب يمنع عودة الإلكترونات إلى الكرة أو خروجها منها عبر الوصلة.'],
+ ['شحنتان مختلفتان إحداهما أكبر مقدارًا. كيف تكون القوتان المتبادلتان؟',['تجاذب بقوتين متساويتين ومتعاكستين','تجاذب والقوة على الجسم الأصغر أضعف','تنافر بقوتين متساويتين'],0,'تؤثر القوتان في جسمين مختلفين. وهما متساويتان في الشدة ومتعاكستان في الاتجاه.'],
+ ['انفرجت ورقتا الكشّاف. هل نعرف بذلك نوع الشحنة؟',['نعم، موجبة','نعم، سالبة','لا، الانفراج وحده لا يكفي'],2,'الورقتان تتنافران سواء كانت شحنتهما موجبة أم سالبة.'],
+ ['قضيب مشحون يجذب ورقًا متعادلًا قبل لمسه. ما التفسير؟',['انتقال بروتونات عبر الهواء','استقطاب موضعي في الورق دون تغيير صافي شحنته','الورق لا يحتوي على شحنات'],1,'الاستقطاب يجعل الشحنات المخالفة أقرب إلى القضيب، مع بقاء الورق متعادلًا.']
+];
+$('questions').innerHTML=qs.map((q,i)=>'<article class="question">'+selectField(num(i+1)+' · '+q[0],'q'+i,[['','اختر إجابة'],...q[1].map((v,j)=>[j,v])],'')+'<p id="qr'+i+'" aria-live="polite"></p></article>').join('');
+$('grade').onclick=()=>{
+ let n=0,done=0;
+ qs.forEach((q,i)=>{const e=$('q'+i), v=e.value, good=v!==''&&Number(v)===q[2];if(v!=='')done++;if(good)n++;
+  const p=$('qr'+i);p.parentNode.className='question'+(v===''?'':good?' good':' bad');p.textContent=v===''?'اختر إجابة أولًا.':(good?'صحيح. ':'راجِع إجابتك. ')+q[3];});
+ $('score').textContent=num(n)+' من '+num(qs.length)+(done<qs.length?' · بقي '+num(qs.length-done):'');
+};
+$('clear').onclick=()=>{qs.forEach((_,i)=>{$('q'+i).value='';$('qr'+i).textContent='';$('qr'+i).parentNode.className='question';});$('score').textContent=num(qs.length)+' أسئلة';};
+setProgress();choose(0);
+
+const bemQ=(label,choices,correct,note)=>({label,choices,correct,note});
+const bemData=[
+ {year:2019,tag:'التأثير والتماس',marks:6,source:'https://bem-algerie.net/sujets/2019/2019-physique.pdf',solution:'https://bem-algerie.net/sujets/2019/2019-physique-sol.pdf',variants:[
+  {title:'قضيب مدلوك وكرية متعادلة',context:'دُلِك قضيب بلاستيكي A بالصوف، ثم قُرّب من كرية B متعادلة مكسوّة بالألمنيوم، من دون أن يلمسها.', phases:['قبل التقريب','القضيب يقترب','انجذاب دون تماس'],kind:'near19',questions:[
+   bemQ('ما الذي تلاحظه على الكرية؟',['تبتعد عن القضيب','تميل نحو القضيب','لا تتحرّك'],1,'تنجذب الكرية إلى القضيب رغم عدم التلامس.'),
+   bemQ('كيف تكهرب القضيب A؟',['بالدَّلك','بالتأثير','باللَّمس'],0,'تكهرب القضيب عندما دُلِك بالصوف.'),
+   bemQ('ما التفسير الأدقّ لحالة الكرية؟',['اكتسبت إلكترونات عبر الهواء','استقطبت بتأثير جسم مكهرب وبقي صافي شحنتها صفرًا','فقدت بروتونات'],1,'أعاد القضيب توزيع الشحنات في الغلاف الناقل. لم تعبر إلكترونات الفجوة.')
+  ],model:'تكهرب القضيب بالدلك. عند تقريبه دون تماس تتوزّع الشحنات من جديد داخل الغلاف المعدني للكرية. تنجذب الكرية بالتأثير، مع بقائها متعادلة ككل لأن الإلكترونات لم تنتقل بين الجسمين.'},
+  {title:'قضيب معدني ينقل أثر التماس',context:'يلمس قضيب زجاجي C موجب الطرف D من ناقل معدني DE فوق حامل عازل. الطرف E يلامس كرية B المتعادلة في البداية.',phases:['الكرية تلامس الطرف E','تماس الزجاج مع الناقل عند D','ابتعاد الكرية عن الطرف E'],kind:'contact19',questions:[
+   bemQ('ما اتجاه انتقال بعض الإلكترونات عند التماس؟',['من الكرية والناقل نحو القضيب الزجاجي','من الزجاج نحو الكرية','لا تنتقل لأن الحامل عازل'],0,'يسمح التماس بانتقال بعض الإلكترونات من المعدن إلى الطرف الموجب للقضيب الزجاجي.'),
+   bemQ('ماذا يحدث للكرية B؟',['تبقى متعادلة وملامسة للناقل','تصبح سالبة وتنجذب إلى الناقل','تصبح موجبة وتتنافر مع الناقل'],2,'تفقد الكرية بعض الإلكترونات عبر الناقل. يحمل الناقل والكرية شحنة من النوع نفسه فيتنافران.')
+  ],model:'عند التماس ينتقل بعض الإلكترونات من الناقل والكرية إلى طرف القضيب الزجاجي الموجب. تصبح الكرية والناقل موجبين، لذلك تتنافر الكرية مع الطرف E وتبتعد عنه.'}
+ ]},
+ {year:2021,tag:'التجاذب والتنافر',marks:6,source:'https://bem-algerie.net/sujets/2021/2021-physique.pdf',solution:'https://www.dzeducative.com/wp-content/uploads/2023/05/bem_2021.pdf',variants:[
+  {title:'استنتج إشارة شحنتَي القضيبين',context:'كلّ من الكريتين B1 وB2 سالبة. يُقرَّب القضيب A من B1 والقضيب C من B2، باستعمال قفاز بلاستيكي عازل.',phases:['قبل تقريب القضيبين','اقتراب دون لمس','B1 تبتعد وB2 تقترب'],kind:'rods21',questions:[
+   bemQ('ما نوع شحنة القضيب A؟',['موجبة','سالبة','متعادل'],1,'تنافر مع B1 السالبة، إذن شحنته سالبة.'),
+   bemQ('ما نوع شحنة القضيب C؟',['سالبة','متعادل','موجبة'],2,'المعطى أن القضيب مشحون. تجاذبه مع B2 السالبة يعني أن شحنته موجبة.'),
+   bemQ('لماذا استُعمل القفاز البلاستيكي؟',['لعزل القضيب عن اليد والحدّ من تسرب شحنته','لزيادة شحنة القضيب تلقائيًا','لعكس إشارة الشحنة'],0,'البلاستيك عازل، فيحدّ من انتقال الشحنات عبر يد المجرّب.')
+  ],model:'القضيب A سالب لتنافره مع B1 السالبة، والقضيب C موجب لتجاذبه مع B2 السالبة، علمًا بأنه مشحون. يعزل القفاز البلاستيكي القضيب عن اليد فيساعد على احتفاظه بشحنته.'},
+  {title:'مثّل القوّتَين المتبادلتين',context:'تقابل كريتان سالبتان معلّقتان بخيطين عازلين. في هذا الرسم تظهر B2 يسارًا وB1 يمينًا.',phases:['الكريتان قبل الملاحظة','ميل الخيطين إلى الخارج','مقارنة القوّتين'],kind:'force21',questions:[
+   bemQ('في أي جهة تؤثر B1 في B2؟',['نحو اليمين','نحو اليسار','نحو الأسفل'],1,'تقع B2 يسار B1، فتدفعها قوة التنافر نحو اليسار.'),
+   bemQ('كيف نقارن القوّتين الكهربائيتين؟',['متساويتان، متعاكستان وعلى الحامل نفسه','لهما الجهة نفسها','القوة المؤثرة في B1 أكبر'],0,'لكل قوة كرية مختلفة تؤثر فيها. القوتان متساويتان في الشدة ومتعاكستان في الجهة وعلى المستقيم الواصل بين الكريتين.')
+  ],model:'قوة B1 على B2 نحو اليسار، وقوة B2 على B1 نحو اليمين. القوتان متساويتان في الشدة ومتعاكستان في الجهة، ولهما الحامل نفسه وتؤثر كل منهما في جسم مختلف.'}
+ ]},
+ {year:2024,tag:'الكشّاف الكهربائي',marks:5,source:'https://odrous.com/media/3b8bd2d7-b85e-489c-875d-df3f024bf675/download',solution:'https://dzmadrassa.com/api/download/bem/physique/2024/correction/dzmadrassa-bem-physique-756577.pdf?download=true',variants:[
+  {title:'من دلك القضيب إلى تفريغ الكشّاف',context:'بعد دلك طرف قضيب عازل بقطعة صوف، أصبحت قطعة الصوف موجبة. يلمس التلميذ قرص الكشّاف بالطرف المدلوك ثم يُبعد القضيب.',phases:['دلك طرف القضيب بالصوف','ملامسة القرص وانفراج الورقتين','إبعاد القضيب مع بقاء الانفراج','تفريغ الكشّاف وعودة الورقتين'],kind:'scope24',questions:[
+   bemQ('ما طريقة تكهرب القضيب ثم الكشّاف؟',['اللمس ثم الدلك','الدلك ثم اللمس بجسم مكهرب','التأثير في الحالتين'],1,'يتكهرب القضيب بالدلك، ثم يتكهرب الكشّاف باللمس بجسم مكهرب، وهو الطرف المدلوك من القضيب.'),
+   bemQ('إذا أصبحت قطعة الصوف موجبة، فما شحنة الطرف المدلوك؟',['موجبة','متعادل','سالبة'],2,'فقدت قطعة الصوف إلكترونات فانتقل بعضها إلى طرف القضيب وأصبح سالبًا.'),
+   bemQ('لماذا تنفرج ورقتا الكشّاف؟',['اكتسبتا إلكترونات وأصبحتا سالبتين فتنافرتا','اختلفت شحنتاهما فتجاذبتا','انتقلت البروتونات إليهما'],0,'تنتقل بعض الإلكترونات من الطرف المدلوك عبر القرص والساق إلى الورقتين، فتتشابهان في إشارة الشحنة وتتنافران.'),
+   bemQ('كيف تعيد الورقتين إلى وضعهما بعد إبعاد القضيب؟',['بملامسة القرص بموصل متصل بالأرض','بإبعاد القضيب فقط','بوضع عازل فوق القرص'],0,'يوفر التأريض طريقًا لتصريف الشحنة الزائدة، فيتعادل الكشّاف ويزول الانفراج.')
+  ],model:'يتكهرب طرف القضيب بالدلك، والكشّاف باللمس بجسم مكهرب. يصبح الطرف المدلوك سالبًا لأن الصوف أصبح موجبًا. تنتقل بعض الإلكترونات من طرف القضيب إلى الكشّاف، فتتشابه شحنتا الورقتين وتتنافران. بعد إبعاد القضيب يُفرَّغ الكشّاف بتوصيل قرصه بالأرض فتعود الورقتان إلى وضعهما.'}
+ ]}
+];
+const bemState={year:2,variant:0,t:0,labels:false,active:false,id:0,last:null};
+const activeExam=()=>bemData[bemState.year];
+const examVariant=()=>activeExam().variants[bemState.variant];
+const isScopeExam=()=>examVariant().kind==='scope24';
+const examT=()=>isScopeExam()?[0,520,790,1000]:[0,520,1000];
+const examPhase=t=>{
+ const kind=examVariant().kind;
+ const edges=kind==='scope24'?[340,610,842]:kind==='contact19'?[440,610]:[340,710];
+ return edges.reduce((p,b)=>p+(t>=b?1:0),0);
+};
+function bemBench(inner){
+ const defs=(studioDefs+sceneDefs).replace(/id="([\w-]+)"/g,'id="bem-$1"');
+ const body=inner.replace(/url\(#([\w-]+)\)/g,'url(#bem-$1)');
+ const d=defs.replace(/url\(#([\w-]+)\)/g,'url(#bem-$1)');
+ return '<svg viewBox="0 0 640 338" role="img" aria-label="'+escapeHtml(examVariant().title)+'" xmlns="http://www.w3.org/2000/svg">'+d+
+ '<defs><linearGradient id="bem-pendSkin" x2="0" y2="1"><stop stop-color="#edb595"/><stop offset="1" stop-color="#a97058"/></linearGradient></defs>'+
+ '<rect width="640" height="228" fill="url(#bem-wall)"/><path d="M0 69H640M0 133H640M126 0v230M286 0v230M446 0v230" fill="none" stroke="#fff" opacity=".22"/><rect x="22" y="21" width="140" height="91" rx="4" fill="#deeeeb" stroke="#aac2c2" stroke-width="4"/><path d="M92 22v89M24 67h136" stroke="#f9ffff" opacity=".75" stroke-width="2"/><path d="M0 228H640V298H0Z" fill="url(#bem-wood)"/><path d="M0 228H640V298H0Z" fill="url(#bem-grain)"/><path d="M0 298H640" stroke="#7d654d" stroke-width="3"/><rect y="300" width="640" height="38" fill="#f5f4ed"/>'+body+'</svg>';
+}
+const eu=(t,a,b)=>stagePart(t,a,b);
+function examBall(px,py,delta,length,r=25){
+ const a=toRad(delta),x=px+length*Math.sin(a),y=py+length*Math.cos(a);
+ const [tx,ty]=[px+(length-r+1)*Math.sin(a),py+(length-r+1)*Math.cos(a)];
+ return {x,y,d:'<path d="M'+px+' '+py+'L'+tx+' '+ty+'" stroke="#52656b" stroke-width="2"/><circle cx="'+px+'" cy="'+py+'" r="4" fill="url(#brass)" stroke="#52656b"/>'+V(x,y,metalBall(r))};
+}
+function examRig(x,y,right){
+ const base=right?x+74:x-74;
+ return '<path d="M'+base+' 269V'+y+'H'+x+'" stroke="#486472" stroke-width="9" fill="none" stroke-linejoin="round"/><path d="M'+(base-23)+' 269h46" stroke="#486472" stroke-width="12" stroke-linecap="round"/>';
+}
+function eRod(x,y,m,w,flip=false){
+ const style=state.view;
+ try{state.view='macro';return flip?V(x,y,'<g transform="scale(-1 1)">'+vrod(0,0,m,w)+'</g>'):vrod(x,y,m,w);}
+ finally{state.view=style;}
+}
+function withExamLab(values,fn){const old={};for(const k in values){old[k]=state[k];state[k]=values[k];}try{return fn();}finally{Object.assign(state,old);}}
+function eLabel(x,y,s){return txt(x,y,s,22,'#203d4e',true);}
+function examNear19(t){
+ const g=eu(t,85,550), h=eu(t,290,870), b=examBall(448,64,-16*h,142,28);
+ let o=examRig(448,64,true)+b.d+eRod(77+109*g,198,'ebony',162)+vb(166,'القضيب A')+vb(451,'الكرية B');
+ if(bemState.labels)o+=chargeTag(210+76*g,153,-1)+chargeTag(b.x+46,b.y+29,0)+chargeDots(b.x,b.y,0,23,.35*h)+(h>.15?forceCue(b.x-8,b.y-46,-65,'جذب'):'');
+ return o;
+}
+function examContact19(t){
+ const g=eu(t,90,440), h=eu(t,540,885), b=examBall(426,54,23*h,139,25);
+ let o=examRig(426,54,true)+stand(317,267)+V(250,193,labRod('metal',146))+b.d+
+ eRod(51+72*g,193,'glass',122)+vb(155,'القضيب الزجاجي C')+vb(385,'الناقل DE والكرية B')+eLabel(251,168,'D')+eLabel(396,166,'E');
+ if(bemState.labels)o+=chargeTag(142+65*g,151,1)+chargeTag(b.x+35,b.y+24,t>535?1:0)+chargeTag(322,161,t>535?1:0)+flowDots(t,[385,193],[232,193],450,630)+(h>.2?forceCue(b.x,b.y-41,57,'تنافر'):'');
+ return o;
+}
+function examGlove(x,y,flip=false){
+ return V(x,y,'<g transform="scale('+(flip?-1:1)+' 1)"><path d="M-62-6l42-4 7 23-49 8z" fill="#465a71"/><path d="M-26-10q15-16 26-10l12 7q6 7-4 10l-6-1 12 9q4 8-8 12l-26-2z" fill="#87c6b5" stroke="#3f7d72" stroke-width="1.4"/><path d="M-10-3Q-2-6 6 2" fill="none" stroke="#408b7f"/></g>');
+}
+function examRods21(t){
+ const g=eu(t,95,530), h=eu(t,345,820), y=194;
+ const a=examBall(207,74,13*h,120,22),b=examBall(443,74,15*h,120,22), l=38+37*g,r=637-20*g;
+ let o='<path d="M41 74H601" stroke="#57727d" stroke-width="7" stroke-linecap="round"/><path d="M320 69V274" stroke="#a5bcbf" stroke-dasharray="5 5"/>'+a.d+b.d+
+ V(l,y,labRod('ebony',102))+V(r,y,'<g transform="scale(-1 1)">'+labRod('glass',98)+'</g>')+examGlove(l+15,y+7)+examGlove(r-15,y+7,true)+
+ eLabel(l+45,241,'A')+eLabel(r-49,241,'C')+eLabel(a.x,a.y+42,'B1')+eLabel(b.x,b.y+42,'B2')+vb(320,'تجربتان بقفاز عازل');
+ if(bemState.labels)o+=chargeTag(a.x,a.y-52,-1)+chargeTag(b.x,b.y-52,-1)+chargeTag(l+52,y-39,-1)+chargeTag(r-51,y-39,1)+(h>.2?forceCue(a.x,a.y-25,37)+forceCue(b.x,b.y-25,37):'');
+ return o;
+}
+function examForce21(t){
+ const g=eu(t,235,730),a=examBall(255,66,-16*g,140,27),b=examBall(385,66,16*g,140,27);
+ let o='<path d="M66 268V65H574V268M41 268h50m458 0h50" fill="none" stroke="#4b6875" stroke-width="8" stroke-linecap="round"/>'+a.d+b.d+
+ eLabel(a.x,a.y+52,'B2')+eLabel(b.x,b.y+52,'B1')+vb(320,'كرّيتان مشحونتان سالبًا');
+ if(bemState.labels){
+  o+=chargeTag(a.x,a.y-60,-1)+chargeTag(b.x,b.y-60,-1);
+  if(g>.27)o+=forceCue(a.x,a.y,-71)+forceCue(b.x,b.y,71);
+ }
+ return o;
+}
+function examScope24(t){
+ if(t<340){
+  const tt=mix(1080,4640,clamp01(t/340));
+  return withExamLab({view:bemState.labels?'overlay':'macro',rub:'eb'},()=>sceneRub(tt)).replace('قضيب الإيبونيت','القضيب العازل');
+ }
+ const g=(t-340)/660, f=g<.69?mix(1020,2800,g/.69):2800;
+ const model=withExamLab({view:bemState.labels?'overlay':'macro',source:-1,scope:'contact'},()=>sceneScope(f,'ebony',eu(g,.92,1))).replace('القضيب المشحون','القضيب العازل');
+ if(t<842)return model;
+ const k=eu(g,.76,.92), plug=521-109*k;
+ let out=model+groundSymbol(560,227)+'<path d="M'+plug+' 70C477 61 543 55 553 138L560 226" fill="none" stroke="#426e55" stroke-width="5" stroke-linecap="round"/><circle cx="'+plug+'" cy="70" r="5" fill="#edcc7c" stroke="#9b6b32"/>'+txt(536,268,'وصلة التأريض',17,teal);
+ if(bemState.labels)out+=flowDots(g,[428,70],[516,73],.92,.967)+flowDots(g,[525,78],[557,194],.951,1);
+ return out;
+}
+const examScenes={near19:examNear19,contact19:examContact19,rods21:examRods21,force21:examForce21,scope24:examScope24};
+function bemPaint(){
+ const t=bemState.t,p=examPhase(t),v=examVariant();
+ $('bemStage').innerHTML=bemBench(examScenes[v.kind](t));
+ $('bemScrub').value=Math.round(t);
+ const title=(p+1)+' / '+v.phases.length+' · '+v.phases[p];
+ if($('bemPhase').textContent!==title){$('bemPhase').textContent=title;$('bemScrub').setAttribute('aria-valuetext',title);}
+ $('bemLabels').setAttribute('aria-pressed',String(bemState.labels));
+ $('bemLabels').textContent=bemState.labels?'أخفِ الشحنات':'أظهر الشحنات';
+ $('bemPlay').textContent=bemState.active?'إيقاف مؤقت':t>=1000?'أعد المشاهدة':t>0?'تابع المشاهدة':'شغّل المشهد';
+ $('bemStep').textContent=p===v.phases.length-1?'العودة إلى البداية':'المرحلة التالية';
+}
+function bemStop(){cancelAnimationFrame(bemState.id);bemState.active=false;bemState.last=null;}
+function bemTick(ms){
+ if(!bemState.active)return;
+ if(bemState.last!==null)bemState.t=Math.min(1000,bemState.t+Math.min(55,ms-bemState.last)*.29);
+ bemState.last=ms;
+ if(bemState.t===1000)bemStop();
+ bemPaint();
+ if(bemState.active)bemState.id=requestAnimationFrame(bemTick);
+}
+function bemStep(){bemStop();const stops=examT();bemState.t=stops[(examPhase(bemState.t)+1)%stops.length];bemPaint();}
+$('bemPlay').onclick=()=>{
+ if(bemState.active){bemStop();bemPaint();return;}
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){bemStep();return;}
+ if(bemState.t>=1000)bemState.t=0;
+ pendStop();render();
+ bemState.active=true;bemPaint();bemState.id=requestAnimationFrame(bemTick);
+};
+$('bemStep').onclick=bemStep;
+$('bemLabels').onclick=()=>{bemState.labels=!bemState.labels;bemPaint();};
+$('bemScrub').oninput=()=>{bemStop();bemState.t=Number($('bemScrub').value);bemPaint();};
+function bemRender(){
+ bemStop();bemState.t=0;bemState.labels=false;
+ const e=activeExam(),v=examVariant();
+ $('bemTabs').querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===bemState.year)));
+ $('bemMeta').textContent='دورة '+e.year+' · التمرين 2 · '+e.marks+' نقاط في الموضوع الأصلي';
+ $('bemSceneTitle').textContent=v.title;$('bemContext').textContent=v.context;
+ $('bemVariants').hidden=e.variants.length<2;
+ $('bemVariants').innerHTML=e.variants.map((x,i)=>'<button type="button" aria-pressed="'+String(i===bemState.variant)+'">'+(i+1)+' · '+escapeHtml(x.title)+'</button>').join('');
+ $('bemVariants').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>{bemState.variant=i;bemRender();$('bemVariants').querySelectorAll('button')[i].focus();});
+ $('bemSource').setAttribute('href',e.source);$('bemSolution').setAttribute('href',e.solution);
+ $('bemQuestions').innerHTML=v.questions.map((q,i)=>'<div class="question">'+selectField((i+1)+' · '+q.label,'bemQ'+i,[['','اختر إجابة'],...q.choices.map((c,j)=>[j,c])],'')+'<p id="bemA'+i+'"></p></div>').join('');
+ $('bemWritten').value='';$('bemModel').hidden=true;$('bemModel').open=false;$('bemModelText').textContent=v.model;$('bemResult').textContent='';
+ bemPaint();
+}
+$('bemTabs').innerHTML=bemData.map(x=>'<button type="button"><b>'+x.year+'</b>'+x.tag+'</button>').join('');
+$('bemTabs').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>{bemState.year=i;bemState.variant=0;bemRender();});
+$('bemGrade').onclick=()=>{
+ const q=examVariant().questions;
+ if(!q.every((_,i)=>$('bemQ'+i).value!=='')){$('bemResult').textContent='أجب عن جميع الأسئلة قبل إظهار التصحيح.';return;}
+ let good=0;
+ q.forEach((x,i)=>{const ok=Number($('bemQ'+i).value)===x.correct;if(ok)good++;
+ const a=$('bemA'+i);a.parentNode.className='question '+(ok?'good':'bad');a.textContent=(ok?'صحيح. ':'راجع تعليلك. ')+x.note;});
+ $('bemResult').textContent=good+' من '+q.length+' إجابات صحيحة في هذا التدريب.';
+ $('bemModel').hidden=false;
+};
+$('bemReset').onclick=()=>{bemRender();$('bemQ0').focus();};
+bemRender();
+
+const lifeData=[
+ ['ما سبب الوخزة عند اقتراب الإصبع من المقبض؟',['المقبض يولّد شحنة من تلقاء نفسه','تفريغ سريع لشحنة تراكمت على الجسم','حرارة السجّاد انتقلت إلى الإصبع'],1,'تراكمت الشحنة أثناء احتكاك الحذاء بالسجّاد، ثم تفرّغت بسرعة قرب المقبض.'],
+ ['ما الذي يساعد على تقليل تكرار الوخزة؟',['جرّ القدمين بسرعة أكبر','زيادة جفاف هواء الغرفة','رفع القدمين أثناء المشي وترطيب الهواء باعتدال إن كان شديد الجفاف'],2,'رفع القدمين يقلّل الاحتكاك، وزيادة الرطوبة باعتدال تساعد على تسرّب الشحنات تدريجيًا.']
+];
+const life={mode:'drag',step:0,timer:null};
+const lifeLabels=['قبل المشي','فوق السجّاد','عند المقبض'];
+const lifeNotes={
+ drag:['لم يبدأ الاحتكاك بالسجّاد بعد في هذا النموذج.','جرّ القدمين يزيد الاحتكاك بين الحذاء والسجّاد، فتتراكم شحنة على الجسم.','عند اقتراب الإصبع من المعدن قد يحدث تفريغ سريع نشعر به على هيئة وخزة.'],
+ lift:['نبدأ من الحالة نفسها، لكن نغيّر طريقة المشي فقط.','رفع القدمين بدل جرّهما يقلّل الاحتكاك وتراكم الشحنة.','عند الوصول إلى المقبض تكون الوخزة أقلّ احتمالًا. رفع القدمين لا يضمن اختفاءها دائمًا.']
+};
+const lifeSVG=(step,drag)=>{
+ const x=[158,255,407][step], chargeCount=step?(drag?(step===1?6:2):(step===1?2:1)):0;
+ const arm=step===2?'M10 110q34-3 56 5l31 2q7 0 8 6t-8 7l-35 1-53-3':'M10 110q19 16 34 44l-7 9q-21-17-39-35';
+ const stride=step===1?(drag?'M-10 159l-9 44-10 22m40-66 17 46 17 20':'M-10 159l-13 41-10 25m44-66 25 31-6 17'):'M-10 159l-9 46-7 20m35-66 11 45 9 21';
+ const foot=step===1&&!drag?'M-34 229h22m41-20 19-6':step===1?'M-33 229h22m51 0h21':'M-27 229h21m34 0h21';
+ const person='<g transform="translate('+x+' 41)"><ellipse cx="8" cy="231" rx="47" ry="8" fill="#375263" opacity=".16"/><path d="'+stride+'" stroke="#263e61" stroke-width="19" stroke-linecap="round" fill="none"/><path d="'+foot+'" stroke="#132f42" stroke-width="11" stroke-linecap="round"/><path d="M-15 98q17-9 34 2l8 63h-48Z" fill="#238374" stroke="#146459" stroke-width="2"/><path d="'+arm+'" fill="#d69e78" stroke="#8c5a40" stroke-width="2" stroke-linejoin="round"/><circle cx="3" cy="75" r="23" fill="#dfaa84" stroke="#915f49" stroke-width="1.5"/><path d="M-19 75q-4-23 18-26 22-2 28 18-16 1-27-7-6 11-19 15" fill="#23394b"/><circle cx="15" cy="75" r="2.2" fill="#314250"/></g>';
+ const charge=Array.from({length:chargeCount},(_,i)=>{const [dx,y]=[[-36,110],[36,99],[-40,157],[41,164],[-33,203],[54,215]][i];return '<g transform="translate('+(x+dx)+' '+y+')"><circle r="8" fill="#e7f5fd" stroke="#2679a0" stroke-width="1.4"/><path d="M-3.5 0h7" stroke="#1a688f" stroke-width="1.8"/></g>';}).join('');
+ const spark=step===2&&drag?'<path d="M512 161l5-7 3 7 4-4" fill="none" stroke="#99540f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="517" cy="158" r="11" fill="none" stroke="#eaa852" stroke-width="1.7" opacity=".8"/>'+'<rect x="459" y="104" width="106" height="25" rx="8" fill="#fff5dd" stroke="#e5c18a"/>'+txt(512,122,'تفريغ سريع',16,'#75420e'):'';
+ const feet=step===1?txt(x+4,302,drag?'احتكاك أكبر':'احتكاك أقلّ',18,'#204f55'):'';
+ return '<svg viewBox="0 0 640 338" role="img" aria-label="'+escapeHtml(lifeNotes[drag?'drag':'lift'][step])+'" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lifeDoorShade" x2="1" y2="0"><stop stop-color="#895939"/><stop offset="1" stop-color="#ad7851"/></linearGradient><pattern id="lifeRugPattern" width="20" height="10" patternUnits="userSpaceOnUse"><path d="M0 5h20M5 0v10m10-10v10" stroke="#fff" opacity=".21" stroke-width=".8"/></pattern></defs>'+
+ '<rect width="640" height="258" fill="#dcecee"/><path d="M0 71H640m0 79H0M92 0v257M260 0v257M430 0v257" stroke="#f9ffff" stroke-width="1.4" opacity=".6"/><rect x="37" y="33" width="105" height="80" rx="5" fill="#c4e0e2" stroke="#98bfc1" stroke-width="3"/><path d="M90 34v78m-52-40h103" stroke="#eff8f8" stroke-width="2"/><rect y="257" width="640" height="81" fill="#e9d4b8"/><path d="M0 258H640" stroke="#ad9981" stroke-width="3"/>'+
+ '<rect x="515" y="34" width="101" height="224" rx="5" fill="url(#lifeDoorShade)" stroke="#70452f" stroke-width="3"/><rect x="531" y="57" width="69" height="174" rx="5" fill="none" stroke="#cc9773" stroke-width="2"/><circle cx="540" cy="160" r="11" fill="#b6c9d1" stroke="#58717e" stroke-width="2"/><path d="M541 160h-16" stroke="#435f70" stroke-width="7" stroke-linecap="round"/>'+
+ '<path d="M125 260h331l37 26H94Z" fill="#33786d" stroke="#265b55" stroke-width="2"/><path d="M125 260h331l37 26H94Z" fill="url(#lifeRugPattern)"/>'+
+ person+charge+spark+feet+txt(571,301,'مقبض معدني',17,'#3c4545')+txt(147,325,'السجّاد',17,'#345853')+'</svg>';
+};
+function lifeStop(){if(life.timer!==null)clearTimeout(life.timer);life.timer=null;}
+function lifePaint(){
+ $('lifeDrag').setAttribute('aria-pressed',String(life.mode==='drag'));
+ $('lifeLift').setAttribute('aria-pressed',String(life.mode==='lift'));
+ $('lifeStage').innerHTML=lifeSVG(life.step,life.mode==='drag');
+ $('lifeCaption').textContent=lifeNotes[life.mode][life.step];
+ $('lifePhases').querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===life.step)));
+ $('lifeRun').textContent=life.timer!==null?'إيقاف العرض':life.step===2?'أعد المشاهدة':'شغّل المشهد';
+}
+function lifeSet(step){lifeStop();life.step=step;lifePaint();}
+function lifeAdvance(){
+ life.timer=null;life.step++;
+ if(life.step<2)life.timer=setTimeout(lifeAdvance,1150);
+ lifePaint();
+}
+$('lifePhases').innerHTML=lifeLabels.map((n,i)=>'<button type="button" aria-pressed="false">'+(i+1)+' · '+n+'</button>').join('');
+$('lifePhases').querySelectorAll('button').forEach((b,i)=>b.onclick=()=>lifeSet(i));
+$('lifeDrag').onclick=()=>{life.mode='drag';lifeSet(0);};
+$('lifeLift').onclick=()=>{life.mode='lift';lifeSet(0);};
+$('lifeRun').onclick=()=>{
+ if(life.timer!==null){lifeStop();lifePaint();return;}
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){lifeSet((life.step+1)%3);return;}
+ life.step=0;life.timer=setTimeout(lifeAdvance,880);lifePaint();
+};
+$('lifeQuestions').innerHTML=lifeData.map((q,i)=>'<article class="question">'+selectField((i+1)+' · '+q[0],'lifeQ'+i,[['','اختر إجابة'],...q[1].map((a,j)=>[j,a])],'')+'<p id="lifeFeedback'+i+'"></p></article>').join('');
+$('lifeGrade').onclick=()=>{
+ let right=0,answered=0;
+ lifeData.forEach((q,i)=>{
+  const el=$('lifeQ'+i), f=$('lifeFeedback'+i);
+  const done=el.value!=='', ok=done&&Number(el.value)===q[2];
+  if(done)answered++;if(ok)right++;
+  f.parentNode.className='question'+(done?(ok?' good':' bad'):'');
+  f.textContent=done?(ok?'صحيح. ':'راجِع تفسيرك. ')+q[3]:'اختر إجابةً عن هذا السؤال.';
+ });
+ if(answered!==lifeData.length){$('lifeResult').textContent='أكمل الإجابتين لعرض الجواب النموذجي تلقائيًا.';return;}
+ $('lifeResult').textContent=right+' من '+lifeData.length+' إجابات صحيحة.';
+ $('lifeAnswer').open=true;
+};
+$('lifeReset').onclick=()=>{
+ lifeData.forEach((_,i)=>{$('lifeQ'+i).value='';const f=$('lifeFeedback'+i);f.textContent='';f.parentNode.className='question';});
+ $('lifeResult').textContent='';$('lifeAnswer').open=false;life.mode='drag';lifeSet(0);$('lifeQ0').focus();
+};
+lifePaint();
+
+</script>
+</body>
+</html>
